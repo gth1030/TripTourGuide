@@ -17,6 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.triptourguide.after_trip" />
+        <activity android:name="com.example.triptourguide.while_trip" />
         <activity android:name="com.example.triptourguide.before_trip" />
         <activity android:name="com.example.triptourguide.MainActivity" >
             <intent-filter>
