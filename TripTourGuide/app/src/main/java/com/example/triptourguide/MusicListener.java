@@ -30,11 +30,13 @@ import java.util.List;
 public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String DEVELOPER_KEY = "AIzaSyA25f1_VvgFd8z8ohCNW8A5jCzjHE9kbag";
-    private static final String VIDEO_ID = "eKc-SxD0HZE";
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     YouTubePlayerFragment myYouTubePlayerFragment;
 
     private static YouTube youtube;
+
+
+    private String[] songList = new String[]{"Truth Hurts", "Senorita", "Someone You Loved", "Ran$om"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +45,14 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
         myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.youtube_fragment);
         myYouTubePlayerFragment.initialize(DEVELOPER_KEY, this);
 
-
     }
 
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
         if (!b) {
-            List<String> playList = new ArrayList<>();
-
-            Thread thread = new Thread(new YoutubeSearchRunner());
+            Thread thread = new Thread(new YoutubeSearchRunner(youTubePlayer, songList));
             thread.start();
-
-            playList.add(VIDEO_ID);
-            playList.add("yMsHSaFBAYw");
-            youTubePlayer.cueVideos(playList);
         }
     }
 
@@ -86,54 +81,27 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
     }
 
 
-    private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
-
-        System.out.println("\n=============================================================");
-        System.out.println(
-                "   First " + 10L + " videos for search on \"" + query + "\".");
-        System.out.println("=============================================================\n");
-
-        if (!iteratorSearchResults.hasNext()) {
-            System.out.println(" There aren't any results for your query.");
-        }
-
-        while (iteratorSearchResults.hasNext()) {
-
-            SearchResult singleVideo = iteratorSearchResults.next();
-            ResourceId rId = singleVideo.getId();
-
-            // Confirm that the result represents a video. Otherwise, the
-            // item will not contain a video ID.
-            if (rId.getKind().equals("youtube#video")) {
-                Thumbnail thumbnail = singleVideo.getSnippet().getThumbnails().getDefault();
-
-                System.out.println(" Video Id" + rId.getVideoId());
-                System.out.println(" Title: " + singleVideo.getSnippet().getTitle());
-                System.out.println(" Thumbnail: " + thumbnail.getUrl());
-                System.out.println("\n-------------------------------------------------------------\n");
-            }
-        }
-    }
-
 
     class YoutubeSearchRunner implements Runnable {
 
+        private YouTubePlayer _youtubePlayer;
 
-        private List<SearchResult> GetYoutubeSearch() {
+        String[] _songsList;
+
+        public YoutubeSearchRunner(YouTubePlayer youTubePlayer, String[] songsList) {
+            _youtubePlayer = youTubePlayer;
+            _songsList = songsList;
+        }
+
+
+        private List<SearchResult> GetYoutubeSearch(String searchTerm) {
             try {
-                // This object is used to make YouTube Data API requests. The last
-                // argument is required, but since we don't need anything
-                // initialized when the HttpRequest is initialized, we override
-                // the interface and provide a no-op function.
 
                 HttpTransport transport = new NetHttpTransport();
                 JsonFactory jsonFactory = new JacksonFactory();
                 GoogleCredential credential = new GoogleCredential();
 
                 youtube = new YouTube.Builder(transport, jsonFactory, credential).setApplicationName("youtube-cmdline-search-sample").build();
-
-                // Prompt the user to enter a query term.
-                String queryTerm = "after you";
 
                 // Define the API request for retrieving search results.
                 YouTube.Search.List search = youtube.search().list("id,snippet");
@@ -142,7 +110,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
                 // non-authenticated requests. See:
                 // {{ https://cloud.google.com/console }}
                 search.setKey(DEVELOPER_KEY);
-                search.setQ(queryTerm);
+                search.setQ(searchTerm);
 
                 // Restrict the search results to only include videos. See:
                 // https://developers.google.com/youtube/v3/docs/search/list#type
@@ -151,7 +119,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
                 // To increase efficiency, only retrieve the fields that the
                 // application uses.
                 search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
-                search.setMaxResults(10L);
+                search.setMaxResults(1L);
 
 
 
@@ -159,7 +127,6 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
                 SearchListResponse searchResponse = search.execute();
                 List<SearchResult> searchResultList = searchResponse.getItems();
                 if (searchResultList != null) {
-                    prettyPrint(searchResultList.iterator(), queryTerm);
                     return searchResultList;
                 }
             } catch (GoogleJsonResponseException e) {
@@ -175,7 +142,19 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
 
         @Override
         public void run() {
-            GetYoutubeSearch();
+
+            List<String> rankedMusicList= MusicRankCollector.GetCountryMusicRank("Canada");
+
+            List<String> playList = new ArrayList<>();
+
+            for (String songName : rankedMusicList) {
+                List<SearchResult> searchResults = GetYoutubeSearch(songName);
+                if (!searchResults.isEmpty()) {
+                    playList.add(searchResults.get(0).getId().getVideoId());
+                }
+            }
+            _youtubePlayer.cueVideos(playList);
+            _youtubePlayer.play();
         }
     }
 
