@@ -1,7 +1,10 @@
 package com.example.triptourguide;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -15,23 +18,22 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.youtube.YouTube;
-import com.google.api.services.youtube.model.ResourceId;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.client.http.HttpTransport;
-import com.google.api.services.youtube.model.Thumbnail;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
 public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    public static final String DEVELOPER_KEY = "AIzaSyA25f1_VvgFd8z8ohCNW8A5jCzjHE9kbag";
+    public static final String DEVELOPER_KEY = "AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8";
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     YouTubePlayerFragment myYouTubePlayerFragment;
+
+    ListView musicNameListView;
 
     private static YouTube youtube;
 
@@ -42,6 +44,9 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_listener);
+
+        musicNameListView = findViewById(R.id.MusicNameList);
+
         myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.youtube_fragment);
         myYouTubePlayerFragment.initialize(DEVELOPER_KEY, this);
 
@@ -51,7 +56,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
         if (!b) {
-            Thread thread = new Thread(new YoutubeSearchRunner(youTubePlayer, songList));
+            Thread thread = new Thread(new YoutubeSearchRunner(this, youTubePlayer, songList, musicNameListView));
             thread.start();
         }
     }
@@ -87,10 +92,14 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
         private YouTubePlayer _youtubePlayer;
 
         String[] _songsList;
+        ListView _musicListView;
+        Activity _context;
 
-        public YoutubeSearchRunner(YouTubePlayer youTubePlayer, String[] songsList) {
+        public YoutubeSearchRunner(Activity context, YouTubePlayer youTubePlayer, String[] songsList, ListView musicListView) {
+            _context = context;
             _youtubePlayer = youTubePlayer;
             _songsList = songsList;
+            _musicListView = musicListView;
         }
 
 
@@ -143,17 +152,31 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
         @Override
         public void run() {
 
-            List<String> rankedMusicList= MusicRankCollector.GetCountryMusicRank("Canada");
+            List<String> rankedMusicNameList= MusicRankCollector.GetCountryMusicRank("Canada");
 
-            List<String> playList = new ArrayList<>();
+            final List<String> youTubeIdList = new ArrayList<>();
+            final List<String> playableMusicNameList = new ArrayList<>();
 
-            for (String songName : rankedMusicList) {
+            for (int i = 0; i < rankedMusicNameList.size(); i++) {
+                String songName = rankedMusicNameList.get(i);
                 List<SearchResult> searchResults = GetYoutubeSearch(songName);
                 if (!searchResults.isEmpty()) {
-                    playList.add(searchResults.get(0).getId().getVideoId());
+                    youTubeIdList.add(searchResults.get(0).getId().getVideoId());
+                    playableMusicNameList.add(rankedMusicNameList.get(i));
                 }
             }
-            _youtubePlayer.cueVideos(playList);
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.list_view_layout, R.id.textView, playableMusicNameList);
+                    _musicListView.setAdapter(adapter);
+                }
+            });
+
+            _youtubePlayer.setPlaylistEventListener(new YtListener(playableMusicNameList, _musicListView, _context));
+
+            _youtubePlayer.cueVideos(youTubeIdList);
             _youtubePlayer.play();
         }
     }
