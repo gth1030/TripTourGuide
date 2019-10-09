@@ -37,8 +37,8 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
 
     private static YouTube youtube;
 
-
-    private String[] songList = new String[]{"Truth Hurts", "Senorita", "Someone You Loved", "Ran$om"};
+    private static String[] youTubeList = new String[]{"P00HMxdsVZI", "Pkh8UtuejGw", "u1yVCeXYya4", "1XzY2ij_vL4" };
+    private static String[] songList = new String[]{"Truth Hurts", "Senorita", "Someone You Loved", "Ran$om"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
         if (!b) {
-            Thread thread = new Thread(new YoutubeSearchRunner(this, youTubePlayer, songList, musicNameListView));
+            Thread thread = new Thread(new YoutubeSearchRunner(this, youTubePlayer, musicNameListView));
             thread.start();
         }
     }
@@ -91,14 +91,12 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
 
         private YouTubePlayer _youtubePlayer;
 
-        String[] _songsList;
         ListView _musicListView;
         Activity _context;
 
-        public YoutubeSearchRunner(Activity context, YouTubePlayer youTubePlayer, String[] songsList, ListView musicListView) {
+        public YoutubeSearchRunner(Activity context, YouTubePlayer youTubePlayer, ListView musicListView) {
             _context = context;
             _youtubePlayer = youTubePlayer;
-            _songsList = songsList;
             _musicListView = musicListView;
         }
 
@@ -157,14 +155,21 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
             final List<String> youTubeIdList = new ArrayList<>();
             final List<String> playableMusicNameList = new ArrayList<>();
 
-            for (int i = 0; i < rankedMusicNameList.size(); i++) {
+            // TODO unblock this for network test
+            /*for (int i = 0; i < rankedMusicNameList.size(); i++) {
                 String songName = rankedMusicNameList.get(i);
                 List<SearchResult> searchResults = GetYoutubeSearch(songName);
                 if (!searchResults.isEmpty()) {
                     youTubeIdList.add(searchResults.get(0).getId().getVideoId());
                     playableMusicNameList.add(rankedMusicNameList.get(i));
                 }
-            }
+            }*/
+
+
+            for (String a : youTubeList)
+                youTubeIdList.add(a);
+            for (String a : songList)
+                playableMusicNameList.add(a);
 
             runOnUiThread(new Runnable() {
                 @Override
@@ -180,5 +185,9 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
             _youtubePlayer.play();
         }
     }
+
+
+
+
 
 }
