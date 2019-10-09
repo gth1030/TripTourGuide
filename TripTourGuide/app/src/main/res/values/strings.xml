@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TripTourGuide</string>
+    <string name="title_activity_startlocation">Map</string>
 </resources>

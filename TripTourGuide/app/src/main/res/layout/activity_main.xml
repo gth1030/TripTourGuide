@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|left"
-            android:onClick="btn1method"
+            android:onClick="btnBeforemethod"
             android:text="여행 전 단계" />
 
         <Button
@@ -25,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
+            android:onClick="btnWhilemethod"
             android:text="여행 중 단계" />
 
         <Button
@@ -32,14 +33,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|right"
-            android:text="여행 후 단계" />
+            android:onClick="btnlocationmethod"
+            android:text="여행 위치" />
 
     </LinearLayout>
 
-    <CalendarView
+    <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="312dp"
         android:layout_gravity="center" />
 
-</LinearLayoutinearlayout>
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ccp_showFullName="true"
+        app:ccp_showPhoneCode="false"
+        app:ccp_showNameCode="false"/>
+
+</LinearLayout>
