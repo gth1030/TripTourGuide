@@ -6,11 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.wx.wheelview.widget.WheelView
+        android:id="@+id/tripPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/musicActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/musicActivity"
         android:layout_width="411dp"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="200dp"
         android:onClick="musicBtn"
         android:text="MusicActivity"
         app:layout_constraintEnd_toEndOf="parent"
