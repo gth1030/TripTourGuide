@@ -51,4 +51,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.google.apis:google-api-services-youtube:v3-rev212-1.25.0'
+    implementation 'com.hbb20:ccp:2.3.2'
+    implementation 'com.archit.calendar:awesome-calendar:1.1.5'
 }

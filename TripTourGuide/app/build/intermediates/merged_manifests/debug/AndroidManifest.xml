@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.triptourguide.TripSettings" />
         <activity android:name="com.example.triptourguide.MusicListener" />
         <activity android:name="com.example.triptourguide.MainActivity" >
             <intent-filter>
