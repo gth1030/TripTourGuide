@@ -35,11 +35,9 @@ public class DBopenHelper extends SQLiteOpenHelper {
 
 
     private void LoadDemoData(SQLiteDatabase db) {
-        String query = "insert into Trip (name) values (\"United States\");";
+        String query = "insert into Trip (name) values (\"미국 캐나다 여행!!\");";
         db.execSQL(query);
-        query = "insert into Trip (name) values (\"Canada\");";
-        db.execSQL(query);
-        query = "insert into Trip (name) values (\"Singapore\");";
+        query = "insert into Trip (name) values (\"싱가포르 여행 :) \");";
         db.execSQL(query);
 
         query = "insert into\n" +
@@ -59,6 +57,46 @@ public class DBopenHelper extends SQLiteOpenHelper {
                 "    \"Boston\",\n" +
                 "    2019 -10 -22,\n" +
                 "    2019 -10 -24\n" +
+                "  );";
+        db.execSQL(query);
+
+        query = "insert into\n" +
+                "  Cities (\n" +
+                "    tripId,\n" +
+                "    tripOrder,\n" +
+                "    countryName,\n" +
+                "    cityName,\n" +
+                "    startDate,\n" +
+                "    endDate\n" +
+                "  )\n" +
+                "values\n" +
+                "  (\n" +
+                "    1,\n" +
+                "    2,\n" +
+                "    \"Canada\",\n" +
+                "    \"Montreal\",\n" +
+                "    2019 -10 -24,\n" +
+                "    2019 -10 -26\n" +
+                "  );";
+        db.execSQL(query);
+
+        query = "insert into\n" +
+                "  Cities (\n" +
+                "    tripId,\n" +
+                "    tripOrder,\n" +
+                "    countryName,\n" +
+                "    cityName,\n" +
+                "    startDate,\n" +
+                "    endDate\n" +
+                "  )\n" +
+                "values\n" +
+                "  (\n" +
+                "    1,\n" +
+                "    3,\n" +
+                "    \"Canada\",\n" +
+                "    \"Ottawa\",\n" +
+                "    2019 -10 -26,\n" +
+                "    2019 -10 -30\n" +
                 "  );";
         db.execSQL(query);
 
