@@ -2,9 +2,12 @@ package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,14 +25,20 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class TripSettings extends AppCompatActivity {
 
 
     CountryCodePicker ccp;
+    Spinner statespinner;
+    Spinner cityspinner;
     TextView text3;
-    Map<String, List<Map<String, List<String>>>> countryToState = new HashMap<>();
-
+    Map<String, Map<String, List<String>>> countryToState = new HashMap<>();
+    String select;
+    List<String> selectedstate;
+    String[] statedate;
+    Context _context;
 
     private String getJsonString()
     {
@@ -56,8 +65,17 @@ public class TripSettings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip_settings);
+
+        _context = this;
+        statedate = new String[0];
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
         text3 = findViewById(R.id.textView3);
+        statespinner = (Spinner)findViewById(R.id.statespinner);
+        ArrayAdapter<String> stateadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, statedate);
+        statespinner.setAdapter(stateadapter);
+
+
+
 
         try {
             JSONArray countryCityNamesJson = new JSONArray(getJsonString());
@@ -65,14 +83,15 @@ public class TripSettings extends AppCompatActivity {
 
                 JSONObject country = countryCityNamesJson.getJSONObject(i);
                 String countryName = country.getString("name");
+
                 JSONObject state = country.getJSONObject("states");
+
                 Iterator<String> keys = state.keys();
 
-                countryToState.put(countryName, new ArrayList<Map<String, List<String>>>());
+                countryToState.put(countryName, new HashMap<String, List<String>>());
 
                 while(keys.hasNext()) {
-                    Map<String, List<String>> stateMap = new HashMap<>();
-                    countryToState.get(countryName).add(stateMap);
+                    Map<String, List<String>> stateMap = countryToState.get(countryName);
                     String stateName = keys.next();
                     JSONArray cities = state.getJSONArray(stateName);
                     List<String> cityList = new ArrayList<>();
@@ -84,8 +103,6 @@ public class TripSettings extends AppCompatActivity {
 
             }
 
-            String a = "";
-
         } catch (JSONException e) {
             Log.d("error found", "error found");
         }
@@ -94,6 +111,18 @@ public class TripSettings extends AppCompatActivity {
         ccp.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
             @Override
                 public void onCountrySelected() {
+                text3.setText(ccp.getSelectedCountryName());
+                select = ccp.getSelectedCountryName();
+                selectedstate = new ArrayList<>();
+
+                Set<String> statesSet = countryToState.get(select).keySet();
+
+                for (String state : statesSet) {
+                    selectedstate.add(state);
+                }
+                statedate = selectedstate.toArray(new String[selectedstate.size()]);
+                ArrayAdapter<String> stateadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, statedate);
+                statespinner.setAdapter(stateadapter);
             }
         });
 
