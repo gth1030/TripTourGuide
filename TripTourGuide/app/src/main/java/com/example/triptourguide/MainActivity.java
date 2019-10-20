@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         wheelView = findViewById(R.id.tripPicker);
         wheelView.setWheelClickable(true);
-        wheelView.setOnWheelItemClickListener(new TripNameClickedListener());
+        wheelView.setOnWheelItemClickListener(new TripNameClickedListener(this));
         wheelView.setWheelAdapter(new ArrayWheelAdapter(this));
         wheelView.setSkin(WheelView.Skin.Common);
         wheelView.setWheelData(GetTripList(db));

@@ -3,9 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:icon="@mipmap/plane_departure_solid"
         android:title="preTrip"
         app:showAsAction="always" />
     <item
+        android:icon="@drawable/plane_departure_solid_type1"
         android:title="inTrip"
         app:showAsAction="always" />
     <item
