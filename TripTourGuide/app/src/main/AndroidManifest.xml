@@ -17,7 +17,7 @@
         <activity
             android:name=".TripProviderActivity"
             android:label="@string/title_activity_trip_provider"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MusicListener" />
         <activity android:name=".MainActivity">
             <intent-filter>

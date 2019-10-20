@@ -42,7 +42,7 @@
 25        android:theme="@style/AppTheme" >
 25-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
 26        <activity
-26-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-20:68
+26-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-20:59
 27            android:name="com.example.triptourguide.TripProviderActivity"
 27-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:13-49
 28            android:label="@string/title_activity_trip_provider"

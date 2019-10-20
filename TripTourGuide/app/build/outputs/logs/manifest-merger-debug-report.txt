@@ -98,7 +98,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Ad
 	android:theme
 		ADDED from E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
 activity#com.example.triptourguide.TripProviderActivity
-ADDED from E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-20:68
+ADDED from E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-20:59
 	android:label
 		ADDED from E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:13-65
 	android:theme

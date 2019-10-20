@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
             String tripName = c.getString(nameInd);
             tripList.add(tripName);
         }
-
-        tripList.add("+ new Trip");
         return tripList;
     }
 
