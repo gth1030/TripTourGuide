@@ -3,14 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:icon="@mipmap/plane_departure_solid"
+        android:icon="@mipmap/airplane_depart48"
         android:title="preTrip"
         app:showAsAction="always" />
     <item
-        android:icon="@drawable/plane_departure_solid_type1"
+        android:icon="@mipmap/airplane_mode52"
         android:title="inTrip"
         app:showAsAction="always" />
     <item
+        android:icon="@mipmap/airplane_land48"
         android:title="postTrip"
         app:showAsAction="always" />
 </menu>
