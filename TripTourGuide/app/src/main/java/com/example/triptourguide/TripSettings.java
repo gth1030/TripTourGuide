@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -33,19 +35,48 @@ public class TripSettings extends AppCompatActivity {
     CountryCodePicker ccp;
     Spinner statespinner;
     Spinner cityspinner;
+    Spinner activityspinner;
     TextView text3;
     Map<String, Map<String, List<String>>> countryToState = new HashMap<>();
-    String select;
+    Map<String, List<String>> cityactivity = new HashMap<>();
+    String pickedcountry;
+    String pickedstate;
+    String pickedcity;
     List<String> selectedstate;
-    String[] statedate;
+    List<String> selectedcity;
+    List<String> selectedactivities;
+    String[] statedata;
+    String[] citydata;
+    String[] activitydata;
     Context _context;
 
-    private String getJsonString()
+    private String getJson1String()
     {
         String json = "";
 
         try {
             InputStream is = getAssets().open("CityNames.json");
+            int fileSize = is.available();
+
+            byte[] buffer = new byte[fileSize];
+            is.read(buffer);
+            is.close();
+
+            json = new String(buffer, "UTF-8");
+        }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+        }
+        return json;
+    }
+
+    private String getJson2String()
+    {
+        String json = "";
+
+        try {
+            InputStream is = getAssets().open("CityActivityList.json");
             int fileSize = is.available();
 
             byte[] buffer = new byte[fileSize];
@@ -67,18 +98,31 @@ public class TripSettings extends AppCompatActivity {
         setContentView(R.layout.activity_trip_settings);
 
         _context = this;
-        statedate = new String[0];
+        statedata = new String[0];
+        citydata = new String[0];
+        activitydata = new String[0];
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
         text3 = findViewById(R.id.textView3);
         statespinner = (Spinner)findViewById(R.id.statespinner);
-        ArrayAdapter<String> stateadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, statedate);
+        ArrayAdapter<String> stateadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, statedata);
         statespinner.setAdapter(stateadapter);
 
+        cityspinner = (Spinner)findViewById(R.id.cityspinner);
+        ArrayAdapter<String> cityadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, citydata);
+        cityspinner.setAdapter(cityadapter);
 
+        StateListener stateListener = new StateListener();
+        statespinner.setOnItemSelectedListener(stateListener);
 
+        activityspinner = (Spinner)findViewById(R.id.activityspinner);
+        ArrayAdapter<String> activitiyadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, activitydata);
+        activityspinner.setAdapter(activitiyadapter);
+
+        CityListener cityListener = new CityListener();
+        cityspinner.setOnItemSelectedListener(cityListener);
 
         try {
-            JSONArray countryCityNamesJson = new JSONArray(getJsonString());
+            JSONArray countryCityNamesJson = new JSONArray(getJson1String());
             for (int i = 0; i < countryCityNamesJson.length(); i++) {
 
                 JSONObject country = countryCityNamesJson.getJSONObject(i);
@@ -107,21 +151,39 @@ public class TripSettings extends AppCompatActivity {
             Log.d("error found", "error found");
         }
 
+        try {
+            JSONArray CityActivityJson = new JSONArray(getJson2String());
+            for (int i = 0; i < CityActivityJson.length(); i++) {
+
+                JSONObject city = CityActivityJson.getJSONObject(i);
+                String cityname = city.getString("name");
+                JSONArray cityListArr = city.getJSONArray("activityList");
+                List<String> cityList = new ArrayList<>();
+                for (int j = 0; j < cityListArr.length(); j++) {
+                    cityList.add(cityListArr.getString(j));
+                }
+                cityactivity.put(cityname, cityList);
+            }
+
+        } catch (JSONException e) {
+            Log.d("error found", "error found");
+        }
+
 
         ccp.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
             @Override
                 public void onCountrySelected() {
                 text3.setText(ccp.getSelectedCountryName());
-                select = ccp.getSelectedCountryName();
+                pickedcountry = ccp.getSelectedCountryName();
                 selectedstate = new ArrayList<>();
 
-                Set<String> statesSet = countryToState.get(select).keySet();
+                Set<String> statesSet = countryToState.get(pickedcountry).keySet();
 
                 for (String state : statesSet) {
                     selectedstate.add(state);
                 }
-                statedate = selectedstate.toArray(new String[selectedstate.size()]);
-                ArrayAdapter<String> stateadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, statedate);
+                statedata = selectedstate.toArray(new String[selectedstate.size()]);
+                ArrayAdapter<String> stateadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, statedata);
                 statespinner.setAdapter(stateadapter);
             }
         });
@@ -129,6 +191,41 @@ public class TripSettings extends AppCompatActivity {
 
     }
 
+    class StateListener implements AdapterView.OnItemSelectedListener{
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            pickedstate = (String) statespinner.getSelectedItem();
+            selectedcity = new ArrayList<>();
+            selectedcity = countryToState.get(pickedcountry).get(pickedstate);
 
+            citydata = selectedcity.toArray(new String[selectedcity.size()]);
+            ArrayAdapter<String> cityadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, citydata);
+            cityspinner.setAdapter(cityadapter);
+        }
 
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    }
+
+    class CityListener implements AdapterView.OnItemSelectedListener{
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            pickedcity = (String) cityspinner.getSelectedItem();
+            selectedactivities = new ArrayList<>();
+            if(cityactivity.get(pickedcity) == null)
+                return;
+            selectedactivities = cityactivity.get(pickedcity);
+
+            activitydata = selectedactivities.toArray(new String[selectedactivities.size()]);
+            ArrayAdapter<String> activityadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, activitydata);
+            activityspinner.setAdapter(activityadapter);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    }
 }

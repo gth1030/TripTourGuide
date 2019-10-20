@@ -1124,20 +1124,8 @@
     "capital": "Singapur",
     "currency": "SGD",
     "states": {
-      "Central Singapore Community Development Council": [
+      "Singapore": [
         "Singapore"
-      ],
-      "North East Community Development Council": [
-        "Singapore"
-      ],
-      "North West Community Development Council": [
-        "Woodlands"
-      ],
-      "South East Community Development Council": [
-        "Woodlands"
-      ],
-      "South West Community Development Council": [
-        "Woodlands"
       ]
     }
   },
