@@ -3,15 +3,15 @@ package com.example.triptourguide;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.hbb20.CountryCodePicker;
 
@@ -19,11 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -36,8 +32,6 @@ public class TripSettings extends AppCompatActivity {
     CountryCodePicker ccp;
     Spinner statespinner;
     Spinner cityspinner;
-    Spinner activityspinner;
-    TextView text3;
     Map<String, Map<String, List<String>>> countryToState = new HashMap<>();
     Map<String, List<String>> cityactivity = new HashMap<>();
     String pickedcountry;
@@ -51,47 +45,9 @@ public class TripSettings extends AppCompatActivity {
     String[] activitydata;
     Context _context;
 
-    private String getJson1String()
-    {
-        String json = "";
+    GridView activityListGridView;
 
-        try {
-            InputStream is = getAssets().open("CityNames.json");
-            int fileSize = is.available();
 
-            byte[] buffer = new byte[fileSize];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, StandardCharsets.UTF_8);
-        }
-        catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
-        return json;
-    }
-
-    private String getJson2String()
-    {
-        String json = "";
-
-        try {
-            InputStream is = getAssets().open("CityActivityList.json");
-            int fileSize = is.available();
-
-            byte[] buffer = new byte[fileSize];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, StandardCharsets.UTF_8);
-        }
-        catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
-        return json;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +59,6 @@ public class TripSettings extends AppCompatActivity {
         citydata = new String[0];
         activitydata = new String[0];
         ccp = findViewById(R.id.ccp);
-        text3 = findViewById(R.id.textView3);
         statespinner = findViewById(R.id.statespinner);
         ArrayAdapter<String> stateadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, statedata);
         statespinner.setAdapter(stateadapter);
@@ -115,15 +70,17 @@ public class TripSettings extends AppCompatActivity {
         StateListener stateListener = new StateListener();
         statespinner.setOnItemSelectedListener(stateListener);
 
-        activityspinner = findViewById(R.id.activityspinner);
-        ArrayAdapter<String> activitiyadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, activitydata);
-        activityspinner.setAdapter(activitiyadapter);
+
+        activityListGridView = findViewById(R.id.activity_list_grid);
+        ActivityListGridViewAdapter adapter = new ActivityListGridViewAdapter(this, new ArrayList<String>());
+        activityListGridView.setAdapter(adapter);
+        activityListGridView.setOnItemClickListener(new ActivityListGridListner(adapter));
 
         CityListener cityListener = new CityListener();
         cityspinner.setOnItemSelectedListener(cityListener);
 
         try {
-            JSONArray countryCityNamesJson = new JSONArray(getJson1String());
+            JSONArray countryCityNamesJson = new JSONArray(TripUtils.ReadFileFromAsset(_context, "CityNames.json"));
             for (int i = 0; i < countryCityNamesJson.length(); i++) {
 
                 JSONObject country = countryCityNamesJson.getJSONObject(i);
@@ -153,7 +110,7 @@ public class TripSettings extends AppCompatActivity {
         }
 
         try {
-            JSONArray CityActivityJson = new JSONArray(getJson2String());
+            JSONArray CityActivityJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "CityActivityList.json"));
             for (int i = 0; i < CityActivityJson.length(); i++) {
 
                 JSONObject city = CityActivityJson.getJSONObject(i);
@@ -174,7 +131,6 @@ public class TripSettings extends AppCompatActivity {
         ccp.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
             @Override
             public void onCountrySelected() {
-                text3.setText(ccp.getSelectedCountryName());
                 pickedcountry = ccp.getSelectedCountryName();
                 selectedstate = new ArrayList<>();
 
@@ -200,8 +156,8 @@ public class TripSettings extends AppCompatActivity {
             selectedcity = countryToState.get(pickedcountry).get(pickedstate);
 
             citydata = selectedcity.toArray(new String[selectedcity.size()]);
-            ArrayAdapter<String> cityadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, citydata);
-            cityspinner.setAdapter(cityadapter);
+            ArrayAdapter<String> cityAdapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, citydata);
+            cityspinner.setAdapter(cityAdapter);
         }
 
         @Override
@@ -219,9 +175,9 @@ public class TripSettings extends AppCompatActivity {
                 return;
             selectedactivities = cityactivity.get(pickedcity);
 
-            activitydata = selectedactivities.toArray(new String[selectedactivities.size()]);
-            ArrayAdapter<String> activityadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, activitydata);
-            activityspinner.setAdapter(activityadapter);
+            ActivityListGridViewAdapter adapter = new ActivityListGridViewAdapter(_context, selectedactivities);
+            ((ActivityListGridListner) activityListGridView.getOnItemClickListener()).ResetAdapter(adapter);
+            activityListGridView.setAdapter(adapter);
         }
 
         @Override
@@ -229,4 +185,36 @@ public class TripSettings extends AppCompatActivity {
 
         }
     }
+
+    class ActivityListGridListner implements AdapterView.OnItemClickListener {
+
+        ActivityListGridViewAdapter _adapter;
+
+        public ActivityListGridListner(ActivityListGridViewAdapter adapter) {
+            _adapter = adapter;
+        }
+
+        public void ResetAdapter(ActivityListGridViewAdapter adapter){
+            _adapter = adapter;
+        }
+
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            if (_adapter.GridViewSelection[position]) {
+                _adapter.GridViewSelection[position] = false;
+                view.setBackgroundColor(Color.GRAY);
+            } else {
+                _adapter.GridViewSelection[position] = true;
+                view.setBackgroundColor(Color.BLACK);
+            }
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    activityListGridView.setAdapter(_adapter);
+                }
+            });
+        }
+    }
+
 }

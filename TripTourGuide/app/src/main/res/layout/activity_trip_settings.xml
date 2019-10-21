@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +12,11 @@
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/ccp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.hbb20.CountryCodePicker
         android:id="@+id/ccp"
@@ -20,32 +24,56 @@
         android:layout_height="wrap_content"
         app:ccp_showFullName="true"
         app:ccp_showNameCode="true"
-        app:ccp_showPhoneCode="false" />
+        app:ccp_showPhoneCode="false"
+        app:layout_constraintBottom_toTopOf="@+id/statespinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" /><![CDATA[/>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="214dp"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+    />/>
+
+    ]]>
 
     <Spinner
         android:id="@+id/statespinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cityspinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccp" />/>/>
 
     <Spinner
         android:id="@+id/cityspinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Spinner
-        android:id="@+id/activityspinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/activity_list_grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statespinner"/>
 
     <GridView
         android:id="@+id/activity_list_grid"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:numColumns="5"
+        app:layout_constraintBottom_toTopOf="@+id/create_trip_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityspinner">
 
-</LinearLayout>
+    </GridView>
+
+    <Button
+        android:id="@+id/create_trip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00494444"
+        android:text="Create New Trip!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_list_grid"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

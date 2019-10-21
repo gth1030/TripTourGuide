@@ -1,18 +1,18 @@
 [
   {
     "name" : "Boston",
-    "activityList" : ["city sightseeing", "swimming", "cruise"]
+    "activityList" : ["city", "swimming", "cruise"]
   },
   {
     "name" : "Montreal",
-    "activityList" : ["city sightseeing", "swimming", "fishing", "snowboarding"]
+    "activityList" : ["city", "swimming", "fishing", "snowboarding"]
   },
   {
     "name" : "Ottawa",
-    "activityList" : ["city sightseeing", "beach picnic", "yacht", "swimming", "fishing"]
+    "activityList" : ["city", "beach picnic", "yacht", "swimming", "fishing"]
   },
   {
     "name" : "Singapore",
-    "activityList" : ["swimming", "hiking", "golf", "fishing", "scooter", "biking", "scuba diving"]
+    "activityList" : ["swimming", "hiking", "golf", "fishing", "scooter", "biking", "snorkel"]
   }
 ]
