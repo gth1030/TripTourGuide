@@ -19,7 +19,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_26" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -58,30 +58,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="220" column="56" lean-forward="true" selection-start-line="220" selection-start-column="56" selection-end-line="220" selection-end-column="56" />
+            <state relative-caret-position="498">
+              <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
               <folding>
-                <element signature="method#getJsonString#0;class#TripSettings#0" />
-                <element signature="method#getJsonString#1;class#TripSettings#0" />
-                <element signature="e#2337#2345#0" expanded="true" />
-                <element signature="e#3399#3407#0" expanded="true" />
                 <element signature="method#onNothingSelected#0;class#StateListener#0;class#TripSettings#0" />
                 <element signature="method#onNothingSelected#0;class#CityListener#0;class#TripSettings#0" />
               </folding>
@@ -92,26 +79,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/assets/CityActivityList.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="101" lean-forward="true" selection-start-line="15" selection-start-column="101" selection-end-line="15" selection-end-column="101" />
+            <state relative-caret-position="76">
+              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/CityNames.json">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/SingaporePrepare.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21413">
-              <caret line="1127" column="17" selection-start-line="1127" selection-start-column="17" selection-end-line="1127" selection-end-column="17" />
+            <state relative-caret-position="1539">
+              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/BostonPrepare.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="3" lean-forward="true" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/OttawaPrepare.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="449">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_prepare_item.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/prepareItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -120,8 +147,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="418">
+              <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -155,16 +182,22 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/CountryStateCity.json" />
         <option value="$PROJECT_DIR$/app/src/main/assets/CityNames.json" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/assets/CityActivityList.json" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/prepareItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_prepare_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/BostonPrepare.json" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/MontrealPrepare.json" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/OttawaPrepare.json" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/CityActivityList.json" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/SingaporePrepare.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-5" />
-    <option name="width" value="988" />
-    <option name="height" value="1039" />
+    <option name="x" value="679" />
+    <option name="y" value="113" />
+    <option name="width" value="1105" />
+    <option name="height" value="969" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -214,15 +247,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_28" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-10-21T13:21:03.591Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="D:/android" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -326,11 +362,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-5" width="988" height="1039" extended-state="0" />
+    <frame x="679" y="113" width="1105" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1875" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27751195" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -343,16 +379,16 @@
       <window_info anchor="bottom" id="TODO" order="2" weight="0.328341" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.328341" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5008104" side_tool="true" weight="0.328341" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5014354" side_tool="true" visible="true" weight="0.3576555" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32949308" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49918962" visible="true" weight="0.33480662" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4985646" visible="true" weight="0.3576555" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32969433" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.3298217" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.32942432" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
@@ -360,14 +396,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_while_trip.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_before_trip.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_after_trip.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_yt.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/country_state_city.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_view_layout.xml" />
@@ -394,44 +423,27 @@
     </entry>
     <entry file="file://D:/android/sources/android-29/java/util/Iterator.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/AppDataFiles/새 텍스트 문서.txt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/start.java" />
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
+        <state relative-caret-position="505">
           <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state relative-caret-position="418">
+          <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -449,25 +461,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/CityActivityList.json">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="101" lean-forward="true" selection-start-line="15" selection-start-column="101" selection-end-line="15" selection-end-column="101" />
+        <state relative-caret-position="190">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/prepareItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_prepare_item.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="220" column="56" lean-forward="true" selection-start-line="220" selection-start-column="56" selection-end-line="220" selection-end-column="56" />
+        <state relative-caret-position="498">
+          <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
           <folding>
-            <element signature="method#getJsonString#0;class#TripSettings#0" />
-            <element signature="method#getJsonString#1;class#TripSettings#0" />
-            <element signature="e#2337#2345#0" expanded="true" />
-            <element signature="e#3399#3407#0" expanded="true" />
             <element signature="method#onNothingSelected#0;class#StateListener#0;class#TripSettings#0" />
             <element signature="method#onNothingSelected#0;class#CityListener#0;class#TripSettings#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/MontrealPrepare.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/OttawaPrepare.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/CityActivityList.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/SingaporePrepare.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/BostonPrepare.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="3" lean-forward="true" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
