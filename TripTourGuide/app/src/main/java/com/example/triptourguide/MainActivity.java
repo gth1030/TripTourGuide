@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     WheelView wheelView;
+    Button newTrip;
 
 
     @Override
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         wheelView.setWheelAdapter(new ArrayWheelAdapter(this));
         wheelView.setSkin(WheelView.Skin.Common);
         wheelView.setWheelData(GetTripList(db));
+
+        newTrip = findViewById(R.id.new_trip);
+
+    }
+
+    public void newTripBtn(View view) {
+        Intent intent = new Intent(this, TripSettings.class);
+        startActivity(intent);
     }
 
 

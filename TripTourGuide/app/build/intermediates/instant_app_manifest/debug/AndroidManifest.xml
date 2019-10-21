@@ -24,6 +24,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.triptourguide.TripSettings" />
         <activity
             android:name="com.example.triptourguide.TripProviderActivity"
             android:label="@string/title_activity_trip_provider"

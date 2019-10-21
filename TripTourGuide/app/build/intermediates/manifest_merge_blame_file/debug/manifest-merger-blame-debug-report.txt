@@ -6,66 +6,69 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+8-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+9-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-11-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:5-81
-11-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:22-78
+11-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:5-81
+11-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:5-79
-12-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:5-76
-13-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:22-73
+13-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:5-76
+13-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:22-73
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:5-67
-14-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
+14-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:5-67
+14-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
 15
 16    <application
-16-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-29:19
+16-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-30:19
 17        android:allowBackup="true"
-17-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
+17-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.0.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:18-86
+18-->[androidx.core:core:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:12:9-43
+20-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:12:9-43
 21        android:label="@string/app_name"
-21-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:13:9-41
+21-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:13:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
+22-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
 23        android:supportsRtl="true"
-23-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
+23-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
 24        android:testOnly="true"
 25        android:theme="@style/AppTheme" >
-25-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
-26        <activity
-26-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-20:59
-27            android:name="com.example.triptourguide.TripProviderActivity"
-27-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:13-49
-28            android:label="@string/title_activity_trip_provider"
-28-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:13-65
-29            android:theme="@style/AppTheme.NoActionBar" />
-29-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:13-56
-30        <activity android:name="com.example.triptourguide.MusicListener" />
-30-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-51
-30-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-48
-31        <activity android:name="com.example.triptourguide.MainActivity" >
-31-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:9-28:20
-31-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:19-47
-32            <intent-filter>
-32-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:13-27:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:17-69
-33-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:26:17-77
-35-->E:\Game\project1\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:26:27-74
-36            </intent-filter>
-37        </activity>
-38    </application>
-39
-40</manifest>
+25-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
+26        <activity android:name="com.example.triptourguide.TripSettings" />
+26-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-59
+26-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:19-47
+27        <activity
+27-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-21:59
+28            android:name="com.example.triptourguide.TripProviderActivity"
+28-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:13-49
+29            android:label="@string/title_activity_trip_provider"
+29-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:13-65
+30            android:theme="@style/AppTheme.NoActionBar" />
+30-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:13-56
+31        <activity android:name="com.example.triptourguide.MusicListener" />
+31-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:9-51
+31-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:19-48
+32        <activity android:name="com.example.triptourguide.MainActivity" >
+32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:9-29:20
+32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:19-47
+33            <intent-filter>
+33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:13-28:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-69
+34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:27:17-77
+36-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:27:27-74
+37            </intent-filter>
+38        </activity>
+39    </application>
+40
+41</manifest>
