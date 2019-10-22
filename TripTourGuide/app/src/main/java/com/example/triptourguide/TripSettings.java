@@ -166,6 +166,7 @@ public class TripSettings extends AppCompatActivity {
                 cityactivity.put(cityname, cityList);
             }
 
+
         } catch (JSONException e) {
             Log.d("error found", "error found");
         }

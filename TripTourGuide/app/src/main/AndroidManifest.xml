@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TripSettings"></activity>
+        <activity android:name=".trip_prepare" />
+        <activity android:name=".TripSettings" />
         <activity
             android:name=".TripProviderActivity"
             android:label="@string/title_activity_trip_provider"

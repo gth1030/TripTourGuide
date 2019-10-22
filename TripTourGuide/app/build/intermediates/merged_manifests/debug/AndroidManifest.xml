@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.triptourguide.trip_prepare" />
         <activity android:name="com.example.triptourguide.TripSettings" />
         <activity
             android:name="com.example.triptourguide.TripProviderActivity"

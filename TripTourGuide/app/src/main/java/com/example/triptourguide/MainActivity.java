@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     WheelView wheelView;
     Button newTrip;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void musicBtn(View view) {
         Intent intent = new Intent(this, MusicListener.class);
+        startActivity(intent);
+    }
+
+    public void supplyBtn(View view){
+        Intent intent = new Intent(getApplicationContext(), trip_prepare.class);
         startActivity(intent);
     }
 
