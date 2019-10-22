@@ -33,6 +33,11 @@ public class DBopenHelper extends SQLiteOpenHelper {
 
     }
 
+    public void CreateNewTrip() {
+
+    }
+
+
 
     private void LoadDemoData(SQLiteDatabase db) {
         String query = "insert into Trip (name) values (\"미국 캐나다 여행!!\");";
@@ -99,7 +104,6 @@ public class DBopenHelper extends SQLiteOpenHelper {
                 "    2019 -10 -30\n" +
                 "  );";
         db.execSQL(query);
-
 
     }
 

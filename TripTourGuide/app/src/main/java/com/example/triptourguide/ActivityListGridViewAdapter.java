@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,11 +30,13 @@ public class ActivityListGridViewAdapter extends BaseAdapter {
             GridViewSelection[i] = false;
     }
 
-    public void ResetActivityList(List<String> activityList) {
-        _activityList = activityList;
-        GridViewSelection = new Boolean[_activityList.size()];
-        for (int i = 0; i < GridViewSelection.length; i++)
-            GridViewSelection[i] = false;
+    public List<String> GetActiveActivities(){
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < _activityList.size(); i++) {
+            if (GridViewSelection[i])
+                result.add(_activityList.get(i));
+        }
+        return result;
     }
 
     @Override

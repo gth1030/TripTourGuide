@@ -1,5 +1,6 @@
 package com.example.triptourguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -10,11 +11,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 public class TripProviderActivity extends AppCompatActivity {
 
-    YtFragment ytFragment = new YtFragment();
-    DummyFragment dummyFragment = new DummyFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +24,8 @@ public class TripProviderActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.youtube_fragment, ytFragment);
-
-        transaction.commit();
-
 
     }
-
 
 
     @Override
@@ -39,5 +33,21 @@ public class TripProviderActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.content_trip_option_menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId())
+        {
+            case R.id.in_trip:
+                Intent intent = new Intent(this, MusicListener.class);
+                startActivity(intent);
+                break;
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

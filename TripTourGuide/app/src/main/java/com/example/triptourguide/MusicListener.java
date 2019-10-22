@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.triptourguide.Listners.YtPlayerStateChangeListner;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -64,6 +64,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
         myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.youtube_fragment);
         myYouTubePlayerFragment.initialize(DEVELOPER_KEY, this);
 
+
     }
 
 
@@ -95,8 +96,10 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
             getYouTubePlayerProvider().initialize(DEVELOPER_KEY, this);
         }
     }
-    protected YouTubePlayer.Provider getYouTubePlayerProvider() {
-        return (YouTubePlayerView)findViewById(R.id.youtube_fragment);
+
+
+    protected YouTubePlayerView getYouTubePlayerProvider() {
+        return (YouTubePlayerView) findViewById(R.id.youtube_fragment);
     }
 
 
@@ -127,14 +130,10 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
                 // Define the API request for retrieving search results.
                 YouTube.Search.List search = youtube.search().list("id,snippet");
 
-                // Set your developer key from the {{ Google Cloud Console }} for
-                // non-authenticated requests. See:
-                // {{ https://cloud.google.com/console }}
                 search.setKey(DEVELOPER_KEY);
                 search.setQ(searchTerm);
 
                 // Restrict the search results to only include videos. See:
-                // https://developers.google.com/youtube/v3/docs/search/list#type
                 search.setType("video");
 
                 // To increase efficiency, only retrieve the fields that the
@@ -188,15 +187,17 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.list_view_layout, R.id.textView, playableMusicNameList);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.list_view_layout, R.id.music_title, playableMusicNameList);
                     _musicListView.setAdapter(adapter);
                 }
             });
 
             _youtubePlayer.setPlaylistEventListener(new YtListener(playableMusicNameList, _musicListView, _context));
+            _youtubePlayer.setPlayerStateChangeListener(new YtPlayerStateChangeListner(playableMusicNameList, _musicListView, _context));
 
             _youtubePlayer.cueVideos(youTubeIdList);
             _youtubePlayer.play();
+
         }
     }
 

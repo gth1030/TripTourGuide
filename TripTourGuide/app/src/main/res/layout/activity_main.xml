@@ -9,20 +9,8 @@
     <com.wx.wheelview.widget.WheelView
         android:id="@+id/tripPicker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/musicActivity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/musicActivity"
-        android:layout_width="411dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="448dp"
-        android:onClick="musicBtn"
-        android:text="MusicActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="300px"
+        android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,12 +18,16 @@
         android:id="@+id/new_trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginBottom="24dp"
         android:onClick="newTripBtn"
         android:text="+ new Trip"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/musicActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tripPicker" />
+        app:layout_constraintTop_toBottomOf="@+id/tripPicker"
+        app:layout_constraintVertical_bias="0.549" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,15 +42,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void newTripBtn(View view) {
-        Intent intent = new Intent(this, TripSettings.class);
+        Intent intent = new Intent(this, TripCreator.class);
         startActivity(intent);
     }
 
-
-    public void musicBtn(View view) {
-        Intent intent = new Intent(this, MusicListener.class);
-        startActivity(intent);
-    }
 
     public List<String> GetTripList(SQLiteDatabase db) {
 

@@ -3,6 +3,7 @@ package com.example.triptourguide;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,13 +14,17 @@ import android.widget.GridView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.borax12.materialdaterangepicker.date.DatePickerDialog;
+import com.example.triptourguide.Models.CityTripEntity;
 import com.hbb20.CountryCodePicker;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -46,6 +51,9 @@ public class TripSettings extends AppCompatActivity {
     Context _context;
 
     GridView activityListGridView;
+    TextView dateRageTextView;
+    Calendar startDate = Calendar.getInstance();
+    Calendar endDate = Calendar.getInstance();
 
 
 
@@ -59,6 +67,8 @@ public class TripSettings extends AppCompatActivity {
         citydata = new String[0];
         activitydata = new String[0];
         ccp = findViewById(R.id.ccp);
+        dateRageTextView = findViewById(R.id.date_range_text);
+        dateRageTextView.setOnClickListener(new DateRangeViewListner());
         statespinner = findViewById(R.id.statespinner);
         ArrayAdapter<String> stateadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, statedata);
         statespinner.setAdapter(stateadapter);
@@ -148,6 +158,14 @@ public class TripSettings extends AppCompatActivity {
 
     }
 
+    public void addCityBtn(View view) {
+        Intent intent = new Intent();
+        ActivityListGridViewAdapter activityAdapter = (ActivityListGridViewAdapter) activityListGridView.getAdapter();
+        intent.putExtra("newCity", new CityTripEntity(pickedcountry, pickedcity, startDate, endDate, activityAdapter.GetActiveActivities()));
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
     class StateListener implements AdapterView.OnItemSelectedListener{
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -214,6 +232,34 @@ public class TripSettings extends AppCompatActivity {
                     activityListGridView.setAdapter(_adapter);
                 }
             });
+        }
+    }
+
+    class DateRangeViewListner implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Calendar now = Calendar.getInstance();
+            DatePickerDialog dpd = DatePickerDialog.newInstance(
+                    new DateRangeSelectListner(),
+                    now.get(Calendar.YEAR),
+                    now.get(Calendar.MONTH),
+                    now.get(Calendar.DAY_OF_MONTH)
+            );
+            dpd.show(getFragmentManager(), "Datepickerdialog");
+        }
+    }
+
+    class DateRangeSelectListner implements DatePickerDialog.OnDateSetListener {
+
+        @Override
+        public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth, int yearEnd, int monthOfYearEnd, int dayOfMonthEnd) {
+            startDate.set(year, monthOfYear, dayOfMonth);
+            endDate.set(yearEnd, monthOfYearEnd, dayOfMonthEnd);
+
+            String dateStr = year + "." + monthOfYear  + "." + dayOfMonth + " - " + yearEnd + "." + monthOfYearEnd + "." + dayOfMonthEnd;
+
+            dateRageTextView.setText(dateStr);
         }
     }
 

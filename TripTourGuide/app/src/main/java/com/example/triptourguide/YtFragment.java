@@ -5,16 +5,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerSupportFragmentX;
 
 
 public class YtFragment extends Fragment {
@@ -43,28 +39,7 @@ public class YtFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_yt, container, false);
 
-        YouTubePlayerSupportFragmentX youTubePlayerFragment = YouTubePlayerSupportFragmentX.newInstance();
-        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        transaction.replace(R.id.youtube_fragment, youTubePlayerFragment).commit();
 
-        youTubePlayerFragment.initialize(YoutubeDeveloperKey, new YouTubePlayer.OnInitializedListener() {
-
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider arg0, YouTubePlayer youTubePlayer, boolean b) {
-                if (!b) {
-                    YPlayer = youTubePlayer;
-                    YPlayer.setFullscreen(true);
-                    YPlayer.loadVideo("P00HMxdsVZI");
-                    YPlayer.play();
-                }
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider arg0, YouTubeInitializationResult arg1) {
-                Log.d("error", "error encountered!!!!!!!!");
-
-            }
-        });
         return rootView;
     }
 
