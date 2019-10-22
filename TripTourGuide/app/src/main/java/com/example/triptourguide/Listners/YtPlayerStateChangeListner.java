@@ -17,7 +17,6 @@ public class YtPlayerStateChangeListner implements YouTubePlayer.PlayerStateChan
     private ListView _musicListView;
     private Activity _context;
     private boolean initialPlay = true;
-    private int _backGroundColor = Color.parseColor("#804A98CC");
 
     public YtPlayerStateChangeListner(List<String> musicNameList, ListView musicListView, Activity context) {
         _musicListView = musicListView;
@@ -42,7 +41,7 @@ public class YtPlayerStateChangeListner implements YouTubePlayer.PlayerStateChan
     public void onVideoStarted() {
         if (initialPlay) {
             _musicListView.getChildAt(0).findViewById(R.id.music_title).setBackgroundColor(Color.RED);
-            YtListener.setUpFadeAnimation((TextView) _musicListView.getChildAt(1).findViewById(R.id.music_title));
+            YtListener.setUpFadeAnimation((TextView) _musicListView.getChildAt(0).findViewById(R.id.music_title));
         }
         initialPlay = false;
 

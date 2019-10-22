@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.triptourguide.Models.CityTripEntity;
 
 import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class DBopenHelper extends SQLiteOpenHelper {
 
@@ -38,18 +40,29 @@ public class DBopenHelper extends SQLiteOpenHelper {
 
     }
 
-    public void CreateNewTrip(SQLiteDatabase db) {
+    public void CreateNewTrip(SQLiteDatabase db, List<CityTripEntity> cityTripEntityList, String tripName) {
+        for (int i = 0; i < cityTripEntityList.size(); i++) {
+            pushCityTripEntity(cityTripEntityList.get(i), tripName, i, db);
+        }
 
     }
 
-    private void pushCityTripEntity(CityTripEntity cityTripEntity, String tripName, SQLiteDatabase db) {
+    private void pushCityTripEntity(CityTripEntity cityTripEntity, String tripName, int tripOrder, SQLiteDatabase db) {
 
         String query = "insert into Trip (name) values (\"" + tripName +"\");";
         db.execSQL(query);
         
-        query = "select * from Trip where name = \"" + tripName + "\"";
+        query = "select id from Trip where name = \"" + tripName + "\"";
         Cursor c = db.rawQuery(query, null);
+        c.moveToNext();
+        int tripId = c.getInt(0);
 
+        query = "insert into Cities (tripId, tripOrder, countryName, cityName, startDate, endDate) " +
+                "values (\"" + tripId + "\", \"" + tripOrder + "\", \"" + cityTripEntity.CountryName + "\", \"" +
+                cityTripEntity.CityName + "\", " + new SimpleDateFormat("yyyy-MM-dd").format(cityTripEntity.StartDate.getTime())
+                + ", " + new SimpleDateFormat("yyyy-MM-dd").format(cityTripEntity.EndDate.getTime()) + ")";
+
+        db.execSQL(query);
     }
 
 
