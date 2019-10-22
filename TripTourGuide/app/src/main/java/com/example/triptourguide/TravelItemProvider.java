@@ -1,6 +1,7 @@
 package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,19 +15,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.triptourguide.Models.CityTripEntity;
+import com.example.triptourguide.Models.ItemPrepRecycleAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -34,6 +32,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTouchListener;
 
 public class TravelItemProvider extends AppCompatActivity {
 
@@ -48,6 +48,7 @@ public class TravelItemProvider extends AppCompatActivity {
     List<String> notreadysupply = new ArrayList<>();
     List<String> readysupply = new ArrayList<>();
     String pickedcondition;
+    RecyclerView itemPrepRecycleView;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -64,6 +65,48 @@ public class TravelItemProvider extends AppCompatActivity {
         List<CityTripEntity> cityTripEntityList = dbHelper.RetrieveTripDetail(db, tripName);
 
         populateConditionToItemMap(cityTripEntityList);
+        itemPrepRecycleView = findViewById(R.id.item_prep_recycle);
+
+
+        SwipeDismissRecyclerViewTouchListener listener = new SwipeDismissRecyclerViewTouchListener.Builder(
+                itemPrepRecycleView,
+                new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
+                    @Override
+                    public boolean canDismiss(int position) {
+                        return true;
+                    }
+
+                    @Override
+                    public void onDismiss(View view) {
+                        // Do what you want when dismiss
+
+                    }
+                })
+                .setIsVertical(false)
+                .setItemTouchCallback(
+                        new SwipeDismissRecyclerViewTouchListener.OnItemTouchCallBack() {
+                            @Override
+                            public void onTouch(int index) {
+                                // Do what you want when item be touched
+                            }
+                        })
+                .setItemClickCallback(new SwipeDismissRecyclerViewTouchListener.OnItemClickCallBack() {
+                    @Override
+                    public void onClick(int position) {
+                        // Do what you want when item be clicked
+                        }
+                    }).create();
+
+        Set<String> items = new HashSet<>();
+        for (String condition : selectedactivity) {
+            if (conditionToItemsMap.containsKey(condition))
+                items.addAll(conditionToItemsMap.get(condition));
+        }
+
+        itemPrepRecycleView.setOnTouchListener(listener);
+        itemPrepRecycleView.setAdapter(new ItemPrepRecycleAdapter(items));
+
+
 
         supplydata = new String[0];
         preparedata = new String[0];
@@ -160,7 +203,7 @@ public class TravelItemProvider extends AppCompatActivity {
                 convertView = inflater.inflate(R.layout.item_provider_row, null);
             }
 
-            TextView supplyname = convertView.findViewById(R.id.textView4);
+            TextView supplyname = convertView.findViewById(R.id.item_provider_item_name);
             supplyname.setText(supplydata[position]);
 
             return convertView;
@@ -191,7 +234,7 @@ public class TravelItemProvider extends AppCompatActivity {
                 convertView = inflater.inflate(R.layout.item_provider_row, null);
             }
 
-            TextView supplyname = convertView.findViewById(R.id.textView4);
+            TextView supplyname = convertView.findViewById(R.id.item_provider_item_name);
             supplyname.setText(readysupplydata[position]);
 
             return convertView;
