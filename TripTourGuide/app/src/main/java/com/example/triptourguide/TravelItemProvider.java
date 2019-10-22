@@ -1,6 +1,7 @@
 package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -37,17 +38,8 @@ import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTo
 
 public class TravelItemProvider extends AppCompatActivity {
 
-    TextView victory;
-    String[] supplydata;
-    String[] readysupplydata;
-    ListView preparelist;
-    ListView readylist;
-    String[] preparedata;
     String[] selectedactivity = {"common", "rainy", "swimming"};
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
-    List<String> notreadysupply = new ArrayList<>();
-    List<String> readysupply = new ArrayList<>();
-    String pickedcondition;
     RecyclerView itemPrepRecycleView;
 
     private String getCountryItemJson(String countryName) {
@@ -68,7 +60,15 @@ public class TravelItemProvider extends AppCompatActivity {
         itemPrepRecycleView = findViewById(R.id.item_prep_recycle);
 
 
-        SwipeDismissRecyclerViewTouchListener listener = new SwipeDismissRecyclerViewTouchListener.Builder(
+        Set<String> items = new HashSet<>();
+        for (String condition : selectedactivity) {
+            if (conditionToItemsMap.containsKey(condition))
+                items.addAll(conditionToItemsMap.get(condition));
+        }
+        itemPrepRecycleView.setLayoutManager(new LinearLayoutManager(this));
+        final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, this);
+
+        SwipeDismissRecyclerViewTouchListener onTouchDismissListener = new SwipeDismissRecyclerViewTouchListener.Builder(
                 itemPrepRecycleView,
                 new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
                     @Override
@@ -78,7 +78,8 @@ public class TravelItemProvider extends AppCompatActivity {
 
                     @Override
                     public void onDismiss(View view) {
-                        // Do what you want when dismiss
+                        int id = itemPrepRecycleView.getChildLayoutPosition(view);
+                        itemPrepAdapter.removeItemOnIndex(id);
 
                     }
                 })
@@ -94,69 +95,14 @@ public class TravelItemProvider extends AppCompatActivity {
                     @Override
                     public void onClick(int position) {
                         // Do what you want when item be clicked
-                        }
-                    }).create();
+                    }
+                }).create();
 
-        Set<String> items = new HashSet<>();
-        for (String condition : selectedactivity) {
-            if (conditionToItemsMap.containsKey(condition))
-                items.addAll(conditionToItemsMap.get(condition));
-        }
-
-        itemPrepRecycleView.setOnTouchListener(listener);
-        itemPrepRecycleView.setAdapter(new ItemPrepRecycleAdapter(items));
-
-
-
-        supplydata = new String[0];
-        preparedata = new String[0];
-        readysupplydata = new String[0];
-        victory = findViewById(R.id.victory);
-        preparelist = findViewById(R.id.preparelist);
-        readylist = findViewById(R.id.readylist);
-
-
-        preparelist.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                readysupply .add(supplydata[position]);
-                notreadysupply.remove(supplydata[position]);
-                supplydata = notreadysupply.toArray(new String[notreadysupply.size()]);
-                readysupplydata = readysupply .toArray(new String[readysupply .size()]);
-                Arrays.sort(supplydata);
-                Arrays.sort(readysupplydata);
-                Listapdapter supplyadapter = new Listapdapter();
-                preparelist.setAdapter(supplyadapter);
-                Listreadyapdapter listreadyapdapter = new Listreadyapdapter();
-                readylist.setAdapter(listreadyapdapter);
-                if(supplydata.length == 0 )
-                    victory.setText("Time to Go!");
-            }
-        });
-
-        readylist.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                notreadysupply.add(readysupplydata[position]);
-                readysupply .remove(readysupplydata[position]);
-
-                supplydata = notreadysupply.toArray(new String[notreadysupply.size()]);
-                readysupplydata = readysupply .toArray(new String[readysupply .size()]);
-
-                Arrays.sort(supplydata);
-                Arrays.sort(readysupplydata);
-                Listreadyapdapter listreadyapdapter = new Listreadyapdapter();
-                readylist.setAdapter(listreadyapdapter);
-                Listapdapter supplyadapter = new Listapdapter();
-                preparelist.setAdapter(supplyadapter);
-                if(supplydata.length != 0 )
-                    victory.setText("");
-
-            }
-        });
-
+        itemPrepRecycleView.setOnTouchListener(onTouchDismissListener);
+        itemPrepRecycleView.setAdapter(itemPrepAdapter);
 
     }
+
 
     private void populateConditionToItemMap(List<CityTripEntity> cityTripEntityList) {
         for (CityTripEntity cityTripEntity : cityTripEntityList) {
@@ -179,84 +125,6 @@ public class TravelItemProvider extends AppCompatActivity {
     }
 
 
-    class Listapdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return supplydata.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            if (convertView == null) {
-                LayoutInflater inflater = getLayoutInflater();
-                convertView = inflater.inflate(R.layout.item_provider_row, null);
-            }
-
-            TextView supplyname = convertView.findViewById(R.id.item_provider_item_name);
-            supplyname.setText(supplydata[position]);
-
-            return convertView;
-        }
-    }
-
-    class Listreadyapdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return readysupplydata.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            if (convertView == null) {
-                LayoutInflater inflater = getLayoutInflater();
-                convertView = inflater.inflate(R.layout.item_provider_row, null);
-            }
-
-            TextView supplyname = convertView.findViewById(R.id.item_provider_item_name);
-            supplyname.setText(readysupplydata[position]);
-
-            return convertView;
-        }
-    }
-
-
-    public void supplymethod(View view) {
-        notreadysupply = new ArrayList<>();
-        preparelist = findViewById(R.id.preparelist);
-        for (int i = 0; i < selectedactivity.length; i++) {
-            pickedcondition = selectedactivity[i];
-            if (!conditionToItemsMap.containsKey(pickedcondition))
-                continue;
-            notreadysupply.addAll(conditionToItemsMap.get(pickedcondition));
-        }
-        supplydata = notreadysupply.toArray(new String[notreadysupply.size()]);
-        Arrays.sort(supplydata);
-        Listapdapter supplyadapter = new Listapdapter();
-        preparelist.setAdapter(supplyadapter);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -269,7 +137,6 @@ public class TravelItemProvider extends AppCompatActivity {
 
         switch (item.getItemId())
         {
-
             case R.id.pre_trip:
                 Intent intentPre = new Intent(this, TravelItemProvider.class);
                 startActivity(intentPre);
@@ -281,7 +148,6 @@ public class TravelItemProvider extends AppCompatActivity {
                 break;
 
         }
-
         return super.onOptionsItemSelected(item);
     }
 
