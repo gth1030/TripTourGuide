@@ -11,14 +11,14 @@ import com.google.android.youtube.player.YouTubePlayer;
 
 import java.util.List;
 
-public class YtPlayerStateChangeListner implements YouTubePlayer.PlayerStateChangeListener {
+public class YtPlayerStateChangeListener implements YouTubePlayer.PlayerStateChangeListener {
 
     private List<String> _musicNameList;
     private ListView _musicListView;
     private Activity _context;
     private boolean initialPlay = true;
 
-    public YtPlayerStateChangeListner(List<String> musicNameList, ListView musicListView, Activity context) {
+    public YtPlayerStateChangeListener(List<String> musicNameList, ListView musicListView, Activity context) {
         _musicListView = musicListView;
     }
 

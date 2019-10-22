@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.triptourguide.Listners.YtPlayerStateChangeListner;
+import com.example.triptourguide.Listners.YtPlayerStateChangeListener;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -193,7 +193,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
             });
 
             _youtubePlayer.setPlaylistEventListener(new YtListener(playableMusicNameList, _musicListView, _context));
-            _youtubePlayer.setPlayerStateChangeListener(new YtPlayerStateChangeListner(playableMusicNameList, _musicListView, _context));
+            _youtubePlayer.setPlayerStateChangeListener(new YtPlayerStateChangeListener(playableMusicNameList, _musicListView, _context));
 
             _youtubePlayer.cueVideos(youTubeIdList);
             _youtubePlayer.play();

@@ -16,6 +16,7 @@
         android:lines="8"
         android:maxLines="3"
         android:minLines="6"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:textAlignment="center" />
 
 </LinearLayout>

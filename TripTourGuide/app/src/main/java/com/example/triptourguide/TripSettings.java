@@ -10,10 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.borax12.materialdaterangepicker.date.DatePickerDialog;
 import com.example.triptourguide.Models.CityTripEntity;
@@ -24,8 +24,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -85,7 +88,7 @@ public class TripSettings extends AppCompatActivity {
         activityListGridView = findViewById(R.id.activity_list_grid);
         ActivityListGridViewAdapter adapter = new ActivityListGridViewAdapter(this, new ArrayList<String>());
         activityListGridView.setAdapter(adapter);
-        activityListGridView.setOnItemClickListener(new ActivityListGridListner(adapter));
+        activityListGridView.setOnItemClickListener(new ActivityListGridListener(adapter));
 
         CityListener cityListener = new CityListener();
         cityspinner.setOnItemSelectedListener(cityListener);
@@ -125,13 +128,13 @@ public class TripSettings extends AppCompatActivity {
             for (int i = 0; i < CityActivityJson.length(); i++) {
 
                 JSONObject city = CityActivityJson.getJSONObject(i);
-                String cityname = city.getString("name");
+                String cityName = city.getString("name");
                 JSONArray cityListArr = city.getJSONArray("activityList");
                 List<String> cityList = new ArrayList<>();
                 for (int j = 0; j < cityListArr.length(); j++) {
                     cityList.add(cityListArr.getString(j));
                 }
-                cityactivity.put(cityname, cityList);
+                cityactivity.put(cityName, cityList);
             }
 
         } catch (JSONException e) {
@@ -160,6 +163,11 @@ public class TripSettings extends AppCompatActivity {
     }
 
     public void addCityBtn(View view) {
+        if (pickedcity == null || pickedcity == null || startDate.equals(endDate)) {
+            Toast.makeText(_context, "모든정보를 기입하셔야 합니다 ㅠㅠ", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Intent intent = new Intent();
         ActivityListGridViewAdapter activityAdapter = (ActivityListGridViewAdapter) activityListGridView.getAdapter();
         intent.putExtra("newCity", new CityTripEntity(pickedcountry, pickedcity, startDate, endDate, activityAdapter.GetActiveActivities()));
@@ -195,7 +203,7 @@ public class TripSettings extends AppCompatActivity {
             selectedactivities = cityactivity.get(pickedcity);
 
             ActivityListGridViewAdapter adapter = new ActivityListGridViewAdapter(_context, selectedactivities);
-            ((ActivityListGridListner) activityListGridView.getOnItemClickListener()).ResetAdapter(adapter);
+            ((ActivityListGridListener) activityListGridView.getOnItemClickListener()).ResetAdapter(adapter);
             activityListGridView.setAdapter(adapter);
         }
 
@@ -205,11 +213,11 @@ public class TripSettings extends AppCompatActivity {
         }
     }
 
-    class ActivityListGridListner implements AdapterView.OnItemClickListener {
+    class ActivityListGridListener implements AdapterView.OnItemClickListener {
 
         ActivityListGridViewAdapter _adapter;
 
-        public ActivityListGridListner(ActivityListGridViewAdapter adapter) {
+        public ActivityListGridListener(ActivityListGridViewAdapter adapter) {
             _adapter = adapter;
         }
 
@@ -242,7 +250,7 @@ public class TripSettings extends AppCompatActivity {
         public void onClick(View v) {
             Calendar now = Calendar.getInstance();
             DatePickerDialog dpd = DatePickerDialog.newInstance(
-                    new DateRangeSelectListner(),
+                    new DateRangeSelectListener(),
                     now.get(Calendar.YEAR),
                     now.get(Calendar.MONTH),
                     now.get(Calendar.DAY_OF_MONTH)
@@ -251,10 +259,23 @@ public class TripSettings extends AppCompatActivity {
         }
     }
 
-    class DateRangeSelectListner implements DatePickerDialog.OnDateSetListener {
+    class DateRangeSelectListener implements DatePickerDialog.OnDateSetListener {
 
         @Override
         public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth, int yearEnd, int monthOfYearEnd, int dayOfMonthEnd) {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                Date strDate = sdf.parse(dayOfMonth + "/" + monthOfYear + "/" + year);
+                if (sdf.parse(dayOfMonthEnd + "/" + monthOfYearEnd + "/" + yearEnd).before(strDate)) {
+                    Toast.makeText(_context, "여행종료시점이 여행시작시점보다 후여야 합니다.", Toast.LENGTH_SHORT).show();
+                    dateRageTextView.setText("set date");
+                    return;
+                }
+            } catch (ParseException e) {
+                Toast.makeText(_context, "에러가 발생했습니다!!!!", Toast.LENGTH_LONG).show();
+                return;
+            }
+
             startDate.set(year, monthOfYear, dayOfMonth);
             endDate.set(yearEnd, monthOfYearEnd, dayOfMonthEnd);
 

@@ -47,8 +47,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\res\mipmap-hdpi\snorkl_50.png" />
-                                      <entry key="outputName" value="snorkel_50" />
+                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\res\mipmap-hdpi\snowboard_50.png" />
+                                      <entry key="outputName" value="snowboard_50" />
                                       <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>

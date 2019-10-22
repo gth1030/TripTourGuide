@@ -4,11 +4,16 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.triptourguide.Models.CityTripEntity;
 
 import java.sql.PreparedStatement;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class DBopenHelper extends SQLiteOpenHelper {
@@ -44,7 +49,31 @@ public class DBopenHelper extends SQLiteOpenHelper {
         for (int i = 0; i < cityTripEntityList.size(); i++) {
             pushCityTripEntity(cityTripEntityList.get(i), tripName, i, db);
         }
+    }
 
+    public List<CityTripEntity> RetrieveTripDetail(SQLiteDatabase db, String tripName) {
+        String query = "select id from Trip where name = \"" + tripName + "\"";
+        Cursor c = db.rawQuery(query, null);
+        c.moveToNext();
+        int tripId = c.getInt(0);
+        query = "select * from Cities where tripId = " + tripId + " order by tripOrder";
+        c = db.rawQuery(query, null);
+
+        List<CityTripEntity> tripList = new ArrayList<>();
+        while (c.moveToNext()) {
+            String countryName = c.getString(c.getColumnIndex("countryName"));
+            String cityName = c.getString(c.getColumnIndex("cityName"));
+            Calendar startDate = Calendar.getInstance();
+            Calendar endDate = Calendar.getInstance();
+            try {
+                startDate.setTime(new SimpleDateFormat().parse(c.getString(c.getColumnIndex("startDate"))));
+                endDate.setTime(new SimpleDateFormat().parse(c.getString(c.getColumnIndex("endDate"))));
+            } catch (ParseException e) {
+                Log.d("Error!!", "Parsing date error in data retrieve!!!");
+            }
+            tripList.add(new CityTripEntity(countryName, cityName, startDate, endDate, new ArrayList<String>()));
+        }
+        return tripList;
     }
 
     private void pushCityTripEntity(CityTripEntity cityTripEntity, String tripName, int tripOrder, SQLiteDatabase db) {

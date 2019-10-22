@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.triptourguide.Models.CityTripEntity;
 
@@ -56,6 +57,11 @@ public class TripCreator extends AppCompatActivity {
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                if (tripNameText.getText().toString().isEmpty()) {
+                    Toast.makeText(activity, "올바른 이름을 입력하세요!!", Toast.LENGTH_SHORT);
+                    return;
+                }
+
                 DBopenHelper dbHelper = new DBopenHelper(activity);
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 dbHelper.CreateNewTrip(db, cityTripList, tripNameText.getText().toString());

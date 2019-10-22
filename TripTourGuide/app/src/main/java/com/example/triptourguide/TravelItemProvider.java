@@ -2,9 +2,14 @@ package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -12,6 +17,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.triptourguide.Models.CityTripEntity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,95 +28,29 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class TravelItemProvider extends AppCompatActivity {
 
     TextView victory;
-    Button okaybutton;
     String[] supplydata;
     String[] readysupplydata;
     ListView preparelist;
     ListView readylist;
     String[] preparedata;
     String[] selectedactivity = {"common", "rainy", "swimming"};
-    Map<String, List<String>> Bostonsupply = new HashMap<>();
+    Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     List<String> notreadysupply = new ArrayList<>();
     List<String> readysupply = new ArrayList<>();
     String pickedcondition;
 
-    private String getJsonOttawaString() {
-        String json = "";
-
-        try {
-            InputStream is = getAssets().open("OttawaPrepare.json");
-            int fileSize = is.available();
-
-            byte[] buffer = new byte[fileSize];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, StandardCharsets.UTF_8);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return json;
-    }
-
-    private String getJsonBostonString() {
-        String json = "";
-
-        try {
-            InputStream is = getAssets().open("BostonPrepare.json");
-            int fileSize = is.available();
-
-            byte[] buffer = new byte[fileSize];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, StandardCharsets.UTF_8);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return json;
-    }
-
-    private String getJsonMontrealString() {
-        String json = "";
-
-        try {
-            InputStream is = getAssets().open("MontrealPrepare.json");
-            int fileSize = is.available();
-
-            byte[] buffer = new byte[fileSize];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, StandardCharsets.UTF_8);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return json;
-    }
-
-    private String getJsonSingaporeString() {
-        String json = "";
-
-        try {
-            InputStream is = getAssets().open("SingaporePrepare.json");
-            int fileSize = is.available();
-
-            byte[] buffer = new byte[fileSize];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, StandardCharsets.UTF_8);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return json;
+    private String getCountryItemJson(String countryName) {
+        return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
     }
 
 
@@ -117,13 +58,19 @@ public class TravelItemProvider extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel_item_provider);
+        String tripName = getIntent().getStringExtra("tripName");
+        DBopenHelper dbHelper = new DBopenHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        List<CityTripEntity> cityTripEntityList = dbHelper.RetrieveTripDetail(db, tripName);
+
+        populateConditionToItemMap(cityTripEntityList);
 
         supplydata = new String[0];
         preparedata = new String[0];
         readysupplydata = new String[0];
-        victory = (TextView)findViewById(R.id.victory);
-        preparelist = (ListView) findViewById(R.id.preparelist);
-        readylist = (ListView)findViewById(R.id.readylist);
+        victory = findViewById(R.id.victory);
+        preparelist = findViewById(R.id.preparelist);
+        readylist = findViewById(R.id.readylist);
 
 
         preparelist.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -133,8 +80,8 @@ public class TravelItemProvider extends AppCompatActivity {
                 notreadysupply.remove(supplydata[position]);
                 supplydata = notreadysupply.toArray(new String[notreadysupply.size()]);
                 readysupplydata = readysupply .toArray(new String[readysupply .size()]);
-                ArraySort.main(supplydata);
-                ArraySort.main(readysupplydata);
+                Arrays.sort(supplydata);
+                Arrays.sort(readysupplydata);
                 Listapdapter supplyadapter = new Listapdapter();
                 preparelist.setAdapter(supplyadapter);
                 Listreadyapdapter listreadyapdapter = new Listreadyapdapter();
@@ -153,8 +100,8 @@ public class TravelItemProvider extends AppCompatActivity {
                 supplydata = notreadysupply.toArray(new String[notreadysupply.size()]);
                 readysupplydata = readysupply .toArray(new String[readysupply .size()]);
 
-                ArraySort.main(supplydata);
-                ArraySort.main(readysupplydata);
+                Arrays.sort(supplydata);
+                Arrays.sort(readysupplydata);
                 Listreadyapdapter listreadyapdapter = new Listreadyapdapter();
                 readylist.setAdapter(listreadyapdapter);
                 Listapdapter supplyadapter = new Listapdapter();
@@ -166,24 +113,26 @@ public class TravelItemProvider extends AppCompatActivity {
         });
 
 
-        try {
-            JSONArray BostonPrepareJson = new JSONArray(getJsonBostonString());
-            for (int i = 0; i < BostonPrepareJson.length(); i++) {
-                JSONObject object = BostonPrepareJson.getJSONObject(i);
-                String condition = object.getString("name");
-                JSONArray supplyListArr = object.getJSONArray("prepareList");
-                List<String> supplyList = new ArrayList<>();
-                for (int j = 0; j < supplyListArr.length(); j++) {
-                    supplyList.add(supplyListArr.getString(j));
+    }
+
+    private void populateConditionToItemMap(List<CityTripEntity> cityTripEntityList) {
+        for (CityTripEntity cityTripEntity : cityTripEntityList) {
+            try {
+                JSONArray cityPrepareJson = new JSONArray(getCountryItemJson(cityTripEntity.CityName));
+                for (int i = 0; i < cityPrepareJson.length(); i++) {
+                    JSONObject object = cityPrepareJson.getJSONObject(i);
+                    String condition = object.getString("name");
+                    JSONArray supplyListArr = object.getJSONArray("prepareList");
+                    if (!conditionToItemsMap.containsKey(condition))
+                        conditionToItemsMap.put(condition, new HashSet<String>());
+                    for (int j = 0; j < supplyListArr.length(); j++) {
+                        conditionToItemsMap.get(condition).add(supplyListArr.getString(j));
+                    }
                 }
-                Bostonsupply.put(condition, supplyList);
-
+            } catch(JSONException e) {
+                Log.d("error found", "error found");
             }
-        } catch (JSONException e) {
-            Log.d("error found", "error found");
         }
-
-
     }
 
 
@@ -211,7 +160,7 @@ public class TravelItemProvider extends AppCompatActivity {
                 convertView = inflater.inflate(R.layout.item_provider_row, null);
             }
 
-            TextView supplyname = (TextView)convertView.findViewById(R.id.textView4);
+            TextView supplyname = convertView.findViewById(R.id.textView4);
             supplyname.setText(supplydata[position]);
 
             return convertView;
@@ -242,7 +191,7 @@ public class TravelItemProvider extends AppCompatActivity {
                 convertView = inflater.inflate(R.layout.item_provider_row, null);
             }
 
-            TextView supplyname = (TextView)convertView.findViewById(R.id.textView4);
+            TextView supplyname = convertView.findViewById(R.id.textView4);
             supplyname.setText(readysupplydata[position]);
 
             return convertView;
@@ -255,30 +204,43 @@ public class TravelItemProvider extends AppCompatActivity {
         preparelist = (ListView) findViewById(R.id.preparelist);
         for (int i = 0; i < selectedactivity.length; i++) {
             pickedcondition = selectedactivity[i];
-            if (!Bostonsupply.containsKey(pickedcondition))
+            if (!conditionToItemsMap.containsKey(pickedcondition))
                 continue;
-            notreadysupply.addAll(Bostonsupply.get(pickedcondition));
+            notreadysupply.addAll(conditionToItemsMap.get(pickedcondition));
         }
         supplydata = notreadysupply.toArray(new String[notreadysupply.size()]);
-        ArraySort.main(supplydata);
+        Arrays.sort(supplydata);
         Listapdapter supplyadapter = new Listapdapter();
         preparelist.setAdapter(supplyadapter);
-
     }
 
-    public static class ArraySort {
-        public static void main(String[] args) {
-            String temp = "";
-            int arySize = args.length;
-            for (int i = 0; i < arySize - 1; i++) {
-                for (int j = i; j < arySize; j++) {
-                    if (args[i].compareTo(args[j]) > 0) {
-                        temp = args[i];
-                        args[i] = args[j];
-                        args[j] = temp;
-                    }
-                }
-            }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.content_trip_option_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId())
+        {
+
+            case R.id.pre_trip:
+                Intent intentPre = new Intent(this, TravelItemProvider.class);
+                startActivity(intentPre);
+                break;
+
+            case R.id.in_trip:
+                Intent intentIn = new Intent(this, MusicListener.class);
+                startActivity(intentIn);
+                break;
+
         }
+
+
+        return super.onOptionsItemSelected(item);
     }
+
 }

@@ -15,7 +15,8 @@ public class TripNameClickedListener implements WheelView.OnWheelItemClickListen
 
     @Override
     public void onItemClick(int position, Object o) {
-        Intent intent = new Intent(_context, TripProviderActivity.class);
+        Intent intent = new Intent(_context, TravelItemProvider.class);
+        intent.putExtra("tripName", (String) o);
         _context.startActivity(intent);
     }
 }
