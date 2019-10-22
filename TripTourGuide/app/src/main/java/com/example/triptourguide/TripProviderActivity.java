@@ -40,9 +40,15 @@ public class TripProviderActivity extends AppCompatActivity {
 
         switch (item.getItemId())
         {
+
+            case R.id.pre_trip:
+                Intent intentPre = new Intent(this, TravelItemProvider.class);
+                startActivity(intentPre);
+                break;
+
             case R.id.in_trip:
-                Intent intent = new Intent(this, MusicListener.class);
-                startActivity(intent);
+                Intent intentIn = new Intent(this, MusicListener.class);
+                startActivity(intentIn);
                 break;
 
         }

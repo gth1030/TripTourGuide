@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:2:1-16:12
 MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:2:1-13:12
@@ -45,20 +45,20 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Admin\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\55566c395264c409f125230efea7fd76\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.14] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\367d2cbd7b2a7f7edd59724d46f903a1\libphonenumber-android-8.10.14\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:11-69
@@ -79,7 +79,7 @@ ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src
 	android:name
 		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-35:19
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-36:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:11:5-14:19
@@ -110,46 +110,50 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
 		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
+activity#com.example.triptourguide.TravelItemProvider
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-65
+	android:name
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:19-53
 activity#com.example.triptourguide.TripCreator
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-58
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-49
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:19-46
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-46
 activity#com.example.triptourguide.TripSettings
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-50
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-50
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-47
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-47
 activity#com.example.triptourguide.TripProviderActivity
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-22:59
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-23:59
 	android:label
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:13-65
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-65
 	android:theme
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:13-56
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:13-49
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:13-49
 activity#com.example.triptourguide.MusicListener
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:9-51
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:9-51
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:19-48
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:19-48
 activity#com.example.triptourguide.MainActivity
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:9-30:20
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:9-31:20
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:19-47
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:27-74
 meta-data#preloaded_fonts
-ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:57
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:9-35:57
 	android:resource
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-54
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:13-54
 	android:name
-		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-43
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-43
 uses-sdk
 INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
