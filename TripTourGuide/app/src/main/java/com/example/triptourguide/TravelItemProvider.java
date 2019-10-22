@@ -201,7 +201,7 @@ public class TravelItemProvider extends AppCompatActivity {
 
     public void supplymethod(View view) {
         notreadysupply = new ArrayList<>();
-        preparelist = (ListView) findViewById(R.id.preparelist);
+        preparelist = findViewById(R.id.preparelist);
         for (int i = 0; i < selectedactivity.length; i++) {
             pickedcondition = selectedactivity[i];
             if (!conditionToItemsMap.containsKey(pickedcondition))
@@ -238,7 +238,6 @@ public class TravelItemProvider extends AppCompatActivity {
                 break;
 
         }
-
 
         return super.onOptionsItemSelected(item);
     }

@@ -6,6 +6,7 @@ INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\
 INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1473a607b4442c61ae975e7273910d4a\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f5bdf8930f5b0dade80802408310dda6\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -162,6 +163,8 @@ MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1473a607b4442c61ae975e7273910d4a\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1473a607b4442c61ae975e7273910d4a\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
 MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f5bdf8930f5b0dade80802408310dda6\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
