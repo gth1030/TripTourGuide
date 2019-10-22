@@ -1,8 +1,13 @@
 package com.example.triptourguide;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.triptourguide.Models.CityTripEntity;
+
+import java.sql.PreparedStatement;
 
 public class DBopenHelper extends SQLiteOpenHelper {
 
@@ -33,7 +38,17 @@ public class DBopenHelper extends SQLiteOpenHelper {
 
     }
 
-    public void CreateNewTrip() {
+    public void CreateNewTrip(SQLiteDatabase db) {
+
+    }
+
+    private void pushCityTripEntity(CityTripEntity cityTripEntity, String tripName, SQLiteDatabase db) {
+
+        String query = "insert into Trip (name) values (\"" + tripName +"\");";
+        db.execSQL(query);
+        
+        query = "select * from Trip where name = \"" + tripName + "\"";
+        Cursor c = db.rawQuery(query, null);
 
     }
 
