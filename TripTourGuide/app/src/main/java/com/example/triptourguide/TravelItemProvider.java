@@ -37,7 +37,6 @@ public class TravelItemProvider extends AppCompatActivity {
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     Map<String, List<String>> countryToItemsMap = new HashMap<>();
     PrepItemFragment prepItemFragment;
-    ProhItemFragment prohItemFragment;
     List<String> list;
 
     private String getCountryItemJson(String countryName) {
@@ -71,7 +70,6 @@ public class TravelItemProvider extends AppCompatActivity {
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         prepItemFragment = new PrepItemFragment(conditionToItemsMap, choosenActivities);
-        prohItemFragment = new ProhItemFragment(list);
         ft.replace(R.id.item_provider_container, prepItemFragment);
         ft.commit();
     }
@@ -148,12 +146,10 @@ public class TravelItemProvider extends AppCompatActivity {
         tran.commit();
     }
 
-    public void btnprohibitedmethod(View view){
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction tran = manager.beginTransaction();
-        tran.replace(R.id.item_provider_container, prohItemFragment);
-        tran.commit();
 
+    public void testBtn(View view) {
+        Intent intent = new Intent(this, gridadapter.class);
+        startActivity(intent);
     }
 
 }

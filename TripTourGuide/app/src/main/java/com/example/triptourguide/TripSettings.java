@@ -233,7 +233,7 @@ public class TripSettings extends AppCompatActivity {
                 view.setBackgroundColor(Color.GRAY);
             } else {
                 _adapter.GridViewSelection[position] = true;
-                view.setBackgroundColor(Color.BLACK);
+                view.setBackgroundColor(Color.YELLOW);
             }
             runOnUiThread(new Runnable() {
                 @Override

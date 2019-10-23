@@ -72,18 +72,24 @@ public class ActivityListGridViewAdapter extends BaseAdapter {
         }
 
         imageView.setImageResource(activityToImageIdMap.get(_activityList.get(position)));
-        imageView.setBackgroundColor(GridViewSelection[position] ? Color.BLACK : Color.GRAY);
+        imageView.setBackgroundColor(GridViewSelection[position] ? Color.YELLOW : Color.parseColor("#00ffffff"));
         return imageView;
     }
 
     private void setActivityToImageIdMap() {
         activityToImageIdMap = new HashMap<>();
         activityToImageIdMap.put("city", R.drawable.building_50);
+        activityToImageIdMap.put("beach picnic", R.drawable.beach_50);
+        activityToImageIdMap.put("cruise", R.drawable.cruise_50);
+        activityToImageIdMap.put("golf", R.drawable.golf_50);
         activityToImageIdMap.put("cycle", R.drawable.cycle_50);
         activityToImageIdMap.put("sail", R.drawable.sail_50);
         activityToImageIdMap.put("snorkel", R.drawable.snorkel_50);
         activityToImageIdMap.put("snowboarding", R.drawable.snowboard_50);
         activityToImageIdMap.put("fishing", R.drawable.fishing_50);
+        activityToImageIdMap.put("hiking", R.drawable.hiking_50);
+        activityToImageIdMap.put("scooter", R.drawable.scooter_50);
+        activityToImageIdMap.put("swimming", R.drawable.swimming_50);
     }
 
 

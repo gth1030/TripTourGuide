@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProhItemFragment extends ListFragment {
+class ProhItemFragment extends ListFragment {
 
     private List<String> data ;
     private String[] converteddata;

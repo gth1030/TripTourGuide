@@ -9,6 +9,6 @@
   },
   {
     "name" : "Singapore",
-    "prohibited" : ["gum", "cigarettes", "alcohol", "medicine", "wildlife", "firework", "porno"]
+    "prohibited" : ["gum", "cigarettes", "alcohol", "pill", "wildlife", "firework", "porno"]
   }
 ]
