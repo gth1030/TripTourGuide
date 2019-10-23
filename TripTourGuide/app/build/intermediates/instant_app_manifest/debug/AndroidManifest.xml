@@ -30,6 +30,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.triptourguide.TravelItemProvider" />
+        <activity android:name="com.example.triptourguide.gridadapter" />
         <activity android:name="com.example.triptourguide.TripCreator" />
         <activity android:name="com.example.triptourguide.TripSettings" />
         <activity android:name="com.example.triptourguide.MainActivity" >

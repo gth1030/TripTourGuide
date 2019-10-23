@@ -34,7 +34,7 @@
 19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 20
 21    <application
-21-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-37:19
+21-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-38:19
 22        android:allowBackup="true"
 22-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -54,61 +54,64 @@
 31        <activity android:name="com.example.triptourguide.TravelItemProvider" />
 31-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-56
 31-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:19-53
-32        <activity android:name="com.example.triptourguide.TripCreator" />
-32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-49
+32        <activity android:name="com.example.triptourguide.gridadapter" />
+32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-58
 32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-46
-33        <activity android:name="com.example.triptourguide.TripSettings" />
-33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-50
-33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-47
-34        <activity android:name="com.example.triptourguide.MainActivity" >
-34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-26:20
+33        <activity android:name="com.example.triptourguide.TripCreator" />
+33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-49
+33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-46
+34        <activity android:name="com.example.triptourguide.TripSettings" />
+34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-50
 34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-47
-35            <intent-filter>
-35-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:13-25:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:17-69
-36-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:17-77
-38-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:24:27-74
-39            </intent-filter>
-40        </activity>
-41
-42        <meta-data
-42-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:28:9-30:57
-43            android:name="preloaded_fonts"
-43-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:13-43
-44            android:resource="@array/preloaded_fonts" />
-44-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-54
-45        <meta-data
-45-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:9-33:71
-46            android:name="com.google.android.geo.API_KEY"
-46-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:13-58
-47            android:value="AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8" />
-47-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-68
-48        <meta-data
-48-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:9-36:69
-49            android:name="com.google.android.gms.version"
-49-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:13-58
-50            android:value="@integer/google_play_services_version" />
-50-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:36:13-66
-51        <!-- Needs to be explicitly declared on P+ -->
-52        <uses-library
-52-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-53            android:name="org.apache.http.legacy"
-53-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-54            android:required="false" />
-54-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-55
-56        <activity
-56-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-57            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-57-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-58            android:exported="false"
-58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-59            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-60    </application>
-61
-62</manifest>
+35        <activity android:name="com.example.triptourguide.MainActivity" >
+35-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
+35-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
+36            <intent-filter>
+36-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
+37-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
+39-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <meta-data
+43-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
+44            android:name="preloaded_fonts"
+44-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
+45            android:resource="@array/preloaded_fonts" />
+45-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
+46        <meta-data
+46-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:71
+47            android:name="com.google.android.geo.API_KEY"
+47-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
+48            android:value="AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8" />
+48-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
+49        <meta-data
+49-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:9-37:69
+50            android:name="com.google.android.gms.version"
+50-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:36:13-58
+51            android:value="@integer/google_play_services_version" />
+51-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:37:13-66
+52        <!-- Needs to be explicitly declared on P+ -->
+53        <uses-library
+53-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+54            android:name="org.apache.http.legacy"
+54-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+55            android:required="false" />
+55-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+56
+57        <activity
+57-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+59            android:exported="false"
+59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+61    </application>
+62
+63</manifest>

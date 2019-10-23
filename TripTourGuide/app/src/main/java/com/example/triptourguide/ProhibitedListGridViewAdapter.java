@@ -82,7 +82,7 @@ public class ProhibitedListGridViewAdapter extends BaseAdapter {
         itemToImageIdMap.put("alcohol", R.drawable.alcohol_50);
         itemToImageIdMap.put("army", R.drawable.army_50);
         itemToImageIdMap.put("artifact", R.drawable.artifact_50);
-        itemToImageIdMap.put("cigarettees", R.drawable.cigarettes_50);
+        itemToImageIdMap.put("cigarettes", R.drawable.cigarettes_50);
         itemToImageIdMap.put("drug", R.drawable.drug_50);
         itemToImageIdMap.put("firework", R.drawable.firework_50);
         itemToImageIdMap.put("gun", R.drawable.gun_50);
@@ -95,6 +95,7 @@ public class ProhibitedListGridViewAdapter extends BaseAdapter {
         itemToImageIdMap.put("seed", R.drawable.seed_50);
         itemToImageIdMap.put("soil", R.drawable.soil_50);
         itemToImageIdMap.put("wildlife", R.drawable.wildlife_50);
+        itemToImageIdMap.put("gum", R.drawable.gum_50);
     }
 
 

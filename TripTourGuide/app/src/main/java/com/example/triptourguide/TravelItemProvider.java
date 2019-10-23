@@ -2,6 +2,7 @@ package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.triptourguide.Fragments.MarkedMapFragment;
 import com.example.triptourguide.Fragments.PrepItemFragment;
@@ -22,6 +24,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -32,6 +35,9 @@ public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     Set<String> chosenActivities;
+    Map<String, List<String>> countryToItemsMap = new HashMap<>();
+    PrepItemFragment prepItemFragment;
+    List<String> list;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -60,12 +66,33 @@ public class TravelItemProvider extends AppCompatActivity {
                 items.addAll(conditionToItemsMap.get(condition));
         }
 
+        list = countryToItemsMap.get("US");
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         Fragment fragment = new PrepItemFragment(conditionToItemsMap, chosenActivities);
         ft.replace(R.id.item_provider_container, fragment);
         ft.commit();
     }
 
+
+    private void CountryToProhItemMap(String countryname) {
+        try {
+            JSONArray CountryProhJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "CountryProhibited.json"));
+            for (int i = 0; i < CountryProhJson.length(); i++) {
+                JSONObject country = CountryProhJson.getJSONObject(i);
+                String countryN = country.getString("name");
+                JSONArray prohibitedListArr = country.getJSONArray("prohibited");
+                List<String> prohibitedList = new ArrayList<>();
+                for (int j = 0; j < prohibitedListArr.length(); j++) {
+                    prohibitedList.add(prohibitedListArr.getString(j));
+                }
+                countryToItemsMap.put(countryN, prohibitedList);
+            }
+
+        } catch (JSONException e) {
+            Log.d("error found", "error found");
+        }
+    }
 
     private void populateConditionToItemMap(List<CityTripEntity> cityTripEntityList) {
         for (CityTripEntity cityTripEntity : cityTripEntityList) {
@@ -131,6 +158,19 @@ public class TravelItemProvider extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void btnpreparemethod(View view){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction tran = manager.beginTransaction();
+        tran.replace(R.id.item_provider_container, prepItemFragment);
+        tran.commit();
+    }
+
+
+    public void testBtn(View view) {
+        Intent intent = new Intent(this, gridadapter.class);
+        startActivity(intent);
     }
 
 }
