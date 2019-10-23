@@ -16,11 +16,11 @@
     "prepareList" : ["fishing rod", "landing net"]
   },
   {
-    "name" : "beach picnic",
+    "name" : "beach",
     "prepareList" : ["swimsuit", "swimming goggles", "sun cream", "cap"]
   },
   {
-    "name" : "yacht",
+    "name" : "sail",
     "prepareList" : ["swimsuit", "sun cream", "cap", "sunglasses"]
   }
 ]
