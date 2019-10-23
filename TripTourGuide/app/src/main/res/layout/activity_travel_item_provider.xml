@@ -30,7 +30,7 @@
             android:text="반입 금지 물품" />
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:id="@+id/item_provider_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

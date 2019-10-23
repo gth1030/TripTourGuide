@@ -23,6 +23,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -34,8 +35,10 @@ import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTo
 public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
+    Map<String, List<String>> countryToItemsMap = new HashMap<>();
     PrepItemFragment prepItemFragment;
-    prohItemFragment prohItemFragment;
+    ProhItemFragment prohItemFragment;
+    List<String> list;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -64,12 +67,34 @@ public class TravelItemProvider extends AppCompatActivity {
                 items.addAll(conditionToItemsMap.get(condition));
         }
 
+        list = countryToItemsMap.get("US");
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         prepItemFragment = new PrepItemFragment(conditionToItemsMap, choosenActivities);
+        prohItemFragment = new ProhItemFragment(list);
         ft.replace(R.id.item_provider_container, prepItemFragment);
         ft.commit();
     }
 
+
+    private void CountryToProhItemMap(String countryname) {
+        try {
+            JSONArray CountryProhJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "CountryProhibited.json"));
+            for (int i = 0; i < CountryProhJson.length(); i++) {
+                JSONObject country = CountryProhJson.getJSONObject(i);
+                String countryN = country.getString("name");
+                JSONArray prohibitedListArr = country.getJSONArray("prohibited");
+                List<String> prohibitedList = new ArrayList<>();
+                for (int j = 0; j < prohibitedListArr.length(); j++) {
+                    prohibitedList.add(prohibitedListArr.getString(j));
+                }
+                countryToItemsMap.put(countryN, prohibitedList);
+            }
+
+        } catch (JSONException e) {
+            Log.d("error found", "error found");
+        }
+    }
 
     private void populateConditionToItemMap(List<CityTripEntity> cityTripEntityList) {
         for (CityTripEntity cityTripEntity : cityTripEntityList) {
