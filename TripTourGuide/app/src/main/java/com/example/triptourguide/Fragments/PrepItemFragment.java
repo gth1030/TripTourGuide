@@ -1,4 +1,4 @@
-package com.example.triptourguide;
+package com.example.triptourguide.Fragments;
 
 
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.triptourguide.Models.ItemPrepRecycleAdapter;
+import com.example.triptourguide.R;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;

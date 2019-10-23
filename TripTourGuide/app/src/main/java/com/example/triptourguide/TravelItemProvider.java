@@ -3,8 +3,6 @@ package com.example.triptourguide;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,10 +11,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 
+import com.example.triptourguide.Fragments.MarkedMapFragment;
+import com.example.triptourguide.Fragments.PrepItemFragment;
 import com.example.triptourguide.Models.CityTripEntity;
-import com.example.triptourguide.Models.ItemPrepRecycleAdapter;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,11 +27,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTouchListener;
-
 public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
+    Set<String> chosenActivities;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -50,19 +48,19 @@ public class TravelItemProvider extends AppCompatActivity {
 
         populateConditionToItemMap(cityTripEntityList);
 
-        Set<String> choosenActivities = new HashSet<>();
-        choosenActivities.add("common");
+        chosenActivities = new HashSet<>();
+        chosenActivities.add("common");
         for (CityTripEntity cityTripEntity : cityTripEntityList)
-            choosenActivities.addAll(cityTripEntity.ActivityList);
+            chosenActivities.addAll(cityTripEntity.ActivityList);
 
         Set<String> items = new HashSet<>();
-        for (String condition : choosenActivities) {
+        for (String condition : chosenActivities) {
             if (conditionToItemsMap.containsKey(condition))
                 items.addAll(conditionToItemsMap.get(condition));
         }
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        Fragment fragment = new PrepItemFragment(conditionToItemsMap, choosenActivities);
+        Fragment fragment = new PrepItemFragment(conditionToItemsMap, chosenActivities);
         ft.replace(R.id.item_provider_container, fragment);
         ft.commit();
     }
@@ -102,11 +100,27 @@ public class TravelItemProvider extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.pre_trip:
+                FragmentTransaction itemPrepFt = getSupportFragmentManager().beginTransaction();
+                Fragment itemPrepFragment = new PrepItemFragment(conditionToItemsMap, chosenActivities);
+                itemPrepFt.replace(R.id.item_provider_container, itemPrepFragment);
+                itemPrepFt.commit();
                 break;
 
             case R.id.in_trip:
                 Intent intentIn = new Intent(this, MusicListener.class);
                 startActivity(intentIn);
+                break;
+
+            case R.id.post_trip:
+                MarkedMapFragment fragment = new MarkedMapFragment(this);
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.item_provider_container, fragment);
+                ft.commit();
+
+                getSupportFragmentManager().executePendingTransactions();
+                SupportMapFragment mapFragment = (SupportMapFragment)fragment.getChildFragmentManager().findFragmentById(R.id.marked_map_fragment);
+                mapFragment.getMapAsync(fragment);
                 break;
 
         }

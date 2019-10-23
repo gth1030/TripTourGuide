@@ -19,8 +19,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
+    private static String _currentTripName = "";
     WheelView wheelView;
     Button newTrip;
+    public static SQLiteDatabase db;
 
 
     @Override
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         DBopenHelper dbHelper = new DBopenHelper(this);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         wheelView = findViewById(R.id.tripPicker);
         wheelView.setWheelClickable(true);
@@ -65,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
             tripList.add(tripName);
         }
         return tripList;
+    }
+
+    public static String GetCurrentTripName() {
+        return _currentTripName;
+    }
+
+    public static void SetCurrentTripName(String tripName) {
+        _currentTripName = tripName;
     }
 
 }
