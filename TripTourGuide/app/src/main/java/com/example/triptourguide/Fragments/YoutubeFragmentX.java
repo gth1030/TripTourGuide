@@ -1,107 +1,93 @@
-package com.example.triptourguide;
+package com.example.triptourguide.Fragments;
+
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.WindowManager;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.triptourguide.Listners.YtPlayerStateChangeListener;
-import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.example.triptourguide.MusicRankCollector;
+import com.example.triptourguide.R;
+import com.example.triptourguide.YtListener;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerFragment;
-import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.android.youtube.player.YouTubePlayerSupportFragmentX;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
+import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
-import com.google.api.client.http.HttpTransport;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class YoutubeFragmentX extends Fragment {
 
-public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    public static final String DEVELOPER_KEY = "AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8";
-    private static final int RECOVERY_DIALOG_REQUEST = 1;
-    YouTubePlayerFragment myYouTubePlayerFragment;
+    public YoutubeFragmentX() {
 
-    ListView musicNameListView;
+    }
 
-    private static YouTube youtube;
+
+    private static final String API_KEY = "AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8";
 
     private static String[] youTubeList = new String[]{"P00HMxdsVZI", "Pkh8UtuejGw", "u1yVCeXYya4", "1XzY2ij_vL4" };
     private static String[] songList = new String[]{"Truth Hurts", "Senorita", "Someone You Loved", "Ran$om"};
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.content_trip_option_menu, menu);
-        return true;
-    }
+
+    private ListView musicNameListView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_music_listener);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_youtube_fragment_x, container, false);
+        musicNameListView = rootView.findViewById(R.id.MusicTitleList);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        YouTubePlayerSupportFragmentX youTubePlayerFragment = YouTubePlayerSupportFragmentX.newInstance();
 
-        musicNameListView = findViewById(R.id.MusicNameList);
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(R.id.youtube_layout, youTubePlayerFragment).commit();
 
-        myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.youtube_fragment);
-        myYouTubePlayerFragment.initialize(DEVELOPER_KEY, this);
+        youTubePlayerFragment.initialize(API_KEY, new YouTubePlayer.OnInitializedListener() {
 
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+                if (!wasRestored) {
+
+                    Thread thread = new Thread(new YoutubeSearchRunner(getActivity(), player, musicNameListView));
+                    thread.start();
+                }
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult error) {
+                // YouTube error
+                String errorMessage = error.toString();
+                Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_LONG).show();
+                Log.d("errorMessage:", errorMessage);
+            }
+        });
+
+        return rootView;
     }
-
-
-    @Override
-    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-        if (!b) {
-            Thread thread = new Thread(new YoutubeSearchRunner(this, youTubePlayer, musicNameListView));
-            thread.start();
-        }
-    }
-
-    @Override
-    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
-        if (youTubeInitializationResult.isUserRecoverableError()) {
-            youTubeInitializationResult.getErrorDialog(this, RECOVERY_DIALOG_REQUEST).show();
-        } else {
-            String errorMessage = String.format(
-                    "There was an error initializing the YouTubePlayer (%1$s)",
-                    youTubeInitializationResult.toString());
-            Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
-
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == RECOVERY_DIALOG_REQUEST) {
-            getYouTubePlayerProvider().initialize(DEVELOPER_KEY, this);
-        }
-    }
-
-
-    protected YouTubePlayerView getYouTubePlayerProvider() {
-        return (YouTubePlayerView) findViewById(R.id.youtube_fragment);
-    }
-
-
 
     class YoutubeSearchRunner implements Runnable {
 
@@ -124,12 +110,12 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
                 JsonFactory jsonFactory = new JacksonFactory();
                 GoogleCredential credential = new GoogleCredential();
 
-                youtube = new YouTube.Builder(transport, jsonFactory, credential).setApplicationName("youtube-cmdline-search-sample").build();
+                YouTube youtube = new YouTube.Builder(transport, jsonFactory, credential).setApplicationName("youtube-cmdline-search-sample").build();
 
                 // Define the API request for retrieving search results.
                 YouTube.Search.List search = youtube.search().list("id,snippet");
 
-                search.setKey(DEVELOPER_KEY);
+                search.setKey(API_KEY);
                 search.setQ(searchTerm);
 
                 // Restrict the search results to only include videos. See:
@@ -183,7 +169,7 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
             for (String a : songList)
                 playableMusicNameList.add(a);
 
-            runOnUiThread(new Runnable() {
+            getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.list_view_layout, R.id.music_title, playableMusicNameList);
@@ -199,9 +185,6 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
 
         }
     }
-
-
-
 
 
 }

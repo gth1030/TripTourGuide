@@ -74,7 +74,7 @@ public class TripSettings extends AppCompatActivity {
         dateRageTextView = findViewById(R.id.date_range_text);
         dateRageTextView.setOnClickListener(new DateRangeViewListner());
         statespinner = findViewById(R.id.statespinner);
-        ArrayAdapter<String> stateadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, statedata);
+        ArrayAdapter<String> stateadapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, statedata);
         statespinner.setAdapter(stateadapter);
 
         cityspinner = findViewById(R.id.cityspinner);

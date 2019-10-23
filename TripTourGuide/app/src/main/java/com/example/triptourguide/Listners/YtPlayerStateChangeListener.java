@@ -44,7 +44,6 @@ public class YtPlayerStateChangeListener implements YouTubePlayer.PlayerStateCha
             YtListener.setUpFadeAnimation((TextView) _musicListView.getChildAt(0).findViewById(R.id.music_title));
         }
         initialPlay = false;
-
     }
 
     @Override

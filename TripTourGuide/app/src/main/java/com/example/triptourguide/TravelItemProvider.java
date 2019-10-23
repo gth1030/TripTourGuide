@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import com.example.triptourguide.Fragments.MarkedMapFragment;
 import com.example.triptourguide.Fragments.PrepItemFragment;
+import com.example.triptourguide.Fragments.YoutubeFragmentX;
 import com.example.triptourguide.Models.CityTripEntity;
 import com.google.android.gms.maps.SupportMapFragment;
 
@@ -107,8 +108,13 @@ public class TravelItemProvider extends AppCompatActivity {
                 break;
 
             case R.id.in_trip:
-                Intent intentIn = new Intent(this, MusicListener.class);
-                startActivity(intentIn);
+                YoutubeFragmentX youtubeFragmentX = new YoutubeFragmentX();
+                FragmentTransaction youtubeFt = getSupportFragmentManager().beginTransaction();
+                youtubeFt.replace(R.id.item_provider_container, youtubeFragmentX);
+                youtubeFt.commit();
+
+                /*Intent intentIn = new Intent(this, MusicListener.class);
+                startActivity(intentIn);*/
                 break;
 
             case R.id.post_trip:
