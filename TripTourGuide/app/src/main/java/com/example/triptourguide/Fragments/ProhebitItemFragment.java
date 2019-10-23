@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -19,7 +18,7 @@ import android.widget.TextView;
 
 import com.example.triptourguide.Listners.ProhibitedListGridViewAdapter;
 import com.example.triptourguide.R;
-import com.example.triptourguide.TravelItemProvider;
+import com.example.triptourguide.TripServiceProvider;
 import com.example.triptourguide.TripUtils;
 
 import org.json.JSONArray;
@@ -60,7 +59,7 @@ public class ProhebitItemFragment extends Fragment {
         _prohibitTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PrepItemFragment prepItemFragment = new PrepItemFragment(TravelItemProvider.conditionToItemsMap, TravelItemProvider.chosenActivities);
+                PrepItemFragment prepItemFragment = new PrepItemFragment(TripServiceProvider.conditionToItemsMap, TripServiceProvider.chosenActivities);
                 FragmentTransaction itemPrepFt = (getActivity()).getSupportFragmentManager().beginTransaction();
                 itemPrepFt.replace(R.id.item_provider_container, prepItemFragment);
                 itemPrepFt.commit();

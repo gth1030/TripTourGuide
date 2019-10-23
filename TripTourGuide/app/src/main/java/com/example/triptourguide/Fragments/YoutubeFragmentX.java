@@ -178,7 +178,7 @@ public class YoutubeFragmentX extends Fragment {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.list_view_layout, R.id.music_title, playableMusicNameList);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.music_title_row, R.id.music_title, playableMusicNameList);
                     _musicListView.setAdapter(adapter);
                 }
             });

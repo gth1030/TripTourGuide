@@ -33,15 +33,6 @@ public class ProhibitedListGridViewAdapter extends BaseAdapter {
             GridViewSelection[i] = false;
     }
 
-    public List<String> GetProhibitedItems(){
-        List<String> result = new ArrayList<>();
-        for (int i = 0; i < _itemlist.size(); i++) {
-            if (GridViewSelection[i])
-                result.add(_itemlist.get(i));
-        }
-        return result;
-    }
-
     @Override
     public int getCount() {
         return _itemlist.size();

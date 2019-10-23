@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class TravelItemProvider extends AppCompatActivity {
+public class TripServiceProvider extends AppCompatActivity {
 
     public static Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     public static Set<String> chosenActivities;

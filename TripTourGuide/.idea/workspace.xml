@@ -10,22 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b31ce69d-3f28-4256-b203-7012f0f79de4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtPlayerStateChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtPlayerStateChangeListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ProhibitedListGridViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TravelItemProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TravelItemProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/YtListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/gridadapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/gridadapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/prohItemFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TravelItemProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripNameClickedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripNameClickedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/gridadapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_gridadapter.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_travel_item_provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_travel_item_provider.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_trip_provider.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_proh_item2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_prohebit_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_view_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/music_title_row.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,10 +76,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TravelItemProvider.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripServiceProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="40">
+              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -93,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
               <folding>
                 <element signature="e#1869#2328#0" expanded="true" />
                 <element signature="e#2327#2328#0" expanded="true" />
@@ -102,13 +115,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="92" column="52" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
+            <state relative-caret-position="516">
+              <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
               <folding>
-                <element signature="e#3553#3729#0" expanded="true" />
                 <element signature="e#3728#3729#0" expanded="true" />
                 <element signature="e#4645#4646#0" expanded="true" />
               </folding>
@@ -117,7 +129,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/music_title_row.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trip_name_dialog.xml">
           <provider editor-type-id="text-editor" />
           <provider selected="true" editor-type-id="android-designer2" />
         </entry>
@@ -135,38 +157,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripNameClickedListener.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/PrepItemFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+            <state relative-caret-position="778">
+              <caret line="56" column="76" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
               <folding>
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_creator.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_travel_item_provider.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_prep_item_fragment.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -207,8 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/gradient_bg.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/city_trip_view_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_view_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_trip_provider.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/content_trip_option_menu.xml" />
@@ -258,6 +255,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_prohebit_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripServiceProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" />
       </list>
     </option>
   </component>
@@ -734,7 +733,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571836394272</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="merge error fixed, prohibited item list set as fragment">
+      <created>1571838833946</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571838833946</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -817,7 +823,8 @@
     <MESSAGE value="Merge branch 'ICOnuupdate' of https://github.com/gth1030/TripTourGuide into youtube&#10;&#10;# Conflicts:&#10;#&#9;TripTourGuide/.idea/caches/build_file_checksums.ser&#10;#&#9;TripTourGuide/.idea/caches/gradle_models.ser&#10;#&#9;TripTourGuide/.idea/workspace.xml&#10;#&#9;TripTourGuide/app/build.gradle&#10;#&#9;TripTourGuide/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt&#10;#&#9;TripTourGuide/app/build/outputs/logs/manifest-merger-debug-report.txt&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/TravelItemProvider.java&#10;#&#9;TripTourGuide/app/src/main/res/layout/activity_travel_item_provider.xml" />
     <MESSAGE value="clean music listener and set up music in fragment" />
     <MESSAGE value="Merge branch 'item+prohibited' of https://github.com/gth1030/TripTourGuide into youtube&#10;&#10;# Conflicts:&#10;#&#9;TripTourGuide/.idea/assetWizardSettings.xml&#10;#&#9;TripTourGuide/.idea/caches/build_file_checksums.ser&#10;#&#9;TripTourGuide/.idea/caches/gradle_models.ser&#10;#&#9;TripTourGuide/.idea/workspace.xml&#10;#&#9;TripTourGuide/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt&#10;#&#9;TripTourGuide/app/build/outputs/logs/manifest-merger-debug-report.txt&#10;#&#9;TripTourGuide/app/src/main/AndroidManifest.xml&#10;#&#9;TripTourGuide/app/src/main/assets/CountryProhibited.json&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/TravelItemProvider.java&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/wildlife_50.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'item+prohibited' of https://github.com/gth1030/TripTourGuide into youtube&#10;&#10;# Conflicts:&#10;#&#9;TripTourGuide/.idea/assetWizardSettings.xml&#10;#&#9;TripTourGuide/.idea/caches/build_file_checksums.ser&#10;#&#9;TripTourGuide/.idea/caches/gradle_models.ser&#10;#&#9;TripTourGuide/.idea/workspace.xml&#10;#&#9;TripTourGuide/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt&#10;#&#9;TripTourGuide/app/build/outputs/logs/manifest-merger-debug-report.txt&#10;#&#9;TripTourGuide/app/src/main/AndroidManifest.xml&#10;#&#9;TripTourGuide/app/src/main/assets/CountryProhibited.json&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/TravelItemProvider.java&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/wildlife_50.png" />
+    <MESSAGE value="merge error fixed, prohibited item list set as fragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge error fixed, prohibited item list set as fragment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,7 +845,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_post_trip_provider.xml" />
     <entry file="jar://$PROJECT_DIR$/app/libs/YouTubeAndroidPlayerApi.jar!/com/google/android/youtube/player/YouTubeBaseActivity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -952,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_view_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1035,20 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1066,16 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/PrepItemFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="76" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/FragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9673">
@@ -1089,14 +1063,6 @@
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="80" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_gridadapter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_trip_provider.xml">
       <provider editor-type-id="text-editor" />
@@ -1148,7 +1114,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripNameClickedListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding>
             <element signature="e#316#317#0" expanded="true" />
             <element signature="e#354#355#0" expanded="true" />
@@ -1156,17 +1122,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TravelItemProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
           <folding>
             <element signature="e#1869#2328#0" expanded="true" />
             <element signature="e#2327#2328#0" expanded="true" />
@@ -1192,15 +1151,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_gridadapter.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="92" column="52" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
+        <state relative-caret-position="516">
+          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
           <folding>
-            <element signature="e#3553#3729#0" expanded="true" />
             <element signature="e#3728#3729#0" expanded="true" />
             <element signature="e#4645#4646#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/music_title_row.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trip_name_dialog.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/PrepItemFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="56" column="76" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripServiceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
         </state>
       </provider>
     </entry>
