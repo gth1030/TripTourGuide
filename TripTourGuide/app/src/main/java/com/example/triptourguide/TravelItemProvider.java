@@ -2,6 +2,7 @@ package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,7 @@ import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTo
 public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
+    PrepItemFragment prepItemFragment;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -62,8 +64,8 @@ public class TravelItemProvider extends AppCompatActivity {
         }
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        Fragment fragment = new PrepItemFragment(conditionToItemsMap, choosenActivities);
-        ft.replace(R.id.item_provider_container, fragment);
+        prepItemFragment = new PrepItemFragment(conditionToItemsMap, choosenActivities);
+        ft.replace(R.id.item_provider_container, prepItemFragment);
         ft.commit();
     }
 
@@ -111,6 +113,19 @@ public class TravelItemProvider extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void btnpreparemethod(View view){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction tran = manager.beginTransaction();
+        tran.add(R.id.item_provider_container, prepItemFragment);
+        tran.commit();
+    }
+
+    public void btnprohibitedmethod(VIew view){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction tran = manager.beginTransaction();
+
     }
 
 }
