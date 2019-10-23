@@ -51,6 +51,7 @@ public class PrepItemFragment extends Fragment {
             if (conditionToItemsMap.containsKey(condition))
                 items.addAll(conditionToItemsMap.get(condition));
         }
+
         itemPrepRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
         final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, getActivity());
 

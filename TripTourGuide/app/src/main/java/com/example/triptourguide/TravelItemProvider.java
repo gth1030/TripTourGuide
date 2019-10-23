@@ -35,6 +35,7 @@ public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     PrepItemFragment prepItemFragment;
+    prohItemFragment prohItemFragment;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -118,13 +119,15 @@ public class TravelItemProvider extends AppCompatActivity {
     public void btnpreparemethod(View view){
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction tran = manager.beginTransaction();
-        tran.add(R.id.item_provider_container, prepItemFragment);
+        tran.replace(R.id.item_provider_container, prepItemFragment);
         tran.commit();
     }
 
     public void btnprohibitedmethod(View view){
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction tran = manager.beginTransaction();
+        tran.replace(R.id.item_provider_container, prohItemFragment);
+        tran.commit();
 
     }
 

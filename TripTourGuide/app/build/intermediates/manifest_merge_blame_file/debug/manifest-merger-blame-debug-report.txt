@@ -41,47 +41,48 @@
 23-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
 24        android:supportsRtl="true"
 24-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
-25        android:theme="@style/AppTheme" >
-25-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
-26        <activity android:name="com.example.triptourguide.TravelItemProvider" />
-26-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-65
-26-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:19-53
-27        <activity android:name="com.example.triptourguide.TripCreator" />
-27-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-49
-27-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-46
-28        <activity android:name="com.example.triptourguide.TripSettings" />
-28-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-50
-28-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-47
-29        <activity android:name="com.example.triptourguide.MusicListener" />
-29-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-51
-29-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-48
-30        <activity android:name="com.example.triptourguide.MainActivity" >
-30-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
-30-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
-31            <intent-filter>
-31-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
-32-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
-34-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
-35            </intent-filter>
-36        </activity>
-37
-38        <meta-data
-38-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
-39            android:name="preloaded_fonts"
-39-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
-40            android:resource="@array/preloaded_fonts" />
-40-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
-41        <meta-data
-41-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:70
-42            android:name="com.google.android.geo.API_KEY"
-42-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
-43            android:value="AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8" />
-43-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
-44    </application>
-45
-46</manifest>
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
+27        <activity android:name="com.example.triptourguide.TravelItemProvider" />
+27-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-65
+27-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:19-53
+28        <activity android:name="com.example.triptourguide.TripCreator" />
+28-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-49
+28-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-46
+29        <activity android:name="com.example.triptourguide.TripSettings" />
+29-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-50
+29-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-47
+30        <activity android:name="com.example.triptourguide.MusicListener" />
+30-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-51
+30-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-48
+31        <activity android:name="com.example.triptourguide.MainActivity" >
+31-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
+31-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
+32            <intent-filter>
+32-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
+33-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
+35-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
+36            </intent-filter>
+37        </activity>
+38
+39        <meta-data
+39-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
+40            android:name="preloaded_fonts"
+40-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
+41            android:resource="@array/preloaded_fonts" />
+41-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
+42        <meta-data
+42-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:70
+43            android:name="com.google.android.geo.API_KEY"
+43-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
+44            android:value="AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8" />
+44-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
+45    </application>
+46
+47</manifest>
