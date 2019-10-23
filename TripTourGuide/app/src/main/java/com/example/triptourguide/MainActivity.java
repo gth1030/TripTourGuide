@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         wheelView.setWheelAdapter(new ArrayWheelAdapter(this));
         wheelView.setSkin(WheelView.Skin.Common);
         wheelView.setWheelData(GetTripList(db));
+        wheelView.setWheelSize(5);
+
+        WheelView.WheelViewStyle wheelStyle= new WheelView.WheelViewStyle();
+        wheelStyle.selectedTextColor = Color.BLACK;
+        wheelStyle.textColor = Color.GRAY;
+        wheelStyle.selectedTextSize = 20;
+        wheelView.setStyle(wheelStyle);
 
         newTrip = findViewById(R.id.new_trip);
 

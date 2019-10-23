@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.triptourguide.Models.CityTripEntity;
 
+import java.sql.Array;
 import java.sql.PreparedStatement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,8 +27,9 @@ public class DBopenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createScript = "create table Cities (\n" +
+                " cityId integer primary key, " +
                 "  tripId integer NOT NULL,\n" +
-                "  tripOrder integer unique not null,\n" +
+                "  tripOrder integer not null,\n" +
                 "  countryName VARCHAR(150) not null,\n" +
                 "  cityName VARCHAR(150) not null,\n" +
                 "  startDate DATE NOT NULL,\n" +
@@ -37,6 +39,9 @@ public class DBopenHelper extends SQLiteOpenHelper {
         db.execSQL(createScript);
         String createCities = "create table Trip (id integer primary key, name text not null);";
         db.execSQL(createCities);
+        String createActivity = "create table Activity (cityId integer not null, activityName VARCHAR(50) not null, " +
+                "CONSTRAINT FK_cityID_Trip FOREIGN KEY (cityID) REFERENCES Cities(cityID));";
+        db.execSQL(createActivity);
         LoadDemoData(db);
     }
 
@@ -71,7 +76,14 @@ public class DBopenHelper extends SQLiteOpenHelper {
             } catch (ParseException e) {
                 Log.d("Error!!", "Parsing date error in data retrieve!!!");
             }
-            tripList.add(new CityTripEntity(countryName, cityName, startDate, endDate, new ArrayList<String>()));
+            query = "select activityName from Activity where cityID = " + c.getInt(c.getColumnIndex("cityId"));
+            Cursor cActivity = db.rawQuery(query, null);
+            List<String> activityList = new ArrayList<>();
+            while (cActivity.moveToNext()) {
+                activityList.add(cActivity.getString(0));
+            }
+
+            tripList.add(new CityTripEntity(countryName, cityName, startDate, endDate, activityList));
         }
         return tripList;
     }
@@ -92,6 +104,17 @@ public class DBopenHelper extends SQLiteOpenHelper {
                 + ", " + new SimpleDateFormat("yyyy-MM-dd").format(cityTripEntity.EndDate.getTime()) + ")";
 
         db.execSQL(query);
+
+        query = "select cityId from Cities where tripId = " + tripId + " and cityName = \"" + cityTripEntity.CityName + "\"";
+
+        c = db.rawQuery(query, null);
+        c.moveToNext();
+        int cityId = c.getInt(0);
+
+        for (String activity : cityTripEntity.ActivityList) {
+            query = "insert into Activity(cityId, activityName) values (" + cityId + ", " + activity + ")";
+            db.execSQL(query);
+        }
     }
 
 
@@ -160,6 +183,10 @@ public class DBopenHelper extends SQLiteOpenHelper {
                 "    2019 -10 -26,\n" +
                 "    2019 -10 -30\n" +
                 "  );";
+        db.execSQL(query);
+
+        query = "insert into Activity (cityId, activityName) values (1, \"swiming\"),(1, \"hiking\"),(1, \"\")" +
+                ",(1, \"snorkel\"),(1, \"city\")";
         db.execSQL(query);
 
     }

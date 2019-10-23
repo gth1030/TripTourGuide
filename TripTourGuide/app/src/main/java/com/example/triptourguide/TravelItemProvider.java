@@ -38,7 +38,6 @@ import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTo
 
 public class TravelItemProvider extends AppCompatActivity {
 
-    String[] selectedactivity = {"common", "rainy", "swimming"};
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     RecyclerView itemPrepRecycleView;
 
@@ -57,11 +56,17 @@ public class TravelItemProvider extends AppCompatActivity {
         List<CityTripEntity> cityTripEntityList = dbHelper.RetrieveTripDetail(db, tripName);
 
         populateConditionToItemMap(cityTripEntityList);
+
+        Set<String> choosenActivities = new HashSet<>();
+        choosenActivities.add("common");
+        for (CityTripEntity cityTripEntity : cityTripEntityList)
+            choosenActivities.addAll(cityTripEntity.ActivityList);
+
         itemPrepRecycleView = findViewById(R.id.item_prep_recycle);
 
 
         Set<String> items = new HashSet<>();
-        for (String condition : selectedactivity) {
+        for (String condition : choosenActivities) {
             if (conditionToItemsMap.containsKey(condition))
                 items.addAll(conditionToItemsMap.get(condition));
         }
@@ -138,8 +143,6 @@ public class TravelItemProvider extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.pre_trip:
-                Intent intentPre = new Intent(this, TravelItemProvider.class);
-                startActivity(intentPre);
                 break;
 
             case R.id.in_trip:

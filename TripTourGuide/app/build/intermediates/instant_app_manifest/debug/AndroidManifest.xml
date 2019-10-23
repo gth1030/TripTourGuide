@@ -28,10 +28,6 @@
         <activity android:name="com.example.triptourguide.TravelItemProvider" />
         <activity android:name="com.example.triptourguide.TripCreator" />
         <activity android:name="com.example.triptourguide.TripSettings" />
-        <activity
-            android:name="com.example.triptourguide.TripProviderActivity"
-            android:label="@string/title_activity_trip_provider"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.triptourguide.MusicListener" />
         <activity android:name="com.example.triptourguide.MainActivity" >
             <intent-filter>
