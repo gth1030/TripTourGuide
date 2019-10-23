@@ -11,9 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.triptourguide.DBopenHelper;
+import com.example.triptourguide.MainActivity;
 import com.example.triptourguide.R;
 
 
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -23,10 +26,27 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
     private TreeSet<String> prePrepItems = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
     private TreeSet<String> postPrepItems = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
     private Context _context;
+    private DBopenHelper dbHelper;
+    private int _tripId;
 
     public ItemPrepRecycleAdapter(Set<String> itemCollection, Context context) {
-        prePrepItems.addAll(itemCollection);
         _context = context;
+        dbHelper = new DBopenHelper(_context);
+        DBopenHelper dbHelper = new DBopenHelper(_context);
+        _tripId = dbHelper.getTripId(MainActivity.GetCurrentTripName());
+        if (!dbHelper.checkIfItemExist(MainActivity.GetCurrentTripName())) {
+            dbHelper.initializeItemPrep(MainActivity.GetCurrentTripName(), itemCollection);
+            prePrepItems.addAll(itemCollection);
+        } else {
+            Map<String, Boolean> itemPrepMap = dbHelper.getItemStateFromDb(MainActivity.GetCurrentTripName());
+            for (String item : itemCollection) {
+                if (itemPrepMap.containsKey(item) && itemPrepMap.get(item)) {
+                    postPrepItems.add(item);
+                } else {
+                    prePrepItems.add(item);
+                }
+            }
+        }
 
     }
 
@@ -75,10 +95,13 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
             String value = postPrepItems.toArray(new String[postPrepItems.size()])[ind - prePrepItems.size()];
             postPrepItems.remove(value);
             prePrepItems.add(value);
+            dbHelper.updateItem(_tripId, value, false);
+
         } else {
             String value = prePrepItems.toArray(new String[prePrepItems.size()])[ind];
             prePrepItems.remove(value);
             postPrepItems.add(value);
+            dbHelper.updateItem(_tripId, value, true);
         }
         notifyDataSetChanged();
     }

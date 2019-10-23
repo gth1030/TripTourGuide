@@ -15,7 +15,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DBopenHelper extends SQLiteOpenHelper {
 
@@ -42,12 +45,22 @@ public class DBopenHelper extends SQLiteOpenHelper {
         String createActivity = "create table Activity (cityId integer not null, activityName VARCHAR(50) not null, " +
                 "CONSTRAINT FK_cityID_Trip FOREIGN KEY (cityID) REFERENCES Cities(cityID));";
         db.execSQL(createActivity);
+        String createItemPrepTable = "create table ItemPrep (tripId integer not null, itemName VARCHAR(100) not null, prepared BOOLEAN not null default '1')";
+        db.execSQL(createItemPrepTable);
+
         LoadDemoData(db);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    public int getTripId(String tripName) {
+        String query = "select id from Trip where name = \"" + tripName + "\"";
+        Cursor c = getReadableDatabase().rawQuery(query, null);
+        c.moveToNext();
+        return c.getInt(0);
     }
 
     public void CreateNewTrip(SQLiteDatabase db, List<CityTripEntity> cityTripEntityList, String tripName) {
@@ -115,6 +128,59 @@ public class DBopenHelper extends SQLiteOpenHelper {
             query = "insert into Activity(cityId, activityName) values (" + cityId + ", " + activity + ")";
             db.execSQL(query);
         }
+    }
+
+    public void initializeItemPrep(String tripName, Collection<String> items) {
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "select id from Trip where name = \"" + tripName + "\"";
+        Cursor c = db.rawQuery(query, null);
+        c.moveToNext();
+        int tripId = c.getInt(0);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("insert into ItemPrep (tripId, itemName) values ");
+        for (String item : items) {
+
+            sb.append( "(" + tripId + ", \"" + item + "\"),");
+        }
+        query = sb.toString().substring(0, sb.length() - 1);
+        db.execSQL(query);
+    }
+
+    public void updateItem(int tripId, String itemName, Boolean prepared) {
+        String query = "update ItemPrep SET prepared = " + (prepared ? "0" : "1") +
+                " where tripId = " + tripId + " and itemName = \"" + itemName + "\"";
+        getWritableDatabase().execSQL(query);
+    }
+
+    public Map<String, Boolean> getItemStateFromDb(String tripName) {
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "select id from Trip where name = \"" + tripName + "\"";
+        Cursor c = db.rawQuery(query, null);
+        c.moveToNext();
+        int tripId = c.getInt(0);
+
+        query = "select * from ItemPrep where tripId = " + tripId;
+        c = db.rawQuery(query, null);
+        Map<String, Boolean> itemPrepMap = new HashMap<>();
+        int itemInd = c.getColumnIndex("itemName");
+        int prepBoolInd = c.getColumnIndex("prepared");
+        while(c.moveToNext()) {
+            itemPrepMap.put(c.getString(itemInd), c.getString(prepBoolInd).equals("0"));
+        }
+        return itemPrepMap;
+    }
+
+    public boolean checkIfItemExist(String tripName) {
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "select id from Trip where name = \"" + tripName + "\"";
+        Cursor c = db.rawQuery(query, null);
+        c.moveToNext();
+        int tripId = c.getInt(0);
+
+        query = "select * from ItemPrep where tripId = " + tripId;
+        c = db.rawQuery(query, null);
+        return c.getCount() != 0;
     }
 
 
