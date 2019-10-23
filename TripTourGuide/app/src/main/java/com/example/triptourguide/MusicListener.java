@@ -64,7 +64,6 @@ public class MusicListener extends YouTubeBaseActivity implements YouTubePlayer.
         myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.youtube_fragment);
         myYouTubePlayerFragment.initialize(DEVELOPER_KEY, this);
 
-
     }
 
 

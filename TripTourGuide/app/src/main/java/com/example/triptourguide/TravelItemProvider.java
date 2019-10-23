@@ -1,6 +1,8 @@
 package com.example.triptourguide;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -8,16 +10,10 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.triptourguide.Models.CityTripEntity;
 import com.example.triptourguide.Models.ItemPrepRecycleAdapter;
@@ -26,8 +22,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -39,7 +33,6 @@ import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTo
 public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
-    RecyclerView itemPrepRecycleView;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -62,50 +55,16 @@ public class TravelItemProvider extends AppCompatActivity {
         for (CityTripEntity cityTripEntity : cityTripEntityList)
             choosenActivities.addAll(cityTripEntity.ActivityList);
 
-        itemPrepRecycleView = findViewById(R.id.item_prep_recycle);
-
-
         Set<String> items = new HashSet<>();
         for (String condition : choosenActivities) {
             if (conditionToItemsMap.containsKey(condition))
                 items.addAll(conditionToItemsMap.get(condition));
         }
-        itemPrepRecycleView.setLayoutManager(new LinearLayoutManager(this));
-        final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, this);
 
-        SwipeDismissRecyclerViewTouchListener onTouchDismissListener = new SwipeDismissRecyclerViewTouchListener.Builder(
-                itemPrepRecycleView,
-                new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
-                    @Override
-                    public boolean canDismiss(int position) {
-                        return true;
-                    }
-
-                    @Override
-                    public void onDismiss(View view) {
-                        int id = itemPrepRecycleView.getChildLayoutPosition(view);
-                        itemPrepAdapter.removeItemOnIndex(id);
-
-                    }
-                })
-                .setIsVertical(false)
-                .setItemTouchCallback(
-                        new SwipeDismissRecyclerViewTouchListener.OnItemTouchCallBack() {
-                            @Override
-                            public void onTouch(int index) {
-                                // Do what you want when item be touched
-                            }
-                        })
-                .setItemClickCallback(new SwipeDismissRecyclerViewTouchListener.OnItemClickCallBack() {
-                    @Override
-                    public void onClick(int position) {
-                        // Do what you want when item be clicked
-                    }
-                }).create();
-
-        itemPrepRecycleView.setOnTouchListener(onTouchDismissListener);
-        itemPrepRecycleView.setAdapter(itemPrepAdapter);
-
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        Fragment fragment = new PrepItemFragment(conditionToItemsMap, choosenActivities);
+        ft.replace(R.id.item_provider_container, fragment);
+        ft.commit();
     }
 
 
