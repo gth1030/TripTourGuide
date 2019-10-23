@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.example.triptourguide.Listners.YtPlayerStateChangeListener;
 import com.example.triptourguide.MusicRankCollector;
 import com.example.triptourguide.R;
-import com.example.triptourguide.YtListener;
+import com.example.triptourguide.Listners.YtListener;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragmentX;

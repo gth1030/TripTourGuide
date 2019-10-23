@@ -6,7 +6,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.triptourguide.R;
-import com.example.triptourguide.YtListener;
 import com.google.android.youtube.player.YouTubePlayer;
 
 import java.util.List;

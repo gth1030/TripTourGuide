@@ -1,4 +1,4 @@
-package com.example.triptourguide;
+package com.example.triptourguide.Listners;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -7,6 +7,7 @@ import android.view.animation.Animation;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.triptourguide.R;
 import com.google.android.youtube.player.YouTubePlayer;
 
 import java.util.List;

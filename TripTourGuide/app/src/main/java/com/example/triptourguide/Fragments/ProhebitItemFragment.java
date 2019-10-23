@@ -1,16 +1,26 @@
-package com.example.triptourguide;
+package com.example.triptourguide.Fragments;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.example.triptourguide.Listners.ProhibitedListGridViewAdapter;
+import com.example.triptourguide.R;
+import com.example.triptourguide.TravelItemProvider;
+import com.example.triptourguide.TripUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,22 +32,42 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class gridadapter extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ProhebitItemFragment extends Fragment {
 
     static GridView ProhibitedItemGridView;
+    private TextView _prohibitTextView;
     Map<String, List<String>> countryToProhItemMap = new HashMap<>();
     Map<String, String> itemToDescriptionMap = new HashMap<>();
     List<String> loadprohitem;
 
+    public ProhebitItemFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gridadapter);
-        ProhibitedItemGridView = (GridView) findViewById(R.id.ProhItemGridView);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
 
+        View rootView = inflater.inflate(R.layout.fragment_prohebit_item, container, false);
+        ProhibitedItemGridView = rootView.findViewById(R.id.prohibited_item_gridview);
+        _prohibitTextView = rootView.findViewById(R.id.prohibit_item_return_text);
+        _prohibitTextView.setClickable(true);
+        _prohibitTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PrepItemFragment prepItemFragment = new PrepItemFragment(TravelItemProvider.conditionToItemsMap, TravelItemProvider.chosenActivities);
+                FragmentTransaction itemPrepFt = (getActivity()).getSupportFragmentManager().beginTransaction();
+                itemPrepFt.replace(R.id.item_provider_container, prepItemFragment);
+                itemPrepFt.commit();
+            }
+        });
         try {
-            JSONArray CountryProhibitedJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "CountryProhibited.json"));
+            JSONArray CountryProhibitedJson = new JSONArray(TripUtils.ReadFileFromAsset(getActivity(), "CountryProhibited.json"));
             for (int i = 0; i < CountryProhibitedJson.length(); i++) {
 
                 JSONObject country = CountryProhibitedJson.getJSONObject(i);
@@ -56,7 +86,7 @@ public class gridadapter extends AppCompatActivity {
         }
 
         try {
-            JSONArray DescriptionJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "ProhibitDescription.json"));
+            JSONArray DescriptionJson = new JSONArray(TripUtils.ReadFileFromAsset(getActivity(), "ProhibitDescription.json"));
             for (int i = 0; i < DescriptionJson.length(); i++) {
 
                 JSONObject item = DescriptionJson.getJSONObject(i);
@@ -71,12 +101,12 @@ public class gridadapter extends AppCompatActivity {
         }
 
         loadprohitem = countryToProhItemMap.get("Singapore");
-        ProhibitedListGridViewAdapter adapter = new ProhibitedListGridViewAdapter(this, loadprohitem);
+        ProhibitedListGridViewAdapter adapter = new ProhibitedListGridViewAdapter(getActivity(), loadprohitem);
         ProhibitedItemGridView.setAdapter(adapter);
 
         ProhibitedItemGridView.setOnItemClickListener(new ProhibitedListGridListener(adapter,itemToDescriptionMap));
 
-
+        return rootView;
     }
 
     public static class ProhibitedListGridListener implements AdapterView.OnItemClickListener {
@@ -118,8 +148,7 @@ public class gridadapter extends AppCompatActivity {
             builder.setIcon(r);
             builder.setPositiveButton("확인", null);
             builder.show();
-            }
         }
     }
 
-
+}

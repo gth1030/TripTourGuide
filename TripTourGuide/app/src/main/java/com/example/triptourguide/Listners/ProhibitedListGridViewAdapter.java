@@ -1,4 +1,4 @@
-package com.example.triptourguide;
+package com.example.triptourguide.Listners;
 
 
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.example.triptourguide.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

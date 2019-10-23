@@ -1,5 +1,6 @@
 package com.example.triptourguide.Models;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -8,10 +9,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.triptourguide.DBopenHelper;
+import com.example.triptourguide.Fragments.ProhebitItemFragment;
 import com.example.triptourguide.MainActivity;
 import com.example.triptourguide.R;
 
@@ -81,6 +85,25 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
             ((TextView) holder.itemView.findViewById(R.id.if_prep_text)).setText("");
         }
         _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
+
+        if (prePrepItems.size() == 0) {
+            _itemRemainingTextview.setClickable(true);
+            _itemRemainingTextview.setTextColor(Color.RED);
+            _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명" +
+                    "\n대리고 가지 말아야할 친구를 위해 여기를 클릭하세요!");
+            _itemRemainingTextview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ProhebitItemFragment prohibitItemFragment = new ProhebitItemFragment();
+                    FragmentTransaction youtubeFt = ((AppCompatActivity) (_context)).getSupportFragmentManager().beginTransaction();
+                    youtubeFt.replace(R.id.item_provider_container, prohibitItemFragment);
+                    youtubeFt.commit();
+                }
+            });
+        } else {
+            _itemRemainingTextview.setClickable(false);
+            _itemRemainingTextview.setTextColor(Color.BLACK);
+        }
     }
 
     @Override

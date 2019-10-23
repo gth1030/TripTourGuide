@@ -8,28 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".TravelItemProvider">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/preparingbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="btnpreparemethod"
-            android:text="준비물" />
-
-        <Button
-            android:id="@+id/prohibitedbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="testBtn"
-            android:text="반입 금지 물품" />
-    </LinearLayout>
-
     <FrameLayout
         android:id="@+id/item_provider_container"
         android:layout_width="match_parent"
