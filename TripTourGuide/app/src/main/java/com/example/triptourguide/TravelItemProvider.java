@@ -122,7 +122,7 @@ public class TravelItemProvider extends AppCompatActivity {
         tran.commit();
     }
 
-    public void btnprohibitedmethod(VIew view){
+    public void btnprohibitedmethod(View view){
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction tran = manager.beginTransaction();
 

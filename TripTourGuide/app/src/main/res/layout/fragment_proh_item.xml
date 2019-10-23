@@ -6,9 +6,11 @@
     tools:context=".prohItemFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <GridView
+        android:id="@+id/ProhItemGridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:numColumns="5" />
 
 </FrameLayout>
