@@ -14,6 +14,7 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Admin\.gradle\cac
 MERGED from [com.wx.wheelview:wheelview:1.3.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\db89544d992c28fb72affd7ca8f4185f\wheelview-1.3.3\AndroidManifest.xml:2:1-16:12
 MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a10edcc3ecbb8cfe2e67388a05756435\gridlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\99839343cfb353ec06147cc6109cf9b2\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\67e3a22614326cadf216274f01d6d423\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\984e9edaa0792ad5f44429be517dd8ee\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -205,6 +206,8 @@ MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gr
 MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:22:5-24:41
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a10edcc3ecbb8cfe2e67388a05756435\gridlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a10edcc3ecbb8cfe2e67388a05756435\gridlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\99839343cfb353ec06147cc6109cf9b2\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\99839343cfb353ec06147cc6109cf9b2\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\67e3a22614326cadf216274f01d6d423\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44

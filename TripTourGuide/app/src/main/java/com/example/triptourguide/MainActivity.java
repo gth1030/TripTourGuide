@@ -1,5 +1,6 @@
 package com.example.triptourguide;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
@@ -53,9 +55,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void newTripBtn(View view) {
         Intent intent = new Intent(this, TripCreator.class);
-        startActivity(intent);
+        startActivityForResult(intent, 2);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        ((BaseAdapter) wheelView.getAdapter()).notifyDataSetChanged();
+    }
 
     public List<String> GetTripList(SQLiteDatabase db) {
 

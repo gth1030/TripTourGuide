@@ -84,6 +84,12 @@ public class ActivityListGridViewAdapter extends BaseAdapter {
         activityToImageIdMap.put("snorkel", R.drawable.snorkel_50);
         activityToImageIdMap.put("snowboarding", R.drawable.snowboard_50);
         activityToImageIdMap.put("fishing", R.drawable.fishing_50);
+        activityToImageIdMap.put("hiking",R.drawable.hiking_50);
+        activityToImageIdMap.put("scooter", R.drawable.scooter_50);
+        activityToImageIdMap.put("golf", R.drawable.golf_50);
+        activityToImageIdMap.put("cruise", R.drawable.cruise_50);
+        activityToImageIdMap.put("swimming", R.drawable.swimming_50);
+        activityToImageIdMap.put("beach", R.drawable.beach_50);
     }
 
 

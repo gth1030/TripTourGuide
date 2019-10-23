@@ -5,12 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.triptourguide.Models.CityTripEntity;
 
-import java.sql.Array;
-import java.sql.PreparedStatement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -131,6 +128,8 @@ public class DBopenHelper extends SQLiteOpenHelper {
     }
 
     public void initializeItemPrep(String tripName, Collection<String> items) {
+        if (items.isEmpty())
+            return;
         SQLiteDatabase db = getWritableDatabase();
         String query = "select id from Trip where name = \"" + tripName + "\"";
         Cursor c = db.rawQuery(query, null);

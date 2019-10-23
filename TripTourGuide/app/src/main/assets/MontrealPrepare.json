@@ -1,10 +1,10 @@
 [
   {
-    "name" : "Common",
+    "name" : "common",
     "prepareList" : ["passport", "flight e-ticket", "eTa", "voucher", "CA dollar", "Credit Card", "battery charger", "11V adapter", "camera&charger", "selfie stick", "earphone", "underwear", "socks", "t-shirt", "sunglasses", "sleepwear", "toothbrush", "toothpaste", "shampoo", "body-wash", "razor", "first-aid medicine"]
   },
   {
-    "name" : "city sightseeing",
+    "name" : "city",
     "prepareList" : ["cardigan", "long trousers"]
   },
   {
