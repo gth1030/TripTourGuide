@@ -28,10 +28,12 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
     private Context _context;
     private DBopenHelper dbHelper;
     private int _tripId;
+    private TextView _itemRemainingTextview;
 
-    public ItemPrepRecycleAdapter(Set<String> itemCollection, Context context) {
+    public ItemPrepRecycleAdapter(Set<String> itemCollection, Context context, TextView itemRemainingTextView) {
         _context = context;
         dbHelper = new DBopenHelper(_context);
+        _itemRemainingTextview = itemRemainingTextView;
         DBopenHelper dbHelper = new DBopenHelper(_context);
         _tripId = dbHelper.getTripId(MainActivity.GetCurrentTripName());
         if (!dbHelper.checkIfItemExist(MainActivity.GetCurrentTripName())) {
@@ -47,6 +49,7 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
                 }
             }
         }
+        _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
 
     }
 
@@ -77,6 +80,7 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
             holder.itemView.setBackground(_context.getDrawable(R.drawable.gradient_bg_red));
             ((TextView) holder.itemView.findViewById(R.id.if_prep_text)).setText("");
         }
+        _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
     }
 
     @Override

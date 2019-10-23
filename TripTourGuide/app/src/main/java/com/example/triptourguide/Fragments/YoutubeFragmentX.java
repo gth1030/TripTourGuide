@@ -52,6 +52,8 @@ public class YoutubeFragmentX extends Fragment {
     private static String[] youTubeList = new String[]{"P00HMxdsVZI", "Pkh8UtuejGw", "u1yVCeXYya4", "1XzY2ij_vL4" };
     private static String[] songList = new String[]{"Truth Hurts", "Senorita", "Someone You Loved", "Ran$om"};
 
+    private boolean _apiCallAllowed = false;
+
 
     private ListView musicNameListView;
 
@@ -153,21 +155,25 @@ public class YoutubeFragmentX extends Fragment {
             final List<String> youTubeIdList = new ArrayList<>();
             final List<String> playableMusicNameList = new ArrayList<>();
 
-            // TODO unblock this for network test
-            /*for (int i = 0; i < rankedMusicNameList.size(); i++) {
-                String songName = rankedMusicNameList.get(i);
-                List<SearchResult> searchResults = GetYoutubeSearch(songName);
-                if (!searchResults.isEmpty()) {
-                    youTubeIdList.add(searchResults.get(0).getId().getVideoId());
-                    playableMusicNameList.add(rankedMusicNameList.get(i));
+            // TODO update _apiCallAllowed to true to get network result! **Google api call limits how many called can be from given api-key
+            // for testing purpose is limited
+            if (_apiCallAllowed) {
+
+                for (int i = 0; i < rankedMusicNameList.size(); i++) {
+                    String songName = rankedMusicNameList.get(i);
+                    List<SearchResult> searchResults = GetYoutubeSearch(songName);
+                    if (!searchResults.isEmpty()) {
+                        youTubeIdList.add(searchResults.get(0).getId().getVideoId());
+                        playableMusicNameList.add(rankedMusicNameList.get(i));
+                    }
                 }
-            }*/
+            } else {
+                for (String a : youTubeList)
+                    youTubeIdList.add(a);
+                for (String a : songList)
+                    playableMusicNameList.add(a);
+            }
 
-
-            for (String a : youTubeList)
-                youTubeIdList.add(a);
-            for (String a : songList)
-                playableMusicNameList.add(a);
 
             getActivity().runOnUiThread(new Runnable() {
                 @Override

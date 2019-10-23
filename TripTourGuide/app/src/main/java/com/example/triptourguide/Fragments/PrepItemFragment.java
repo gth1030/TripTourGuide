@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.triptourguide.Models.ItemPrepRecycleAdapter;
 import com.example.triptourguide.R;
@@ -52,7 +53,7 @@ public class PrepItemFragment extends Fragment {
                 items.addAll(conditionToItemsMap.get(condition));
         }
         itemPrepRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, getActivity());
+        final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, getActivity(), (TextView) view.findViewById(R.id.remaining_item_count));
 
         SwipeDismissRecyclerViewTouchListener onTouchDismissListener = new SwipeDismissRecyclerViewTouchListener.Builder(
                 itemPrepRecycleView,

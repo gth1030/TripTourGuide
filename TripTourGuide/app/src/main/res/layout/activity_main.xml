@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cartoon_city"
     tools:context=".MainActivity">
 
     <com.wx.wheelview.widget.WheelView

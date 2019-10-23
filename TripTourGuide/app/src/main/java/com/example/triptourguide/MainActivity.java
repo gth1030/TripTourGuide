@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         wheelView.setSkin(WheelView.Skin.Common);
         wheelView.setWheelData(GetTripList(db));
         wheelView.setWheelSize(5);
+        wheelView.setBackgroundColor(Color.parseColor("#00ffffff"));
+        wheelView.setAlpha(0.7f);
 
         WheelView.WheelViewStyle wheelStyle= new WheelView.WheelViewStyle();
         wheelStyle.selectedTextColor = Color.BLACK;
