@@ -275,7 +275,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-10-21T13:52:50.970Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../AS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/assets" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
