@@ -47,8 +47,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\새 폴더\gum_50.png" />
-                                      <entry key="outputName" value="gum_50" />
+                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\res\drawable\consulate_50.png" />
+                                      <entry key="outputName" value="consulate_50" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="000000" />
                                     </map>

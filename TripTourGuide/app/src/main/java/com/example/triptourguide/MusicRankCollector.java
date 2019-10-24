@@ -25,7 +25,7 @@ public class MusicRankCollector {
     private static String baseUrl = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks";
 
     private static String queryBuilder(String country) {
-        return baseUrl + "&country=" + country + "&api_key=" + _apiToken + "&format=json";
+        return baseUrl + "&country=" + country.replace(" ", "%20") + "&api_key=" + _apiToken + "&format=json";
 
     }
 
