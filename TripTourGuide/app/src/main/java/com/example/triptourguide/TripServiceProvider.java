@@ -35,8 +35,12 @@ public class TripServiceProvider extends AppCompatActivity {
 
     public static Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     public static Set<String> chosenActivities;
+    public static List<CityTripEntity> CityTripEntityList;
     Map<String, List<String>> countryToItemsMap = new HashMap<>();
     List<String> list;
+    YoutubeFragmentX youtubeFragmentX;
+    MarkedMapFragment mapFragment;
+
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
@@ -50,13 +54,13 @@ public class TripServiceProvider extends AppCompatActivity {
         String tripName = getIntent().getStringExtra("tripName");
         DBopenHelper dbHelper = new DBopenHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        List<CityTripEntity> cityTripEntityList = dbHelper.RetrieveTripDetail(db, tripName);
+        CityTripEntityList = dbHelper.RetrieveTripDetail(db, tripName);
 
-        populateConditionToItemMap(cityTripEntityList);
+        populateConditionToItemMap(CityTripEntityList);
 
         chosenActivities = new HashSet<>();
         chosenActivities.add("common");
-        for (CityTripEntity cityTripEntity : cityTripEntityList)
+        for (CityTripEntity cityTripEntity : CityTripEntityList)
             chosenActivities.addAll(cityTripEntity.ActivityList);
 
         Set<String> items = new HashSet<>();
@@ -71,6 +75,9 @@ public class TripServiceProvider extends AppCompatActivity {
         Fragment fragment = new PrepItemFragment(conditionToItemsMap, chosenActivities);
         ft.replace(R.id.item_provider_container, fragment);
         ft.commit();
+        youtubeFragmentX = new YoutubeFragmentX();
+        mapFragment = new MarkedMapFragment(this);
+
     }
 
 
@@ -115,22 +122,19 @@ public class TripServiceProvider extends AppCompatActivity {
                 break;
 
             case R.id.in_trip:
-                YoutubeFragmentX youtubeFragmentX = new YoutubeFragmentX();
                 FragmentTransaction youtubeFt = getSupportFragmentManager().beginTransaction();
                 youtubeFt.replace(R.id.item_provider_container, youtubeFragmentX);
                 youtubeFt.commit();
+
                 break;
 
             case R.id.post_trip:
-                MarkedMapFragment fragment = new MarkedMapFragment(this);
-
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.item_provider_container, fragment);
+                ft.replace(R.id.item_provider_container, mapFragment);
                 ft.commit();
-
                 getSupportFragmentManager().executePendingTransactions();
-                SupportMapFragment mapFragment = (SupportMapFragment)fragment.getChildFragmentManager().findFragmentById(R.id.marked_map_fragment);
-                mapFragment.getMapAsync(fragment);
+                SupportMapFragment fragment = (SupportMapFragment)mapFragment.getChildFragmentManager().findFragmentById(R.id.marked_map_fragment);
+                fragment.getMapAsync(mapFragment);
                 break;
 
         }

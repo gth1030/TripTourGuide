@@ -8,6 +8,18 @@
     tools:context=".TripSettings">
 
 
+    <LinearLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".8"
+        android:background="@drawable/tree_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
     <TextView
         android:id="@+id/date_range_text"
         android:layout_width="wrap_content"
@@ -30,16 +42,17 @@
         app:ccp_showFullName="true"
         app:ccp_showNameCode="true"
         app:ccp_showPhoneCode="false"
-        app:layout_constraintTop_toBottomOf="@+id/date_range_text"
         app:layout_constraintBottom_toTopOf="@+id/statespinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_range_text" />
 
     <Spinner
         android:id="@+id/statespinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/cityspinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,10 +63,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/activity_list_grid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statespinner" />
+
+    <TextView
+        android:id="@+id/select_activity_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#66FFFFFF"
+        android:fontFamily="@font/alegreya_sans_thin"
+        android:text="도시에서 어떤 여행을 하나요?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/activity_list_grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityspinner" />
 
     <GridView
         android:id="@+id/activity_list_grid"
@@ -63,7 +93,7 @@
         app:layout_constraintBottom_toTopOf="@+id/create_city_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cityspinner">
+        app:layout_constraintTop_toBottomOf="@+id/select_activity_text">
 
     </GridView>
 
@@ -74,8 +104,9 @@
         android:layout_height="wrap_content"
         android:background="#99094775"
         android:onClick="addCityBtn"
-        android:text="Add new City!"
+        android:text="새로운 도시 추가하기!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

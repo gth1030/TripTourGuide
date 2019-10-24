@@ -46,6 +46,7 @@ public class MusicRankCollector {
             }
 
         } catch (IOException e) {
+            e.printStackTrace();
 
         } catch (JSONException e) {
 
@@ -57,7 +58,7 @@ public class MusicRankCollector {
         List<String> musicList = new ArrayList<>();
         try {
             JSONArray tracks = GetMusicRankJson(country).getJSONObject("tracks").getJSONArray("track");
-            int maxTrack = Math.min(tracks.length(), 10);
+            int maxTrack = Math.min(tracks.length(), 20);
             for (int i = 0; i < maxTrack; i++) {
                 JSONObject track = tracks.getJSONObject(i);
                 musicList.add(track.getString("name"));

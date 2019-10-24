@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.example.triptourguide.Models.CityTripEntity;
+import com.example.triptourguide.Models.MusicItemEntity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -45,7 +46,33 @@ public class DBopenHelper extends SQLiteOpenHelper {
         String createItemPrepTable = "create table ItemPrep (tripId integer not null, itemName VARCHAR(100) not null, prepared BOOLEAN not null default '1')";
         db.execSQL(createItemPrepTable);
 
+        String createMusicRankTable = "create table MusicRank (rank integer not null, musicTitle VARCHAR(100) " +
+                "not null, videoId VARCHAR(50) not null, countryName VARCHAR(100) not null)";
+        db.execSQL(createMusicRankTable);
+
         LoadDemoData(db);
+    }
+
+    public void updateMusicRank(String countryName, List<String> musicTitles, List<String> videoIds) {
+        SQLiteDatabase db = getWritableDatabase();
+        StringBuilder sb = new StringBuilder();
+        sb.append("insert into MusicRank (rank, musicTitle, videoId, countryName) values ");
+        for (int i = 0; i < musicTitles.size(); i++) {
+            sb.append("( " + (i+1) + ", \"" + musicTitles.get(i) +"\", \"" + videoIds.get(i) + "\", \"" + countryName + "\"),");
+        }
+        db.execSQL(sb.toString().substring(0, sb.length() - 1));
+    }
+
+    public List<MusicItemEntity> getMusicRank(String countryName) {
+        String query = "select * from MusicRank where countryName = \"" + countryName + "\" order by rank";
+        Cursor c = getReadableDatabase().rawQuery(query, null);
+        List<MusicItemEntity> musicItemEntities = new ArrayList<>();
+        int musicTitleInd = c.getColumnIndex("musicTitle");
+        int videoIdInd = c.getColumnIndex("videoId");
+        while (c.moveToNext()) {
+            musicItemEntities.add(new MusicItemEntity(c.getString(videoIdInd), c.getString(musicTitleInd)));
+        }
+        return musicItemEntities;
     }
 
     @Override
@@ -181,6 +208,8 @@ public class DBopenHelper extends SQLiteOpenHelper {
         c = db.rawQuery(query, null);
         return c.getCount() != 0;
     }
+
+
 
 
 

@@ -19,8 +19,8 @@
 
     <ListView
         android:id="@+id/MusicTitleList"
-        android:layout_width="0dp"
-        android:layout_height="684dp"
+        android:layout_width="match_parent"
+        android:layout_height="800px"
         android:layout_centerHorizontal="true"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"

@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.triptourguide.R;
 import com.google.android.youtube.player.YouTubePlayer;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class YtListener implements YouTubePlayer.PlaylistEventListener {
@@ -19,11 +21,14 @@ public class YtListener implements YouTubePlayer.PlaylistEventListener {
     private Activity _context;
     private int _currentInd = 0;
     private int _backGroundColor = Color.parseColor("#804A98CC");
+    private static Boolean[] isAnimationPlayable;
 
     public YtListener(List<String> musicNameList, ListView musicListView, Activity context) {
         _musicNameList = musicNameList;
         _musicListView = musicListView;
         _context = context;
+        isAnimationPlayable = new Boolean[musicNameList.size()];
+        Arrays.fill(isAnimationPlayable, false);
     }
 
     @Override
@@ -49,13 +54,16 @@ public class YtListener implements YouTubePlayer.PlaylistEventListener {
             public void run() {
                 TextView v = _musicListView.getChildAt(_currentInd).findViewById(R.id.music_title);
                 v.setBackgroundColor(Color.RED);
-                setUpFadeAnimation(v);
+                isAnimationPlayable[_currentInd] = true;
+                setUpFadeAnimation(v, _currentInd);
                 if (_currentInd != 0) {
+                    isAnimationPlayable[_currentInd - 1] = false;
                     TextView vp = _musicListView.getChildAt(_currentInd - 1).findViewById(R.id.music_title);
                     vp.setBackgroundColor(_backGroundColor);
                     vp.clearAnimation();
                 }
                 if (_currentInd < _musicNameList.size() - 1) {
+                    isAnimationPlayable[_currentInd + 1] = false;
                     TextView vp = _musicListView.getChildAt(_currentInd + 1).findViewById(R.id.music_title);
                     vp.setBackgroundColor(_backGroundColor);
                     vp.clearAnimation();
@@ -65,7 +73,7 @@ public class YtListener implements YouTubePlayer.PlaylistEventListener {
     }
 
 
-    public static void setUpFadeAnimation(final TextView textView) {
+    public static void setUpFadeAnimation(final TextView textView, final int viewInd) {
         // Start from 0.1f if you desire 90% fade animation
         final Animation fadeIn = new AlphaAnimation(0.3f, 1.0f);
         fadeIn.setDuration(1000);
@@ -79,7 +87,8 @@ public class YtListener implements YouTubePlayer.PlaylistEventListener {
             @Override
             public void onAnimationEnd(Animation arg0) {
                 // start fadeOut when fadeIn ends (continue)
-                textView.startAnimation(fadeOut);
+                if (isAnimationPlayable[viewInd])
+                    textView.startAnimation(fadeOut);
             }
 
             @Override
@@ -95,7 +104,8 @@ public class YtListener implements YouTubePlayer.PlaylistEventListener {
             @Override
             public void onAnimationEnd(Animation arg0) {
                 // start fadeIn when fadeOut ends (repeat)
-                textView.startAnimation(fadeIn);
+                if (isAnimationPlayable[viewInd])
+                    textView.startAnimation(fadeIn);
             }
 
             @Override

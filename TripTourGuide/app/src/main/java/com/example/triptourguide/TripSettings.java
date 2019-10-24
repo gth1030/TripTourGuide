@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.borax12.materialdaterangepicker.date.DatePickerDialog;
+import com.example.triptourguide.Listners.ActivityListGridViewAdapter;
 import com.example.triptourguide.Models.CityTripEntity;
 import com.hbb20.CountryCodePicker;
 
@@ -27,9 +28,11 @@ import org.json.JSONObject;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +52,6 @@ public class TripSettings extends AppCompatActivity {
     List<String> selectedstate;
     List<String> selectedcity;
     List<String> selectedactivities;
-    String[] statedata;
     String[] citydata;
     String[] activitydata;
     Context _context;
@@ -67,19 +69,19 @@ public class TripSettings extends AppCompatActivity {
         setContentView(R.layout.activity_trip_settings);
 
         _context = this;
-        statedata = new String[0];
         citydata = new String[0];
         activitydata = new String[0];
         ccp = findViewById(R.id.ccp);
         dateRageTextView = findViewById(R.id.date_range_text);
         dateRageTextView.setOnClickListener(new DateRangeViewListner());
         statespinner = findViewById(R.id.statespinner);
-        ArrayAdapter<String> stateadapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, statedata);
+        final ArrayAdapter<String> stateadapter = new ArrayAdapter<>(this, R.layout.spinner_row, new ArrayList<String>());
         statespinner.setAdapter(stateadapter);
-
+        statespinner.setPrompt("주를 선택하세요");
         cityspinner = findViewById(R.id.cityspinner);
-        ArrayAdapter<String> cityadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, citydata);
+        final ArrayAdapter<String> cityadapter = new ArrayAdapter<String>(this, R.layout.spinner_row, citydata);
         cityspinner.setAdapter(cityadapter);
+        cityspinner.setPrompt("도시를 선택하세요");
 
         StateListener stateListener = new StateListener();
         statespinner.setOnItemSelectedListener(stateListener);
@@ -147,15 +149,17 @@ public class TripSettings extends AppCompatActivity {
             public void onCountrySelected() {
                 pickedcountry = ccp.getSelectedCountryName();
                 selectedstate = new ArrayList<>();
-
-                Set<String> statesSet = countryToState.get(pickedcountry).keySet();
+                Set<String> statesSet = new HashSet<>();
+                if (countryToState.containsKey(pickedcountry))
+                    statesSet = countryToState.get(pickedcountry).keySet();
 
                 for (String state : statesSet) {
                     selectedstate.add(state);
                 }
-                statedata = selectedstate.toArray(new String[selectedstate.size()]);
-                ArrayAdapter<String> stateadapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, statedata);
-                statespinner.setAdapter(stateadapter);
+                String[] stateSections = selectedstate.toArray(new String[selectedstate.size()]);
+                Arrays.sort(stateSections);
+                ArrayAdapter<String> stateAdapter = new ArrayAdapter<>(_context, R.layout.spinner_row, stateSections);
+                statespinner.setAdapter(stateAdapter);
             }
         });
 
@@ -163,7 +167,7 @@ public class TripSettings extends AppCompatActivity {
     }
 
     public void addCityBtn(View view) {
-        if (pickedcity == null || pickedcity == null || startDate.equals(endDate)) {
+        if (pickedcity == null || pickedcity == null ) {
             Toast.makeText(_context, "모든정보를 기입하셔야 합니다 ㅠㅠ", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -183,7 +187,7 @@ public class TripSettings extends AppCompatActivity {
             selectedcity = countryToState.get(pickedcountry).get(pickedstate);
 
             citydata = selectedcity.toArray(new String[selectedcity.size()]);
-            ArrayAdapter<String> cityAdapter = new ArrayAdapter<>(_context, android.R.layout.simple_spinner_item, citydata);
+            ArrayAdapter<String> cityAdapter = new ArrayAdapter<>(_context, R.layout.spinner_row, citydata);
             cityspinner.setAdapter(cityAdapter);
         }
 

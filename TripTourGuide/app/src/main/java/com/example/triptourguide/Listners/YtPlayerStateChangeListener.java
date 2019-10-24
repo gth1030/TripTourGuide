@@ -12,12 +12,10 @@ import java.util.List;
 
 public class YtPlayerStateChangeListener implements YouTubePlayer.PlayerStateChangeListener {
 
-    private List<String> _musicNameList;
     private ListView _musicListView;
-    private Activity _context;
     private boolean initialPlay = true;
 
-    public YtPlayerStateChangeListener(List<String> musicNameList, ListView musicListView, Activity context) {
+    public YtPlayerStateChangeListener(ListView musicListView) {
         _musicListView = musicListView;
     }
 
@@ -40,7 +38,7 @@ public class YtPlayerStateChangeListener implements YouTubePlayer.PlayerStateCha
     public void onVideoStarted() {
         if (initialPlay) {
             _musicListView.getChildAt(0).findViewById(R.id.music_title).setBackgroundColor(Color.RED);
-            YtListener.setUpFadeAnimation((TextView) _musicListView.getChildAt(0).findViewById(R.id.music_title));
+            YtListener.setUpFadeAnimation((TextView) _musicListView.getChildAt(0).findViewById(R.id.music_title), 0);
         }
         initialPlay = false;
     }

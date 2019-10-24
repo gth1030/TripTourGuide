@@ -53,7 +53,8 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
                 }
             }
         }
-        _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
+        _itemRemainingTextview.setText("이 친구들은 여행에 함깨해야 합니다.\n여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
+        _itemRemainingTextview.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
     }
 
@@ -84,13 +85,16 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
             holder.itemView.setBackground(_context.getDrawable(R.drawable.gradient_bg_red));
             ((TextView) holder.itemView.findViewById(R.id.if_prep_text)).setText("");
         }
-        _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
+        _itemRemainingTextview.setText("이 친구들은 여행에 함깨해야 합니다.\n여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
+        _itemRemainingTextview.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
         if (prePrepItems.size() == 0) {
             _itemRemainingTextview.setClickable(true);
             _itemRemainingTextview.setTextColor(Color.RED);
-            _itemRemainingTextview.setText("여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명" +
-                    "\n대리고 가지 말아야할 친구를 위해 여기를 클릭하세요!");
+            _itemRemainingTextview.setText("대리고 가지 말아야할 친구를 위해 여기를 클릭하세요!\n" +
+                            "여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
+            _itemRemainingTextview.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
             _itemRemainingTextview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

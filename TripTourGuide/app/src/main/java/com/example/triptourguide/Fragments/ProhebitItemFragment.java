@@ -17,6 +17,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import com.example.triptourguide.Listners.ProhibitedListGridViewAdapter;
+import com.example.triptourguide.Models.CityTripEntity;
 import com.example.triptourguide.R;
 import com.example.triptourguide.TripServiceProvider;
 import com.example.triptourguide.TripUtils;
@@ -40,18 +41,16 @@ public class ProhebitItemFragment extends Fragment {
     private TextView _prohibitTextView;
     Map<String, List<String>> countryToProhItemMap = new HashMap<>();
     Map<String, String> itemToDescriptionMap = new HashMap<>();
-    List<String> loadprohitem;
+    List<String> loadprohitem = new ArrayList<>();
 
     public ProhebitItemFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
+        loadprohitem = new ArrayList<>();
         View rootView = inflater.inflate(R.layout.fragment_prohebit_item, container, false);
         ProhibitedItemGridView = rootView.findViewById(R.id.prohibited_item_gridview);
         _prohibitTextView = rootView.findViewById(R.id.prohibit_item_return_text);
@@ -99,7 +98,12 @@ public class ProhebitItemFragment extends Fragment {
             Log.d("error found", "error found");
         }
 
-        loadprohitem = countryToProhItemMap.get("Singapore");
+        for (CityTripEntity cityTripEntity : TripServiceProvider.CityTripEntityList) {
+            if (!countryToProhItemMap.containsKey(cityTripEntity.CountryName))
+                continue;
+            loadprohitem.addAll(countryToProhItemMap.get(cityTripEntity.CountryName));
+        }
+
         ProhibitedListGridViewAdapter adapter = new ProhibitedListGridViewAdapter(getActivity(), loadprohitem);
         ProhibitedItemGridView.setAdapter(adapter);
 

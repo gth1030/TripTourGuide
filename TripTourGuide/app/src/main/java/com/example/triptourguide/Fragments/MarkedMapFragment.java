@@ -44,9 +44,7 @@ public class MarkedMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View v1 = inflater.inflate(R.layout.fragment_marked_map, container, false);
-
         return v1;
     }
 

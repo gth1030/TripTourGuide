@@ -15,7 +15,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.triptourguide.DBopenHelper;
 import com.example.triptourguide.Listners.YtPlayerStateChangeListener;
+import com.example.triptourguide.MainActivity;
+import com.example.triptourguide.Models.CityTripEntity;
+import com.example.triptourguide.Models.MusicItemEntity;
 import com.example.triptourguide.MusicRankCollector;
 import com.example.triptourguide.R;
 import com.example.triptourguide.Listners.YtListener;
@@ -34,6 +38,7 @@ import com.google.api.services.youtube.model.SearchResult;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -41,18 +46,16 @@ import java.util.List;
  */
 public class YoutubeFragmentX extends Fragment {
 
+    List<CityTripEntity> _cityTripEntity;
+
 
     public YoutubeFragmentX() {
+        _cityTripEntity = new DBopenHelper(getActivity()).RetrieveTripDetail(MainActivity.db, MainActivity.GetCurrentTripName());
 
     }
 
 
-    private static final String API_KEY = "AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8";
-
-    private static String[] youTubeList = new String[]{"P00HMxdsVZI", "Pkh8UtuejGw", "u1yVCeXYya4", "1XzY2ij_vL4" };
-    private static String[] songList = new String[]{"Truth Hurts", "Senorita", "Someone You Loved", "Ran$om"};
-
-    private boolean _apiCallAllowed = false;
+    private static final String API_KEY = "AIzaSyA25f1_VvgFd8z8ohCNW8A5jCzjHE9kbag";
 
 
     private ListView musicNameListView;
@@ -149,29 +152,41 @@ public class YoutubeFragmentX extends Fragment {
 
         @Override
         public void run() {
+            String countryName = getProperCountryName(_cityTripEntity);
 
-            List<String> rankedMusicNameList= MusicRankCollector.GetCountryMusicRank("Canada");
+            List<String> rankedMusicNameList= MusicRankCollector.GetCountryMusicRank(countryName);
 
             final List<String> youTubeIdList = new ArrayList<>();
             final List<String> playableMusicNameList = new ArrayList<>();
 
-            // TODO update _apiCallAllowed to true to get network result! **Google api call limits how many called can be from given api-key
-            // for testing purpose is limited
-            if (_apiCallAllowed) {
 
-                for (int i = 0; i < rankedMusicNameList.size(); i++) {
+            DBopenHelper dbHelper = new DBopenHelper(getActivity());
+            List<MusicItemEntity> musicItemEntityList = dbHelper.getMusicRank(countryName);
+            if (musicItemEntityList.size() < 20) {
+                for (int i = 0; i < Math.min(20, rankedMusicNameList.size()); i++) {
                     String songName = rankedMusicNameList.get(i);
+
                     List<SearchResult> searchResults = GetYoutubeSearch(songName);
-                    if (!searchResults.isEmpty()) {
+
+                    //In case youtube api runs out of quota!!!
+                    // Youtube quota is very limited ㅠㅠ
+                    if (searchResults == null) {
+                        for (int j = 0; j < songsTitles.length; j++) {
+                            youTubeIdList.add(videoIds[j]);
+                            playableMusicNameList.add(songsTitles[i]);
+                        }
+
+                    } else if (!searchResults.isEmpty()) {
                         youTubeIdList.add(searchResults.get(0).getId().getVideoId());
                         playableMusicNameList.add(rankedMusicNameList.get(i));
                     }
                 }
+                dbHelper.updateMusicRank(countryName, rankedMusicNameList, youTubeIdList);
             } else {
-                for (String a : youTubeList)
-                    youTubeIdList.add(a);
-                for (String a : songList)
-                    playableMusicNameList.add(a);
+                for (MusicItemEntity musicItemEntity : musicItemEntityList) {
+                    youTubeIdList.add(musicItemEntity.VideoId);
+                    playableMusicNameList.add(musicItemEntity.MusicTitle);
+                }
             }
 
 
@@ -184,13 +199,37 @@ public class YoutubeFragmentX extends Fragment {
             });
 
             _youtubePlayer.setPlaylistEventListener(new YtListener(playableMusicNameList, _musicListView, _context));
-            _youtubePlayer.setPlayerStateChangeListener(new YtPlayerStateChangeListener(playableMusicNameList, _musicListView, _context));
+            _youtubePlayer.setPlayerStateChangeListener(new YtPlayerStateChangeListener(_musicListView));
 
             _youtubePlayer.cueVideos(youTubeIdList);
             _youtubePlayer.play();
 
         }
+
+        private String getProperCountryName(List<CityTripEntity> cityTripEntityList) {
+            long currentDiff = Math.abs(cityTripEntityList.get(0).StartDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+            String closestCountryName = cityTripEntityList.get(0).CountryName;
+            for (CityTripEntity cityTripEntity : cityTripEntityList) {
+                if (currentDiff > Math.abs(cityTripEntity.StartDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis())) {
+                    currentDiff = Math.abs(cityTripEntity.StartDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+                    closestCountryName = cityTripEntity.CountryName;
+                }
+                if (currentDiff > Math.abs(cityTripEntity.EndDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis())) {
+                    currentDiff = Math.abs(cityTripEntity.EndDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+                    closestCountryName = cityTripEntity.CountryName;
+                }
+            }
+            return closestCountryName;
+        }
     }
+
+    String[] songsTitles = new String[]{
+
+    };
+    String[] videoIds = new String[]{
+
+    };
+
 
 
 }
