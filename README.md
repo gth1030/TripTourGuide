@@ -64,48 +64,48 @@ Android 9.0 이상
 
 
 ##사용법 (Getting Started)
-<img src="./img/main.jpg" width="320">
-![main](./img/main.jpg)
+
+<img src="./img/main.jpg" width="350">
 
 어플을 실행했을 때 초기화면입니다. 저장된 여행들을 리스트로 확인할 수 있습니다. '+new Trip'을 클릭하여 새로운 여행을 추가할 수 있습니다.
 
-![beforeaddcity](./img/beforeaddcity.jpg)
+<img src="./img/beforeaddcity.jpg" width="350">
 
 '+new Tip'을 클릭했을 때 실행되는 여행 추가를 위한 설정화면입니다. '+Add City!'를 클릭하여 여행을 떠날 도시를 선택하면 됩니다.
 
-![addingcity](./img/addingcity.jpg)
+<img src="./img/addingcity.jpg" width="350">
 
 '+Add City'를 클릭했을 때 실행되는 여행 도시을 설정하는 화면입니다. 먼저 출발 및 도착 날짜를 설정합니다. 그 다음 여행국가, 주, 도시 순으로 선택을 하면 해당 도시에서 즐길 수 있는 활동(Activity)가 표시됩니다. 원하는 활동을 모두 선택한 후 '새로운 도시 추가하기!'를 클릭하여 설정을 마무리합니다.
 
-![addedcity](./img/addedcity.jpg)
+<img src="./img/addedcity.jpg" width="350">
 
 여행을 떠날 도시를 모두 추가했을 때의 화면입니다. 여행 도시 추가를 마쳤다면 '새 여행 만들기!'를 클릭하여 떠날 여행의 제목을 설정합니다.
 
-![namingtrip](./img/namingtrip.jpg)
+<img src="./img/namingtrip.jpg" width="350">
 
 '새 여행 만들기!'를 클릭했을 때 실행되는 dialog입니다. 제목을 작성한 후 'OK'버튼을 눌러 여행 추가를 마무리합니다.
 
-![preparingsupply](./img/preparingsupply.jpg)
+<img src="./img/preparingsupply.jpg" width="350">
 
 여행 제목을 클릭하였을 때 실행되는 챙겨야 할 준비물 리스트 제공 화면입니다. 확실하게 챙긴 준비물은 옆으로 슬라이드하여 '준비됨' 상태로 변경할 수 있습니다. 상단의 텍스트를 통해 몇 개의 준비물이 남았는지 파악할 수 있습니다.
 
-![completepreparingsupply](./img/completepreparingsupply.jpg)
+<img src="./img/completepreparingsupply.jpg" width="350">
 
 모든 준비물을 챙겼을 때 변경된 준비물 화면입니다. 준비물을 모두 '준비됨' 상태로 변경할 시 리스트의 항목들이 투명하게 변하며 뒤의 배경 그림이 나타나게 됩니다. 또한 상단의 텍스트의 색상이 변경되며 텍스트를 클릭할 시 여행 국가에서 반입을 금지하고 있는 물품들을 볼 수 있습니다.
 
-![prohibiteditems](./img/prohibiteditems.jpg)
+<img src="./img/prohibiteditems.jpg" width="350">
 
 준비물 준비를 마치고 변경된 텍스트를 클릭할 시 실행되는 해당 국가의 반입 금지 물품 리스트입니다. 아이콘들을 클릭할 시 어떠한 물품이 왜 반입이 불가한 지에 대한 설명이 제공됩니다.
 
-![musicplaying](./img/musicplaying.jpg)
+<img src="./img/musicplaying.jpg" width="350">
 
 상단의 ActionBar에서 두번째 아이콘을 클릭할 시 실행되는 현지 인기 음악 재생 화면입니다. 위 화면에서는 여행을 가는 국가의 인기 음원 차트를 'Last.fm'에서 API를 통해 받아옵니다. 그 차트에 실려있는 음악은 'Youtube'를 통해 재생목록을 생성 및 동영상을 재생합니다.
 
-![consulateinfo](./img/consulateinfo.jpg)
+<img src="./img/consulateinfo.jpg" width="350">
 
 상단의 ActionBar에서 마지막 아이콘을 클릭할 시 실행되는 dialog입니다.  여행을 가는 도시에서 불행한 상황이 발생했을 시 도움을 청할 수 있는 영사관의 정보를 제공합니다.
 
-![mappingcity](./img/mappingcity.jpg)
+<img src="./img/mappingcity.jpg" width="350">
 
 상단의 ActionBar에서 세번째 아이콘을 클릭할 시 실행되는 여행 도시를 지도에 표시해 주는 기능입니다.  'Google Map'의 API를 활용한 기능이며 어떤 도시를 여행했는지 지도를 통해 사용자에게 한눈에 표시해줍니다.
 
