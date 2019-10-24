@@ -1,6 +1,6 @@
 [
   {
-    "name" : "US",
+    "name" : "United States",
     "prohibited" : ["alcohol", "artifact", "army", "pets", "drug", "soil", "seed", "pill"]
   },
   {

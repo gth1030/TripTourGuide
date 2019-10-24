@@ -18,4 +18,9 @@
         android:icon="@mipmap/airplane_land48"
         android:title="postTrip"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/country_consulate"
+        android:icon="@drawable/info_50"
+        android:title="consulate info"
+        app:showAsAction="always" />
 </menu>

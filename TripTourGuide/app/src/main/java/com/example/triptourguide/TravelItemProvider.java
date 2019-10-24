@@ -1,5 +1,6 @@
 package com.example.triptourguide;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -17,7 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.triptourguide.Models.CityTripEntity;
-import com.example.triptourguide.Models.ItemPrepRecycleAdapter;
+import com.example.triptourguide.Models.ConsulateModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,17 +31,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import io.github.codefalling.recyclerviewswipedismiss.SwipeDismissRecyclerViewTouchListener;
 
 public class TravelItemProvider extends AppCompatActivity {
 
     Map<String, Set<String>> conditionToItemsMap = new HashMap<>();
     Map<String, List<String>> countryToItemsMap = new HashMap<>();
+    Map<String, ConsulateModel> countryToConsulateMap = new HashMap<>();
     PrepItemFragment prepItemFragment;
     List<String> list;
 
     private String getCountryItemJson(String countryName) {
         return TripUtils.ReadFileFromAsset(this, countryName + "Prepare.json");
+    }
+
+    private String getCountryConsulateJson(String countryName) {
+        return TripUtils.ReadFileFromAsset(this, countryName + "Consulate.json");
     }
 
 
@@ -74,25 +79,31 @@ public class TravelItemProvider extends AppCompatActivity {
         ft.commit();
     }
 
-
-    private void CountryToProhItemMap(String countryname) {
-        try {
-            JSONArray CountryProhJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "CountryProhibited.json"));
-            for (int i = 0; i < CountryProhJson.length(); i++) {
-                JSONObject country = CountryProhJson.getJSONObject(i);
-                String countryN = country.getString("name");
-                JSONArray prohibitedListArr = country.getJSONArray("prohibited");
-                List<String> prohibitedList = new ArrayList<>();
-                for (int j = 0; j < prohibitedListArr.length(); j++) {
-                    prohibitedList.add(prohibitedListArr.getString(j));
+    private void populateCountryToCosulateMap() {
+        String[] builtInConsulateCountry = new String[]{"Singapore", "United States", "Canada"};
+        for (String countryName : builtInConsulateCountry) {
+            try {
+                JSONArray countryConsulateJson = new JSONArray(getCountryConsulateJson(countryName));
+                for (int i = 0; i < countryConsulateJson.length(); i++) {
+                    JSONObject contryConsulateJson = countryConsulateJson.getJSONObject(i);
+                    String city = contryConsulateJson.getString("name");
+                    String address = contryConsulateJson.getString("address");
+                    String telephone = contryConsulateJson.getString("telephone");
+                    String fax = contryConsulateJson.getString("fax");
+                    String homepage = contryConsulateJson.getString("homepage");
+                    JSONArray consulateListArr = contryConsulateJson.getJSONArray("jurisdiction");
+                    List<String> jurisdictions = new ArrayList<>();
+                    for (int j = 0; j < consulateListArr.length(); j++) {
+                        jurisdictions.add(consulateListArr.getString(j));
+                    }
+                    countryToConsulateMap.put(country, new ConsulateModel(city, address, telephone, fax, homepage, jurisdictions));
                 }
-                countryToItemsMap.put(countryN, prohibitedList);
+            } catch(JSONException e) {
+                Log.d("error found", "error found");
             }
-
-        } catch (JSONException e) {
-            Log.d("error found", "error found");
         }
     }
+
 
     private void populateConditionToItemMap(List<CityTripEntity> cityTripEntityList) {
         for (CityTripEntity cityTripEntity : cityTripEntityList) {
@@ -135,6 +146,13 @@ public class TravelItemProvider extends AppCompatActivity {
                 startActivity(intentIn);
                 break;
 
+            case R.id.country_consulate:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("영사관 정보");
+                builder.setIcon(R.drawable.consulate_50);
+                builder.setMessage("");
+                builder.setPositiveButton("확인", null);
+                builder.show();
         }
         return super.onOptionsItemSelected(item);
     }

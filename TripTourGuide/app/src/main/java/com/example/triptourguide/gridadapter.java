@@ -60,25 +60,6 @@ public class gridadapter extends AppCompatActivity {
         ProhibitedItemGridView = (GridView) findViewById(R.id.ProhItemGridView);
 
         try {
-            JSONArray CountryProhibitedJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "CountryProhibited.json"));
-            for (int i = 0; i < CountryProhibitedJson.length(); i++) {
-
-                JSONObject country = CountryProhibitedJson.getJSONObject(i);
-                String countryname = country.getString("name");
-                JSONArray prohitemlistArr = country.getJSONArray("prohibited");
-                List<String> prohitemlist = new ArrayList<>();
-                for (int j = 0; j < prohitemlistArr.length(); j++) {
-                    prohitemlist.add(prohitemlistArr.getString(j));
-                }
-                countryToProhItemMap.put(countryname, prohitemlist);
-
-            }
-
-        } catch (JSONException e) {
-            Log.d("error found", "error found");
-        }
-
-        try {
             JSONArray DescriptionJson = new JSONArray(TripUtils.ReadFileFromAsset(this, "ProhibitDescription.json"));
             for (int i = 0; i < DescriptionJson.length(); i++) {
 
