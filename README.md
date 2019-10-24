@@ -61,7 +61,10 @@ Android 9.0 이상
 - 생성된 APK 파일을 Android 기반의 모바일 디바이스로 전송하고 설치하시면 앱을 실행하실 수 있습니다
 
 
+
+
 ##사용법 (Getting Started)
+<img src="./img/main.jpg" width="48">
 ![main](./img/main.jpg)
 
 어플을 실행했을 때 초기화면입니다. 저장된 여행들을 리스트로 확인할 수 있습니다. '+new Trip'을 클릭하여 새로운 여행을 추가할 수 있습니다.
