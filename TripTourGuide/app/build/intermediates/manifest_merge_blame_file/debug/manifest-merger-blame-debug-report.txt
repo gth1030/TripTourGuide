@@ -6,25 +6,25 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+8-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+9-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-11-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:5-81
-11-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:22-78
+11-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:5-81
+11-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:5-76
-13-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:22-73
+13-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:5-76
+13-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:22-73
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:5-67
-14-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
+14-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:5-67
+14-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
 15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->[com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:26:5-66
-15-->[com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:26:22-63
+15-->[com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:26:5-66
+15-->[com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:26:22-63
 16
 17    <uses-feature
 17-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
@@ -34,67 +34,67 @@
 19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 20
 21    <application
-21-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-38:19
+21-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-38:19
 22        android:allowBackup="true"
-22-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
+22-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:12:9-43
+25-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:12:9-43
 26        android:label="@string/app_name"
-26-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:13:9-41
+26-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:13:9-41
 27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
+27-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
 28        android:supportsRtl="true"
-28-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
+28-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
 29        android:testOnly="true"
 30        android:theme="@style/AppTheme"
-30-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
+30-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
 31        android:usesCleartextTraffic="true" >
-31-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-44
+31-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-44
 32        <activity android:name="com.example.triptourguide.TripServiceProvider" />
-32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-57
-32-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-54
+32-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-57
+32-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-54
 33        <activity android:name="com.example.triptourguide.TripCreator" />
-33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-49
-33-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-46
+33-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-49
+33-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-46
 34        <activity android:name="com.example.triptourguide.TripSettings" />
-34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-50
-34-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-47
+34-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-50
+34-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-47
 35        <activity android:name="com.example.triptourguide.MainActivity" >
-35-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
-35-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
+35-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
+35-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
 36            <intent-filter>
-36-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
+36-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
 37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
-37-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
+37-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
+37-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
 38
 39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
-39-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
+39-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
+39-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
 40            </intent-filter>
 41        </activity>
 42
 43        <meta-data
-43-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
+43-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
 44            android:name="preloaded_fonts"
-44-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
+44-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
 45            android:resource="@array/preloaded_fonts" />
-45-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
+45-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
 46        <meta-data
-46-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:71
+46-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:71
 47            android:name="com.google.android.geo.API_KEY"
-47-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
+47-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
 48            android:value="AIzaSyAg1hkaFMgL6Jh9ankdeJ58Hl0b54qOCI8" />
-48-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
+48-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
 49        <meta-data
-49-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:9-37:69
+49-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:9-37:69
 50            android:name="com.google.android.gms.version"
-50-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:36:13-58
+50-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:36:13-58
 51            android:value="@integer/google_play_services_version" />
-51-->C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:37:13-66
+51-->C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:37:13-66
 52        <!-- Needs to be explicitly declared on P+ -->
 53        <uses-library
 53-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40

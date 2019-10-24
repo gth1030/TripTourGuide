@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_security"
     android:orientation="vertical"
     tools:context=".Fragments.ProhebitItemFragment">
 
@@ -11,9 +12,11 @@
         android:id="@+id/prohibit_item_return_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/coming_soon"
+        android:fontFamily="@font/archivo_black"
         android:text="이 친구들은 여행에서 피해주세요 ㅠㅠ \n 준비물품으로 돌아가기"
         android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#3C3F41"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +27,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:horizontalSpacing="0dp"
-        android:numColumns="3"
+        android:numColumns="4"
         android:stretchMode="columnWidth"
         android:verticalSpacing="0dp" />
 

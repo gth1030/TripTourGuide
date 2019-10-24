@@ -23,6 +23,7 @@ import com.hbb20.CountryCodePicker;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 
 import java.text.ParseException;
@@ -58,6 +59,7 @@ public class TripSettings extends AppCompatActivity {
 
     GridView activityListGridView;
     TextView dateRageTextView;
+    TextView textView;
     Calendar startDate = Calendar.getInstance();
     Calendar endDate = Calendar.getInstance();
 
@@ -72,6 +74,8 @@ public class TripSettings extends AppCompatActivity {
         citydata = new String[0];
         activitydata = new String[0];
         ccp = findViewById(R.id.ccp);
+        textView = (TextView)findViewById(R.id.select_activity_text);
+        textView.setText("");
         dateRageTextView = findViewById(R.id.date_range_text);
         dateRageTextView.setOnClickListener(new DateRangeViewListner());
         statespinner = findViewById(R.id.statespinner);
@@ -209,6 +213,8 @@ public class TripSettings extends AppCompatActivity {
             ActivityListGridViewAdapter adapter = new ActivityListGridViewAdapter(_context, selectedactivities);
             ((ActivityListGridListener) activityListGridView.getOnItemClickListener()).ResetAdapter(adapter);
             activityListGridView.setAdapter(adapter);
+
+            textView.setText("도시에서 어떤 여행을 하나요?");
         }
 
         @Override
