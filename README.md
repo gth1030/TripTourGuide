@@ -10,12 +10,19 @@ TripTourTravel는
 
 ## 개발배경
 ![koreatourchart](./img/rMateChart_1655011.png)
+
 대한민국의 해외 관광객 수치는 매년 평균 10%의 성장률을 보이고 있습니다.
+
 ![traveler](./img/traveler.jpg)
+
 이런 수요를 바탕으로 현재 다양한 여행 관련 TV 프로그램들이 상영중입니다.
-![searchresult](./img/searchresult.jpg)
+
+![searchresult](./img/searchresult.png)
+
 어플 시장에도 이러한 흐름에 따라 많은 어플이 나왔지만 대부분의 어플은 '예매'관련 어플이며 사용자의 여행 과정을 세밀하게 보조해주는 어플은 보이지 않았습니다.
+
 ![medicinejail](./img/medicinejail.png)
+
 여행국가에서 어떠한 물건이 반입이 불가한지 파악을 못하여 감옥에 가는 등 불이익을 보는 사례가 증가하고 있습니다.
 
 따라서 저희는 사용자의 여행을 즐길 수 있게 보조하는 어플을 개발하게 되었습니다.
