@@ -1,25 +1,5 @@
 # TripTourGuide
 
-##소개
-TripTourTravel는
-- 사용자의 여행을 여행을 떠나기 전, 중, 후에 나누어 도움을 주는 안드로이드 App입니다.
-- 사용자가 여행을 떠났을 때 일어날 수 있는 불행한 상황(금지 물품 반입, 챙기지 못한 준비물 등)을 예방해줍니다.
-- 여행 국가의 인기 음악 Top 20를 제공함으로써 음악을 통해 현지 문화를 더 쉽고 빠르게 받아드릴 수 있게 도와줍니다.
-- 다녀온 도시를 지도에 표시해 한 눈에 보여주어 사용자에게 여행을 되돌아보는 시간을 제공합니다.
-
-
-## 개발배경
-![koreatourchart](./img/koreatourchart.jpg)
-대한민국의 해외 관광객 수치는 매년 평균 10%의 성장률을 보이고 있습니다.
-![traveler](./img/traveler.jpg)
-이런 수요를 바탕으로 현재 다양한 여행 관련 TV 프로그램들이 상영중입니다.
-![searchresult](./img/searchresult.jpg)
-어플 시장에도 이러한 흐름에 따라 많은 어플이 나왔지만 대부분의 어플은 '예매'관련 어플이며 사용자의 여행 과정을 세밀하게 보조해주는 어플은 보이지 않았습니다.
-![medicinejail](./img/medicinejail.jpg)
-여행국가에서 어떠한 물건이 반입이 불가한지 파악을 못하여 감옥에 가는 등 불이익을 보는 사례가 증가하고 있습니다.
-
-따라서 저희는 사용자의 여행을 즐길 수 있게 보조하는 어플을 개발하게 되었습니다.
-
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 
 최소 SDK 버전 26
@@ -54,29 +34,7 @@ Android 9.0 이상
 - 생성된 APK 파일을 Android 기반의 모바일 디바이스로 전송하고 설치하시면 앱을 실행하실 수 있습니다
 
 
-##사용법 (Getting Started)
-![main](./img/main.jpg)
-어플을 실행했을 때 초기화면입니다. 저장된 여행들을 리스트로 확인할 수 있습니다. '+new Trip'을 클릭하여 새로운 여행을 추가할 수 있습니다.
-![beforeaddcity](./img/beforeaddcity.jpg)
-'+new Tip'을 클릭했을 때 실행되는 여행 추가를 위한 설정화면입니다. '+Add City!'를 클릭하여 여행을 떠날 도시를 선택하면 됩니다.
-![addingcity](./img/addingcity.jpg)
-'+Add City'를 클릭했을 때 실행되는 여행 도시을 설정하는 화면입니다. 먼저 출발 및 도착 날짜를 설정합니다. 그 다음 여행국가, 주, 도시 순으로 선택을 하면 해당 도시에서 즐길 수 있는 활동(Activity)가 표시됩니다. 원하는 활동을 모두 선택한 후 '새로운 도시 추가하기!'를 클릭하여 설정을 마무리합니다.
-![addedcity](./img/addedcity.jpg)
-여행을 떠날 도시를 모두 추가했을 때의 화면입니다. 여행 도시 추가를 마쳤다면 '새 여행 만들기!'를 클릭하여 떠날 여행의 제목을 설정합니다.
-![namingtrip](./img/namingtrip.jpg)
-'새 여행 만들기!'를 클릭했을 때 실행되는 dialog입니다. 제목을 작성한 후 'OK'버튼을 눌러 여행 추가를 마무리합니다.
-![preparingsupply](./img/preparingsupply.jpg)
-여행 제목을 클릭하였을 때 실행되는 챙겨야 할 준비물 리스트 제공 화면입니다. 확실하게 챙긴 준비물은 옆으로 슬라이드하여 '준비됨' 상태로 변경할 수 있습니다. 상단의 텍스트를 통해 몇 개의 준비물이 남았는지 파악할 수 있습니다.
-![completepreparingsupply](./img/completepreparingsupply.jpg)
-모든 준비물을 챙겼을 때 변경된 준비물 화면입니다. 준비물을 모두 '준비됨' 상태로 변경할 시 리스트의 항목들이 투명하게 변하며 뒤의 배경 그림이 나타나게 됩니다. 또한 상단의 텍스트의 색상이 변경되며 텍스트를 클릭할 시 여행 국가에서 반입을 금지하고 있는 물품들을 볼 수 있습니다.
-![prohibiteditems](./img/prohibiteditems.jpg)
-준비물 준비를 마치고 변경된 텍스트를 클릭할 시 실행되는 해당 국가의 반입 금지 물품 리스트입니다. 아이콘들을 클릭할 시 어떠한 물품이 왜 반입이 불가한 지에 대한 설명이 제공됩니다.
-![musicplaying](./img/musicplaying.jpg)
-상단의 ActionBar에서 두번째 아이콘을 클릭할 시 실행되는 현지 인기 음악 재생 화면입니다. 위 화면에서는 여행을 가는 국가의 인기 음원 차트를 'Last.fm'에서 API를 통해 받아옵니다. 그 차트에 실려있는 음악은 'Youtube'를 통해 재생목록을 생성 및 동영상을 재생합니다.
-![consulateinfo](./img/consulateinfo.jpg)
-상단의 ActionBar에서 마지막 아이콘을 클릭할 시 실행되는 dialog입니다.  여행을 가는 도시에서 불행한 상황이 발생했을 시 도움을 청할 수 있는 영사관의 정보를 제공합니다.
-![mappingcity](./img/mappingcity.jpg)
-상단의 ActionBar에서 세번째 아이콘을 클릭할 시 실행되는 여행 도시를 지도에 표시해 주는 기능입니다.  'Google Map'의 API를 활용한 기능이며 어떤 도시를 여행했는지 지도를 통해 사용자에게 한눈에 표시해줍니다.
+## 사용법 (Getting Started)
 
 
 
@@ -150,6 +108,16 @@ Google Youtube API Quota exceed error - 이 문제에 대한 해결방법은 일단 Quota가 �
 
 
 ## 크레딧 (Credit)
+계발자 김기태
+계발자 하혜성
+
+이미지 및 아이콘 출처
+https://www.freepik.com/
+https://icons8.com/
+http://overseas.mofa.go.kr/sg-ko/index.do
+http://overseas.mofa.go.kr/us-ko/index.do
+http://overseas.mofa.go.kr/ca-ko/index.do
+
 
 ## 업데이트 정보 (Change Log)
 

@@ -17,7 +17,9 @@ import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.widget.WheelView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,13 +71,15 @@ public class MainActivity extends AppCompatActivity {
 
     public List<String> GetTripList(SQLiteDatabase db) {
 
-        List<String> tripList = new ArrayList<>();
+        Set<String> tripSet = new HashSet<>();
         Cursor c = db.rawQuery("select * from Trip", null);
         while (c.moveToNext()) {
             int nameInd = c.getColumnIndex("name");
             String tripName = c.getString(nameInd);
-            tripList.add(tripName);
+            tripSet.add(tripName);
         }
+        List<String> tripList = new ArrayList<>();
+        tripList.addAll(tripSet);
         return tripList;
     }
 
