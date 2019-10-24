@@ -102,7 +102,7 @@ Android 9.0 이상
 
 상단의 ActionBar에서 마지막 아이콘을 클릭할 시 실행되는 dialog입니다.  여행을 가는 도시에서 불행한 상황이 발생했을 시 도움을 청할 수 있는 영사관의 정보를 제공합니다.
 
-![mappingcity](./img/mappingcity.jpg =250x)
+![mappingcity](./img/mappingcity.jpg)
 
 상단의 ActionBar에서 세번째 아이콘을 클릭할 시 실행되는 여행 도시를 지도에 표시해 주는 기능입니다.  'Google Map'의 API를 활용한 기능이며 어떤 도시를 여행했는지 지도를 통해 사용자에게 한눈에 표시해줍니다.
 
