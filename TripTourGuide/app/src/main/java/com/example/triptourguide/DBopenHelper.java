@@ -149,7 +149,7 @@ public class DBopenHelper extends SQLiteOpenHelper {
         int cityId = c.getInt(0);
 
         for (String activity : cityTripEntity.ActivityList) {
-            query = "insert into Activity(cityId, activityName) values (" + cityId + ", " + activity + ")";
+            query = "insert into Activity(cityId, activityName) values (" + cityId + ", \"" + activity + "\")";
             db.execSQL(query);
         }
     }

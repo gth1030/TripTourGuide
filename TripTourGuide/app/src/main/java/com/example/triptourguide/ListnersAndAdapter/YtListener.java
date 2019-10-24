@@ -1,10 +1,7 @@
-package com.example.triptourguide.Listners;
+package com.example.triptourguide.ListnersAndAdapter;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -12,8 +9,6 @@ import com.example.triptourguide.Models.YoutubeMusicTitleAdapter;
 import com.example.triptourguide.R;
 import com.google.android.youtube.player.YouTubePlayer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class YtListener implements YouTubePlayer.PlaylistEventListener {

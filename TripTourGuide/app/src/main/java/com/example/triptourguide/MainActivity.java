@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 
+import com.example.triptourguide.ListnersAndAdapter.TripNameClickedListener;
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.widget.WheelView;
 

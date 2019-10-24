@@ -16,14 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.borax12.materialdaterangepicker.date.DatePickerDialog;
-import com.example.triptourguide.Listners.ActivityListGridViewAdapter;
+import com.example.triptourguide.ListnersAndAdapter.ActivityListGridViewAdapter;
 import com.example.triptourguide.Models.CityTripEntity;
 import com.hbb20.CountryCodePicker;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 
 import java.text.ParseException;
@@ -74,7 +73,7 @@ public class TripSettings extends AppCompatActivity {
         citydata = new String[0];
         activitydata = new String[0];
         ccp = findViewById(R.id.ccp);
-        textView = (TextView)findViewById(R.id.select_activity_text);
+        textView = findViewById(R.id.select_activity_text);
         textView.setText("");
         dateRageTextView = findViewById(R.id.date_range_text);
         dateRageTextView.setOnClickListener(new DateRangeViewListner());
@@ -189,7 +188,6 @@ public class TripSettings extends AppCompatActivity {
             pickedstate = (String) statespinner.getSelectedItem();
             selectedcity = new ArrayList<>();
             selectedcity = countryToState.get(pickedcountry).get(pickedstate);
-
             citydata = selectedcity.toArray(new String[selectedcity.size()]);
             ArrayAdapter<String> cityAdapter = new ArrayAdapter<>(_context, R.layout.spinner_row, citydata);
             cityspinner.setAdapter(cityAdapter);
@@ -213,28 +211,23 @@ public class TripSettings extends AppCompatActivity {
             ActivityListGridViewAdapter adapter = new ActivityListGridViewAdapter(_context, selectedactivities);
             ((ActivityListGridListener) activityListGridView.getOnItemClickListener()).ResetAdapter(adapter);
             activityListGridView.setAdapter(adapter);
-
             textView.setText("도시에서 어떤 여행을 하나요?");
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
-
         }
     }
 
     class ActivityListGridListener implements AdapterView.OnItemClickListener {
 
         ActivityListGridViewAdapter _adapter;
-
         public ActivityListGridListener(ActivityListGridViewAdapter adapter) {
             _adapter = adapter;
         }
-
         public void ResetAdapter(ActivityListGridViewAdapter adapter){
             _adapter = adapter;
         }
-
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -288,9 +281,7 @@ public class TripSettings extends AppCompatActivity {
 
             startDate.set(year, monthOfYear, dayOfMonth);
             endDate.set(yearEnd, monthOfYearEnd, dayOfMonthEnd);
-
             String dateStr = year + "." + monthOfYear  + "." + dayOfMonth + " - " + yearEnd + "." + monthOfYearEnd + "." + dayOfMonthEnd;
-
             dateRageTextView.setText(dateStr);
         }
     }

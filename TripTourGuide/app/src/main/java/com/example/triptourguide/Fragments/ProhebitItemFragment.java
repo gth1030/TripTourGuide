@@ -16,7 +16,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.example.triptourguide.Listners.ProhibitedListGridViewAdapter;
+import com.example.triptourguide.ListnersAndAdapter.ProhibitedListGridViewAdapter;
 import com.example.triptourguide.Models.CityTripEntity;
 import com.example.triptourguide.R;
 import com.example.triptourguide.TripServiceProvider;

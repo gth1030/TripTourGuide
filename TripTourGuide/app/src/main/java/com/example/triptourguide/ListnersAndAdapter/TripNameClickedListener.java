@@ -1,8 +1,10 @@
-package com.example.triptourguide;
+package com.example.triptourguide.ListnersAndAdapter;
 
 import android.content.Context;
 import android.content.Intent;
 
+import com.example.triptourguide.MainActivity;
+import com.example.triptourguide.TripServiceProvider;
 import com.wx.wheelview.widget.WheelView;
 
 public class TripNameClickedListener implements WheelView.OnWheelItemClickListener {

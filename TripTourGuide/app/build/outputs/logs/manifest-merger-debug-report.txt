@@ -1,18 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:2:1-16:12
-MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\2b16006711cf949cef8a8a1998dfdee9\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:2:1-11:12
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a2f8bd09bd0bfdb2fa91b73a1b962bae\jetified-fastscroll-0.2.5\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1473a607b4442c61ae975e7273910d4a\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f5bdf8930f5b0dade80802408310dda6\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1d93c655cdcaa19a3180f48e63f30b3d\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.wx.wheelview:wheelview:1.3.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\db89544d992c28fb72affd7ca8f4185f\wheelview-1.3.3\AndroidManifest.xml:2:1-16:12
-MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:17:1-30:12
+MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a10edcc3ecbb8cfe2e67388a05756435\gridlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\99839343cfb353ec06147cc6109cf9b2\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -24,7 +24,7 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Admin\.gradle\caches\tra
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\8506ddbc1ed30380944ad7f0369e4760\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\df9a84c4655b7cf6fd3ecff2821fd9d3\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\de3b4aff63e255359d6d83ac6fbdaff5\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\35d6382087ac1999db47004e3bf24934\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -51,65 +51,65 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Admin\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\55566c395264c409f125230efea7fd76\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.14] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\367d2cbd7b2a7f7edd59724d46f903a1\libphonenumber-android-8.10.14\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:5-81
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:22-78
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:5-76
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:22-73
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:7:22-73
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:5-67
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-38:19
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:10:5-38:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:11:5-14:19
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:11:5-14:19
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a2f8bd09bd0bfdb2fa91b73a1b962bae\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a2f8bd09bd0bfdb2fa91b73a1b962bae\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.wx.wheelview:wheelview:1.3.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\db89544d992c28fb72affd7ca8f4185f\wheelview-1.3.3\AndroidManifest.xml:11:5-14:19
 MERGED from [com.wx.wheelview:wheelview:1.3.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\db89544d992c28fb72affd7ca8f4185f\wheelview-1.3.3\AndroidManifest.xml:11:5-14:19
-MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:28:5-20
-MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:28:5-20
+MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:28:5-20
+MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:28:5-20
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9a29ee90fd211f611caccd9d338a3e44\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -117,77 +117,77 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:16:9-40
 	android:usesCleartextTraffic
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-44
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:17:9-44
 activity#com.example.triptourguide.TripServiceProvider
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-57
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:9-57
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-54
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:18:19-54
 activity#com.example.triptourguide.TripCreator
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-49
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:9-49
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-46
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:19:19-46
 activity#com.example.triptourguide.TripSettings
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-50
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:9-50
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-47
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:20:19-47
 activity#com.example.triptourguide.MainActivity
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:9-27:20
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:21:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:25:27-74
 meta-data#preloaded_fonts
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:29:9-31:57
 	android:resource
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:31:13-54
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:30:13-43
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:71
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:32:9-34:71
 	android:value
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:34:13-68
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:33:13-58
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:9-37:69
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:35:9-37:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:37:13-66
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:37:13-66
 	android:name
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:36:13-58
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml:36:13-58
 uses-sdk
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.hbb20:ccp:2.3.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\57561163c288651b32faaeab10dc4765\ccp-2.3.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\2b16006711cf949cef8a8a1998dfdee9\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\2b16006711cf949cef8a8a1998dfdee9\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a2f8bd09bd0bfdb2fa91b73a1b962bae\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a2f8bd09bd0bfdb2fa91b73a1b962bae\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1473a607b4442c61ae975e7273910d4a\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1473a607b4442c61ae975e7273910d4a\jetified-RecyclerViewSwipeDismiss-v1.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dd795a7795e72145c86268541ee328d2\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f5bdf8930f5b0dade80802408310dda6\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f5bdf8930f5b0dade80802408310dda6\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\c1763829f79bc3811543d2bb9a22b866\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
@@ -196,8 +196,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Admin\.gradle\cac
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1d93c655cdcaa19a3180f48e63f30b3d\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.wx.wheelview:wheelview:1.3.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\db89544d992c28fb72affd7ca8f4185f\wheelview-1.3.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.wx.wheelview:wheelview:1.3.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\db89544d992c28fb72affd7ca8f4185f\wheelview-1.3.3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:22:5-24:41
-MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:22:5-24:41
+MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:22:5-24:41
+MERGED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:22:5-24:41
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.gridlayout:gridlayout:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a10edcc3ecbb8cfe2e67388a05756435\gridlayout-1.0.0\AndroidManifest.xml:20:5-44
@@ -220,8 +220,8 @@ MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.g
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\287346e905cd20ad06ee512960ac8325\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\446887e5918a388aa78bffefea52b531\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\6d20ce96bf1498910f5f43bf908756dd\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\df9a84c4655b7cf6fd3ecff2821fd9d3\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\df9a84c4655b7cf6fd3ecff2821fd9d3\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\de3b4aff63e255359d6d83ac6fbdaff5\loader-1.0.0\AndroidManifest.xml:20:5-44
@@ -274,20 +274,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Admin\.gradle\caches
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.14] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\367d2cbd7b2a7f7edd59724d46f903a1\libphonenumber-android-8.10.14\AndroidManifest.xml:7:5-9:41
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.14] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\367d2cbd7b2a7f7edd59724d46f903a1\libphonenumber-android-8.10.14\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Admin\Documents\GitHub\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Admin\Downloads\Projects\TripTourGuide\TripTourGuide\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.VIBRATE
-ADDED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:26:5-66
+ADDED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:26:5-66
 	android:name
-		ADDED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b7335937a5430608b6969d94aba8e3bc\jetified-library-2.0\AndroidManifest.xml:26:22-63
+		ADDED from [com.borax12.materialdaterangepicker:library:2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\89e1c3c29d3b4e2b373ce4b6889e624e\jetified-library-2.0\AndroidManifest.xml:26:22-63
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion

@@ -10,21 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b31ce69d-3f28-4256-b203-7012f0f79de4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_house_moving.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_house_moving_v2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_borax12_materialdaterangepicker_library_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_borax12_materialdaterangepicker_library_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CodeFalling_RecyclerViewSwipeDismiss_v1_1_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CodeFalling_RecyclerViewSwipeDismiss_v1_1_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/MarkedMapFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/MarkedMapFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/PrepItemFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/PrepItemFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ActivityListGridViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/ActivityListGridViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/ProhibitedListGridViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/TripCreatorListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/TripCreatorListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/YtListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtPlayerStateChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/YtPlayerStateChangeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripCreatorListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/TripCreatorListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_bg_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_bg_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_prep_item_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_prep_item_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_provider_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_provider_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripNameClickedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/TripNameClickedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/gotravel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gotravel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/suitcase.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/suitcase.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tree_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tree_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +46,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="ce021602d0c8280d02" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -80,46 +91,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/PrepItemFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="56" column="27" lean-forward="true" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="2635">
+              <caret line="193" column="34" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_creator.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_row.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="151" column="108" selection-start-line="151" selection-start-column="108" selection-end-line="151" selection-end-column="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MusicRankCollector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/TripNameClickedListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1463">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
               <folding>
-                <element signature="e#5051#5052#0" expanded="true" />
-                <element signature="e#5116#5117#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_prep_item_fragment.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -127,18 +168,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_prohebit_item.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="2235">
+              <caret line="189" column="78" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/MarkedMapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="527">
+              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
               <folding>
                 <element signature="e#1168#1169#0" expanded="true" />
                 <element signature="e#1202#1203#0" expanded="true" />
@@ -184,7 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/assets/BostonPrepare.json" />
         <option value="$PROJECT_DIR$/app/src/main/assets/OttawaPrepare.json" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
@@ -210,7 +243,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/MusicItemEntity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/assets/CountryProhibited.json" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_travel_item_provider.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MusicRankCollector.java" />
@@ -225,24 +257,26 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/ItemPrepRecycleAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/ProhebitItemFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_prep_item_fragment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripServiceProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/MarkedMapFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_trip_settings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_trip_creator.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_prohebit_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/TripNameClickedListener.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="810" />
-    <option name="y" value="33" />
-    <option name="width" value="1010" />
-    <option name="height" value="990" />
+    <option name="x" value="648" />
+    <option name="y" value="64" />
+    <option name="width" value="1247" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -252,6 +286,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -262,11 +308,6 @@
             <path>
               <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -296,36 +337,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="triptourguide" type="462c0819:PsiDirectoryNode" />
-              <item name="Listners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="triptourguide" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="triptourguide" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="ListnersAndAdapter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TripTourGuide" type="1abcf292:AndroidViewProjectNode" />
@@ -336,148 +348,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="triptourguide" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="triptourguide" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="triptourguide" type="462c0819:PsiDirectoryNode" />
-              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="triptourguide" type="462c0819:PsiDirectoryNode" />
-              <item name="Listners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TripTourGuide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TripTourGuide" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="ce021602d0c8280d02" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-10-24T05:30:51.479Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-10-24T10:16:40.012Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../AS" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/example/triptourguide" />
@@ -722,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571888347927</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="readme update">
+      <created>1571911901797</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1571911901797</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -739,7 +621,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1444563" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18550107" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -747,7 +629,7 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.3033839" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32827735" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32719395" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3293348" />
@@ -807,7 +689,8 @@
     <MESSAGE value="Merge branch 'item+prohibited' of https://github.com/gth1030/TripTourGuide into youtube&#10;&#10;# Conflicts:&#10;#&#9;TripTourGuide/.idea/assetWizardSettings.xml&#10;#&#9;TripTourGuide/.idea/caches/build_file_checksums.ser&#10;#&#9;TripTourGuide/.idea/caches/gradle_models.ser&#10;#&#9;TripTourGuide/.idea/workspace.xml&#10;#&#9;TripTourGuide/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt&#10;#&#9;TripTourGuide/app/build/outputs/logs/manifest-merger-debug-report.txt&#10;#&#9;TripTourGuide/app/src/main/AndroidManifest.xml&#10;#&#9;TripTourGuide/app/src/main/assets/CountryProhibited.json&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/ActivityListGridViewAdapter.java&#10;#&#9;TripTourGuide/app/src/main/java/com/example/triptourguide/TravelItemProvider.java&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-hdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-mdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xhdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxhdpi/wildlife_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/alcohol_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/army_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/artifact_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/beach_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/cigarettes_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/cruise_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/drug_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/firework_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/golf_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/gun_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/hiking_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/lighter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/paint_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/pets_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/pill_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/porno_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/printer_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/scooter_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/seed_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/soil_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/swimming_50.png&#10;#&#9;TripTourGuide/app/src/main/res/drawable-xxxhdpi/wildlife_50.png" />
     <MESSAGE value="merge error fixed, prohibited item list set as fragment" />
     <MESSAGE value="fixed youtube fragment UI error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed youtube fragment UI error" />
+    <MESSAGE value="readme update" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -834,26 +717,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/content/Intent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="354" column="11" selection-start-line="354" selection-start-column="11" selection-end-line="354" selection-end-column="11" />
-          <folding>
-            <element signature="e#26810#26811#0" expanded="true" />
-            <element signature="e#26861#26862#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/SplashActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -881,13 +744,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="67" column="62" lean-forward="true" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -927,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MusicRankCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/MusicItemEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -941,21 +790,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtListener.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/YtListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="204">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#1499#2544#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/YtPlayerStateChangeListener.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/YtPlayerStateChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -981,14 +830,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ActivityListGridViewAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/ActivityListGridViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/TripCreatorListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/TripCreatorListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
@@ -1003,10 +852,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_provider_row.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_row.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
     </entry>
@@ -1029,21 +874,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="219" column="65" lean-forward="true" selection-start-line="219" selection-start-column="65" selection-end-line="219" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1071,17 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripNameClickedListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_youtube_fragment_x.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -1097,18 +916,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Listners/ProhibitedListGridViewAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/ProhibitedListGridViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_creator.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1117,13 +928,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1140,17 +944,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/MarkedMapFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding>
-            <element signature="e#1168#1169#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1179,6 +972,125 @@
           <folding>
             <element signature="e#5051#5052#0" expanded="true" />
             <element signature="e#5116#5117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Models/YoutubeMusicTitleAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+            <element signature="e#2401#2402#0" expanded="true" />
+            <element signature="e#2495#2496#0" expanded="true" />
+            <element signature="e#2581#2582#0" expanded="true" />
+            <element signature="e#2662#2663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/widget/ListView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="85" column="34" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="38" />
+          <folding>
+            <element signature="e#2342#2343#0" expanded="true" />
+            <element signature="e#2393#2394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/YoutubeFragmentX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="193" column="34" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/MusicRankCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/Fragments/MarkedMapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding>
+            <element signature="e#1168#1169#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_trip_creator.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/DBopenHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="151" column="108" selection-start-line="151" selection-start-column="108" selection-end-line="151" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/TripSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2235">
+          <caret line="189" column="78" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/triptourguide/ListnersAndAdapter/TripNameClickedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding>
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
           </folding>
         </state>
       </provider>
