@@ -2,9 +2,11 @@ package com.example.triptourguide.Listners;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.triptourguide.Models.YoutubeMusicTitleAdapter;
 import com.example.triptourguide.R;
 import com.google.android.youtube.player.YouTubePlayer;
 
@@ -37,8 +39,7 @@ public class YtPlayerStateChangeListener implements YouTubePlayer.PlayerStateCha
     @Override
     public void onVideoStarted() {
         if (initialPlay) {
-            _musicListView.getChildAt(0).findViewById(R.id.music_title).setBackgroundColor(Color.RED);
-            YtListener.setUpFadeAnimation((TextView) _musicListView.getChildAt(0).findViewById(R.id.music_title), 0);
+            ((YoutubeMusicTitleAdapter)_musicListView.getAdapter()).getViewAt(0).findViewById(R.id.music_title).setBackgroundColor(Color.RED);
         }
         initialPlay = false;
     }

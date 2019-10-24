@@ -20,6 +20,7 @@ import com.example.triptourguide.Listners.YtPlayerStateChangeListener;
 import com.example.triptourguide.MainActivity;
 import com.example.triptourguide.Models.CityTripEntity;
 import com.example.triptourguide.Models.MusicItemEntity;
+import com.example.triptourguide.Models.YoutubeMusicTitleAdapter;
 import com.example.triptourguide.MusicRankCollector;
 import com.example.triptourguide.R;
 import com.example.triptourguide.Listners.YtListener;
@@ -183,8 +184,7 @@ public class YoutubeFragmentX extends Fragment {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(_context, R.layout.music_title_row, R.id.music_title, playableMusicNameList);
-                    _musicListView.setAdapter(adapter);
+                    _musicListView.setAdapter(new YoutubeMusicTitleAdapter(playableMusicNameList, _context));
                 }
             });
 
