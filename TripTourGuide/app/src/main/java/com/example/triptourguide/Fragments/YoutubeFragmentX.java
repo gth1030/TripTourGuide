@@ -116,22 +116,12 @@ public class YoutubeFragmentX extends Fragment {
                 GoogleCredential credential = new GoogleCredential();
 
                 YouTube youtube = new YouTube.Builder(transport, jsonFactory, credential).setApplicationName("youtube-cmdline-search-sample").build();
-
-                // Define the API request for retrieving search results.
                 YouTube.Search.List search = youtube.search().list("id,snippet");
-
                 search.setKey(API_KEY);
                 search.setQ(searchTerm);
-
-                // Restrict the search results to only include videos. See:
                 search.setType("video");
-
-                // To increase efficiency, only retrieve the fields that the
-                // application uses.
                 search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
                 search.setMaxResults(1L);
-
-
 
                 // Call the API and print results.
                 SearchListResponse searchResponse = search.execute();
@@ -224,10 +214,10 @@ public class YoutubeFragmentX extends Fragment {
     }
 
     String[] songsTitles = new String[]{
-
+            "Truth Hurts", "Senorita", "Someone you Loved", "Circles", "No Guidance", "HIGHEST IN THE ROOM", "RAN$OM", "Bad Guy", "Panini", "Bandit", "10,000 Hours", "Memories", "Goodbyes", "Beautiful People", "I Don't Care", "Old Town Road", "Lights Up", "Talk", "Sunflower (Spider-Man:Into the Spider-Verse)", "Good As Hell"
     };
     String[] videoIds = new String[]{
-
+            "P00HMxdsVZI", "Pkh8UtuejGw", "zABLecsR5UE", "wXhTHyIgQ_U", "6L_k74BOLag", "tfSS1e3kYeo", "1XzY2ij_vL4", "DyDfgMOUjCI", "bXcSLI58-h8", "Sw5fNI400E4", "Y2E71oe0aSM", "SlPhMPnQ58k", "QumPpMqaxxo", "mj0XInqZMHY", "y83x7MgzWOA", "w2Ov5jzm3j8", "9NZvM1918_E", "hE2Ira-Cwxo", "ApXoWvfEYVU", "SmbmeOgWsqE"
     };
 
 

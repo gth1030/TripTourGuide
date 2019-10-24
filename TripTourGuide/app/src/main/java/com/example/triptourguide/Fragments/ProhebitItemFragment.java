@@ -29,8 +29,10 @@ import org.json.JSONObject;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,7 +43,7 @@ public class ProhebitItemFragment extends Fragment {
     private TextView _prohibitTextView;
     Map<String, List<String>> countryToProhItemMap = new HashMap<>();
     Map<String, String> itemToDescriptionMap = new HashMap<>();
-    List<String> loadprohitem = new ArrayList<>();
+    Set<String> loadprohitem;
 
     public ProhebitItemFragment() {
     }
@@ -50,7 +52,7 @@ public class ProhebitItemFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        loadprohitem = new ArrayList<>();
+        loadprohitem = new HashSet<>();
         View rootView = inflater.inflate(R.layout.fragment_prohebit_item, container, false);
         ProhibitedItemGridView = rootView.findViewById(R.id.prohibited_item_gridview);
         _prohibitTextView = rootView.findViewById(R.id.prohibit_item_return_text);
@@ -103,12 +105,9 @@ public class ProhebitItemFragment extends Fragment {
                 continue;
             loadprohitem.addAll(countryToProhItemMap.get(cityTripEntity.CountryName));
         }
-
         ProhibitedListGridViewAdapter adapter = new ProhibitedListGridViewAdapter(getActivity(), loadprohitem);
         ProhibitedItemGridView.setAdapter(adapter);
-
         ProhibitedItemGridView.setOnItemClickListener(new ProhibitedListGridListener(adapter,itemToDescriptionMap));
-
         return rootView;
     }
 

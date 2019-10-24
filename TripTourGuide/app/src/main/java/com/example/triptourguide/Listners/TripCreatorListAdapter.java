@@ -1,4 +1,4 @@
-package com.example.triptourguide;
+package com.example.triptourguide.Listners;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.triptourguide.Models.CityTripEntity;
+import com.example.triptourguide.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

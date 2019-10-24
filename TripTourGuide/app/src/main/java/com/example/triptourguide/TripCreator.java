@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.triptourguide.Listners.TripCreatorListAdapter;
 import com.example.triptourguide.Models.CityTripEntity;
 
 import java.util.ArrayList;

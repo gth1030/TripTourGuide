@@ -15,18 +15,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class ProhibitedListGridViewAdapter extends BaseAdapter {
 
     private Context _context;
-    private List<String> _itemlist;
+    private List<String> _itemlist = new ArrayList<>();
     public Boolean[] GridViewSelection;
 
     Map<String, Integer> itemToImageIdMap;
 
-    public ProhibitedListGridViewAdapter(Context context, List<String> prohibitedList) {
+    public ProhibitedListGridViewAdapter(Context context, Set<String> prohibitedList) {
         _context = context;
-        _itemlist = prohibitedList;
+        _itemlist.addAll(prohibitedList);
         setItemToImageIdMap();
         GridViewSelection = new Boolean[_itemlist.size()];
         for (int i = 0; i < GridViewSelection.length; i++)

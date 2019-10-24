@@ -58,7 +58,7 @@ public class MarkedMapFragment extends Fragment implements OnMapReadyCallback {
         for (CityTripEntity cityTripEntity : entityList) {
             try {
                 List<Address> address = geocoder.getFromLocationName(cityTripEntity.CityName, 3);
-                Address matchedAddress = null;
+                Address matchedAddress = address.get(0);
                 for (Address ad : address) {
                     if (ad.getCountryName().equalsIgnoreCase(cityTripEntity.CountryName)) {
                         matchedAddress = ad;

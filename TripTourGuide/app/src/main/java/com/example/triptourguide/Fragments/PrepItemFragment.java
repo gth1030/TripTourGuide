@@ -54,7 +54,8 @@ public class PrepItemFragment extends Fragment {
         }
 
         itemPrepRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, getActivity(), (TextView) view.findViewById(R.id.remaining_item_count));
+        final ItemPrepRecycleAdapter itemPrepAdapter = new ItemPrepRecycleAdapter(items, getActivity(),
+                (TextView) view.findViewById(R.id.remaining_item_count), itemPrepRecycleView);
 
         SwipeDismissRecyclerViewTouchListener onTouchDismissListener = new SwipeDismissRecyclerViewTouchListener.Builder(
                 itemPrepRecycleView,

@@ -33,10 +33,12 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
     private DBopenHelper dbHelper;
     private int _tripId;
     private TextView _itemRemainingTextview;
+    private RecyclerView _recyclerView;
 
-    public ItemPrepRecycleAdapter(Set<String> itemCollection, Context context, TextView itemRemainingTextView) {
+    public ItemPrepRecycleAdapter(Set<String> itemCollection, Context context, TextView itemRemainingTextView, RecyclerView parentView) {
         _context = context;
         dbHelper = new DBopenHelper(_context);
+        _recyclerView = parentView;
         _itemRemainingTextview = itemRemainingTextView;
         DBopenHelper dbHelper = new DBopenHelper(_context);
         _tripId = dbHelper.getTripId(MainActivity.GetCurrentTripName());
@@ -94,6 +96,7 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
             _itemRemainingTextview.setText("대리고 가지 말아야할 친구를 위해 여기를 클릭하세요!\n" +
                             "여행에 함께해야할 남은친구 : " + prePrepItems.size() + "명");
             _itemRemainingTextview.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            _recyclerView.setAlpha(.1f);
 
             _itemRemainingTextview.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -107,6 +110,8 @@ public class ItemPrepRecycleAdapter extends RecyclerView.Adapter {
         } else {
             _itemRemainingTextview.setClickable(false);
             _itemRemainingTextview.setTextColor(Color.BLACK);
+            _recyclerView.setAlpha(1f);
+
         }
     }
 
