@@ -64,7 +64,7 @@ Android 9.0 이상
 
 
 ##사용법 (Getting Started)
-<img src="./img/main.jpg" width="48">
+<img src="./img/main.jpg" width="250">
 ![main](./img/main.jpg)
 
 어플을 실행했을 때 초기화면입니다. 저장된 여행들을 리스트로 확인할 수 있습니다. '+new Trip'을 클릭하여 새로운 여행을 추가할 수 있습니다.
