@@ -62,7 +62,7 @@ Android 9.0 이상
 
 
 ##사용법 (Getting Started)
-![main](./img/main.jpg)
+![main](./img/main.jpg=250x)
 어플을 실행했을 때 초기화면입니다. 저장된 여행들을 리스트로 확인할 수 있습니다. '+new Trip'을 클릭하여 새로운 여행을 추가할 수 있습니다.
 ![beforeaddcity](./img/beforeaddcity.jpg)
 '+new Tip'을 클릭했을 때 실행되는 여행 추가를 위한 설정화면입니다. '+Add City!'를 클릭하여 여행을 떠날 도시를 선택하면 됩니다.
